@@ -71,7 +71,7 @@ class SessionForm extends React.Component {
           <br />
           <label>Email:
             <input
-              type="text"
+              type="email"
               value={this.state.email}
               onChange={this.handleInput('email')}
             />

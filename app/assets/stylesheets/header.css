@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* .welcome-message {
+
+} */
+
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.links a {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: bisque;
+}

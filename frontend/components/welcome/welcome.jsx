@@ -17,9 +17,10 @@ const Welcome = (props) => {
         <Link to="/signup">
           Sign Up
         </Link>
-
-        <br />
-
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
         <Link to="/login">
           Login
         </Link>

@@ -7,7 +7,7 @@ import { AuthRoute, ProtectedRoute } from './util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>DisArray</h1>
+      <h1 className="welcome-message">DisArray</h1>
       < WelcomeContainer />
     </header>
 
