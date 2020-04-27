@@ -2,12 +2,15 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #0D0620;
 }
 
 
-/* .welcome-message {
-
-} */
+.welcome-message {
+  border-radius: 25px;
+  background-color: #E6F9AF;
+  padding: 15px;
+}
 
 
 .links {
@@ -17,6 +20,6 @@ header {
 
 .links a {
   padding: 5px;
-  border-radius: 20px;
-  background-color: bisque;
+  border-radius: 25px;
+  background-color: #E6F9AF;
 }
