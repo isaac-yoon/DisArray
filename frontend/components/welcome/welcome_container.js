@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Welcome from './welcome';
-import { logout } from '../actions/session_actions';
+import { logout } from '../../actions/session_actions';
 
 
 

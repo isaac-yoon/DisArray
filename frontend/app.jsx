@@ -1,5 +1,5 @@
 import React from 'react';
-import WelcomeContainer from "./welcome/welcome_container";
+import WelcomeContainer from "./components/welcome/welcome_container";
 
 const App = () => (
   <div>
