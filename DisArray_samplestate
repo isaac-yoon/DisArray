@@ -1,0 +1,151 @@
+```javascript
+let sampleState = {
+  entities: {
+    users: {
+      1: {
+        id: 1,
+        username: 'Captain America',
+        email: 'firstavenger@avengers.io'
+      }, 
+      2: {
+        id: 2,
+        username: 'Iron Man',
+        email: 'tstark@starkindustries.io'
+      }, 
+      3: {
+        id: 3,
+        username: 'Hulk',
+        email: 'hulkSMASH@avengers.io'
+      },
+      4: {
+        id: 4,
+        username: 'Black Widow',
+        email: 'blackwidow@avengers.io'
+      }, 
+    },
+    servers: {
+      1: {
+        id: 1,
+        serverName: 'Avengers',
+        ownerId: 2,
+      }, 
+      2: {
+        id: 2,
+        serverName: 'Stark Industries',
+        ownerId: 2,
+      }
+    }, 
+    channels: {
+      1: {
+        id: 1,
+        channelName: 'General',
+        serverId: 1,
+        ownerId: 2,
+      }, 
+      2: {
+        id: 2,
+        channelName: 'General',
+        serverId: 2,
+        ownerId: 2,
+      }
+    }, 
+    channelMembers: {
+      1: {
+        userId: 1,
+        channelId: 1,
+        admin: false
+      }, 
+      2: {
+        userId: 2,
+        channelId: 1,
+        admin: false
+      }, 
+      3: {
+        userId: 3,
+        channelId: 1,
+        admin: false
+      }, 
+      4: {
+        userId: 4,
+        channelId: 1,
+        admin: true
+      }, 
+      5: {
+        userId: 5,
+        channelId: 1,
+        admin: true
+      },
+      6: {
+        userId: 2,
+        channelId: 2,
+        admin: true
+      }
+    },
+    channelMessages: {
+      1: {
+        id: 1,
+        body: 'The truth is...I am Iron Man.',
+        authorId: 2,
+        channelId: 2,
+        createdAt: '3rd Feb 2011 10:05:06+03:30',
+      },
+      2: {
+        id: 2,
+        body: "It's not about me. It's not about you. It's not even about us. It's about legacy. It's about what we choose to leave behind.",
+        authorId: 2,
+        channelId: 2,
+        createdAt: '1st Jan 2014 07:05:04+04:30'
+      }, 
+      3: {
+        id: 3,
+        body: "We're the avengers. We can bust arms dealers all the livelong day, but that up there, that's...the end game. How were you guys planning on beating them?",
+        authorId: 2,
+        channelId: 1,
+        createdAt: ''
+      },
+      4: {
+        id: 4,
+        body: "Together.",
+        authorId: 1,
+        channelId: 1,
+        createdAt: ''
+      },
+      5: {
+        id: 5,
+        body: "We'll lose.",
+        authorId: 2,
+        channelId: 1,
+        createdAt: ''
+      }, 
+      6: {
+        id: 6, 
+        body: "Then we'll do that together too.",
+        authorId: 1,
+        channelId: 1,
+        createdAt: ''
+      }
+    },
+    directMessages: {
+      1: {
+        id: 1,
+        body: "Tony, I'm glad you're back at the compound. I don't like the idea of you rattling around a mansion by yourself. We all need family. The Avengers are yours, maybe more so than mine. I've been on my own since I was 18. I never really fit in anywhere, even in the army. My faith's in people, I guess. Individuals. And I'm happy to say that, for the most part, they haven't let me down. Which is why I can't let them down either. Locks can be replaced, but maybe they shouldn't. I know I hurt you, Tony. I guess I thought by not telling you about your parents I was sparing you, but I can see now that I was really sparing myself, and I'm sorry. Hopefully one day you can understand. I wish we agreed on the Accords, I really do.I know you're doing what you believe in, and that's all any of us can do. That's all any of us should do. So, no matter what. I promise you, if you need us, if you need me, I'll be there.",
+        receiverId: 2,
+        senderId: 1,
+        createdAt: ''
+      }
+    }
+	},
+	session: {
+		currentUser: 2
+	},
+	ui: {
+		modalOpen: true,
+    loading: true/false
+	},
+	errors: {
+		userErrors: [],
+		sessionErrors: [],
+		postErrors: []
+	}
+}
+```
