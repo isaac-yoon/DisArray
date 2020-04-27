@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import * as APIUtil from './util/session_api_util';
 import configureStore from './store/store';
+import Root from './root';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -19,5 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // END TESTING
 
 
-  ReactDOM.render(<h1>Welcome to DisArray</h1>, root);
+  ReactDOM.render(< Root store = {store} />, root);
 });
