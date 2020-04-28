@@ -21,10 +21,9 @@ const Welcome = ({ currentUser, logout, openModal }) => {
             onClick={() => openModal('login')}
           >LOGIN</button>
 
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
+          <button
+            id="welcome-demo-button"
+          >DEMO LOGIN</button>
 
           <button
             id="welcome-signup-button"
