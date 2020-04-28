@@ -66,16 +66,19 @@
 }
 
 @media only screen and (max-width: 600px) {
-  #welcome-image-laptop {
+  .welcome-image-small-box {
     display: none;
   }
-  #welcome-image-headphones {
+  .welcome-image-laptop {
     display: none;
   }
-  #welcome-image-gamecontroller {
+  .welcome-image-headphones {
     display: none;
   }
-  #welcome-image-desktop {
+  .welcome-image-gamecontroller {
+    display: none;
+  }
+  .welcome-image-desktop {
     display: none;
   }
 }
