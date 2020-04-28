@@ -1,0 +1,81 @@
+.welcome-image-container {
+  position: relative;
+  width: 1000px;
+  height: 700px;
+}
+
+
+.welcome-image-small-box {
+  left: 35%;
+  top: 5%;
+  -webkit-transition: none;
+  transition: none;
+  position: absolute;
+}
+
+.welcome-image-desktop {
+  top: 15%;
+  left: 60%;
+  margin-left: -289.5px;
+  position: absolute;
+}
+
+.welcome-image-android {
+  top: 45%;
+  left: 45%;
+  margin-left: -384px;
+  position: absolute;
+}
+
+.welcome-image-iphone {
+  top: 46%;
+  left: 45%;
+  margin-left: -229.5px;
+  position: absolute;
+}
+
+.welcome-image-gamecontroller {
+  top: 67%;
+  left: 65%;
+  margin-left: -255px;
+  position: absolute;
+}
+
+.welcome-image-laptop {
+  position: absolute;
+}
+
+.welcome-image-headphones {
+  left: 55%;
+  bottom: 19%;
+  position: absolute;
+}
+
+.laptop-headphones-parent {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 75%;
+  top: 41%;
+}
+
+.laptop-headphones-child {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  #welcome-image-laptop {
+    display: none;
+  }
+  #welcome-image-headphones {
+    display: none;
+  }
+  #welcome-image-gamecontroller {
+    display: none;
+  }
+  #welcome-image-desktop {
+    display: none;
+  }
+}
