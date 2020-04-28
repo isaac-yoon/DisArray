@@ -1,0 +1,21 @@
+DESIGN DECISIONS and BUG LOGS
+
+
+
+4.27.2020
+- database schema
+	- can users be associated with both servers and channels?
+	- what is the relationship between channels and servers?
+
+	- have users be associated with servers
+	- a server can have many channels. a channel can only have one server
+
+
+4.28.2020
+- implementing demo login functionality
+	- because my project involves modals for both login, signup, and demo-login, it was a bit difficult to determine the best way to implement demo login functionality
+
+	- do I make a separate demo-login modal?
+
+	- I opted to use the login modal and prefill values using a demologin user
+

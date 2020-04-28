@@ -29,6 +29,17 @@ class SessionForm extends React.Component {
     this.props.closeModal();
   }
 
+  componentDidMount() {
+    if (this.props.formType === 'demo-login') this.demoLogin();
+  }
+
+  demoLogin() {
+    this.setState({
+      username: 'DemoLogin',
+      password: '123456'
+    })
+  }
+
   render() {
     let form;
 
@@ -66,6 +77,45 @@ class SessionForm extends React.Component {
 
           <button 
             className="session-form-button" 
+            id="session-form-login-button"
+          >LOGIN</button>
+        </form>;
+    }
+
+    if (this.props.formType === 'demo-login') {
+      form =
+        <form onSubmit={this.handleSubmit}>
+          <label className="session-form-label">USERNAME
+            <br />
+            <input
+              type="text"
+              value={this.state.username}
+              onChange={this.handleInput('username')}
+              placeholder="Enter a username"
+              className="session-form-input"
+            />
+
+            <br />
+          </label>
+
+          <br />
+
+          <label className="session-form-label">PASSWORD
+            <br />
+            <input
+              type="password"
+              value={this.state.password}
+              onChange={this.handleInput('password')}
+              placeholder="Enter your password"
+              className="session-form-input"
+            />
+            <br />
+          </label>
+
+          <br />
+
+          <button
+            className="session-form-button"
             id="session-form-login-button"
           >LOGIN</button>
         </form>;

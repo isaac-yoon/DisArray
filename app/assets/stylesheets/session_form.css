@@ -21,16 +21,19 @@
   box-sizing: border-box;
   width: 200px;
   margin: 10px;
+  cursor: pointer;
 }
 
 #welcome-login-button {
   background-color: #FFFFFF;
   color: #292B2F;
+  cursor: pointer;
 }
 
 #welcome-demo-button {
   background-color: #F26522;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .session-form-label {
@@ -63,6 +66,7 @@
   width: 250px;
   height: 50px;
   font-style: helvetica;
+  cursor: pointer;
 }
 
 #session-form-login-button {

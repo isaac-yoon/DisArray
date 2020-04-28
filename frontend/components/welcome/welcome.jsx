@@ -23,6 +23,7 @@ const Welcome = ({ currentUser, logout, openModal }) => {
 
           <button
             id="welcome-demo-button"
+            onClick={() => openModal('demo-login')}
           >DEMO LOGIN</button>
 
           <button
