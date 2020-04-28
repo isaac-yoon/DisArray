@@ -26,6 +26,7 @@ class SessionForm extends React.Component {
       username: '',
       password: ''
     });
+    this.props.closeModal();
   }
 
   render() {
@@ -38,20 +39,25 @@ class SessionForm extends React.Component {
       form =
         <form onSubmit={this.handleSubmit}>
           <label>Username:
+            <br/>
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
             />
+            <br/>
           </label>
           <br />
           <label>Password:
+            <br/>
             <input
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
             />
+            <br/>
           </label>
+          <br/>
           <button>Login</button>
         </form>;
     }
@@ -62,28 +68,35 @@ class SessionForm extends React.Component {
       form =
         <form onSubmit={this.handleSubmit}>
           <label>Username:
+            <br/>
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
             />
+            <br/>
           </label>
           <br />
           <label>Email:
+            <br/>
             <input
               type="email"
               value={this.state.email}
               onChange={this.handleInput('email')}
             />
+            <br/>
           </label>
           <br />
           <label>Password:
+            <br/>
             <input
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
             />
+            <br/>
           </label>
+          <br/>
           <button>Sign Up</button>
         </form>;
     }
