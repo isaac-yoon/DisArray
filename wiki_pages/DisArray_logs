@@ -17,5 +17,5 @@ DESIGN DECISIONS and BUG LOGS
 
 	- do I make a separate demo-login modal?
 
-	- I opted to use the login modal and prefill values using a demologin user
+	- I opted to use the login modal and prefill values using a demologin user account that was already saved in 
 

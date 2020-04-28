@@ -1,0 +1,23 @@
+#welcome-message-1 {
+  font-weight: bold;
+}
+
+#welcome-message-2 {
+  font-size: 15px;
+  font-style: helvetica;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+.welcome-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.welcome-message {
+  border-radius: 25px;
+  padding: 15px;
+  color: #FFFFFF;
+}

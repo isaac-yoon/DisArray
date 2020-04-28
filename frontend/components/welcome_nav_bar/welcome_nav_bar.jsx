@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Welcome = ({ currentUser, logout, openModal }) => {
+const WelcomeNavBar = ({ currentUser, logout, openModal }) => {
 
   if (currentUser !== undefined) {
     return (
@@ -14,7 +14,9 @@ const Welcome = ({ currentUser, logout, openModal }) => {
     );
   } else {
     return (
-      <div>
+      <div 
+        className = "welcome-nav-bar-login-signup-links"
+      >
         <nav className="login-signup">
           <button
             id="welcome-login-button"
@@ -36,4 +38,4 @@ const Welcome = ({ currentUser, logout, openModal }) => {
   }
 }
 
-export default Welcome;
+export default WelcomeNavBar;

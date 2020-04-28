@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Welcome from './welcome';
+import Welcome from './welcome_nav_bar';
 import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 
@@ -13,5 +13,5 @@ const mapDispatchToProps = (dispatch) => ({
   openModal: modal => dispatch(openModal(modal))
 })
 
-const WelcomeContainer = connect(mapStateToProps, mapDispatchToProps)(Welcome);
-export default WelcomeContainer;
+const WelcomeNavBarContainer = connect(mapStateToProps, mapDispatchToProps)(Welcome);
+export default WelcomeNavBarContainer;
