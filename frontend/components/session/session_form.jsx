@@ -38,27 +38,36 @@ class SessionForm extends React.Component {
 
       form =
         <form onSubmit={this.handleSubmit}>
-          <label>Username:
+          <label className = "session-form-label">USERNAME
             <br/>
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
+              placeholder="enter a username"
+              className = "session-form-input"
             />
+
             <br/>
           </label>
+
           <br />
-          <label>Password:
+
+          <label className="session-form-label">PASSWORD
             <br/>
             <input
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
+              placeholder="enter your password"
+              className="session-form-input"
             />
             <br/>
           </label>
+
           <br/>
-          <button>Login</button>
+
+          <button>LOGIN</button>
         </form>;
     }
 
@@ -67,42 +76,48 @@ class SessionForm extends React.Component {
 
       form =
         <form onSubmit={this.handleSubmit}>
-          <label>Username:
+          <label className = "session-form-label">USERNAME
             <br/>
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
+              placeholder="choose a username"
+              className="session-form-input"
             />
             <br/>
           </label>
           <br />
-          <label>Email:
+          <label className="session-form-label">EMAIL
             <br/>
             <input
               type="email"
               value={this.state.email}
               onChange={this.handleInput('email')}
+              placeholder="write your email"
+              className="session-form-input"
             />
             <br/>
           </label>
           <br />
-          <label>Password:
+          <label className="session-form-label">PASSWORD
             <br/>
             <input
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
+              placeholder="choose a password"
+              className="session-form-input"
             />
             <br/>
           </label>
           <br/>
-          <button>Sign Up</button>
+          <button>SIGN UP</button>
         </form>;
     }
 
     return (
-      <div>
+      <div className="session-form">
         {this.props.errors.map(error => {
           return (
             <strong>

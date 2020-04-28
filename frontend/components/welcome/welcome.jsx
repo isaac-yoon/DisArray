@@ -17,7 +17,7 @@ const Welcome = ({ currentUser, logout, openModal }) => {
       <div className='links'>
         <nav className="login-signup">
           <button onClick={() => openModal('login')}>
-            Login
+            LOGIN
           </button>
 
             &nbsp;
@@ -26,7 +26,7 @@ const Welcome = ({ currentUser, logout, openModal }) => {
             &nbsp;
 
           <button onClick={() => openModal('signup')}>
-            Signup
+            SIGNUP
           </button>
         </nav>
       </div>

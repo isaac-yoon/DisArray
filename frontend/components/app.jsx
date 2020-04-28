@@ -11,7 +11,7 @@ const App = () => (
       < WelcomeContainer />
     </header>
 
-    {/* < ProtectedRoute path="/" component = {  } />   */}
+    {/* < ProtectedRoute path="/" component = {} />   */}
   </div>
 );
 

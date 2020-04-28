@@ -14,8 +14,10 @@
  *= require_self
  */
 
+
 html {
-  background-color: #384E77;
+  background-color: #26262B;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .modal-background {
@@ -33,7 +35,9 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: pink;
+  background-color: #2F3136;
   border-radius: 25px;
   padding: 25px;
+  width: 500px;
+  height: 500px;
 }
