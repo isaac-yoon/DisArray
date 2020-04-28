@@ -17,9 +17,3 @@ header {
   display: flex;
   flex-direction: row;
 }
-
-.links a {
-  padding: 5px;
-  border-radius: 25px;
-  background-color: #E6F9AF;
-}

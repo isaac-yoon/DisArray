@@ -30,12 +30,9 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let header;
     let form;
 
     if (this.props.formType === 'login') {
-      header = <h2>Login</h2>;
-
       form =
         <form onSubmit={this.handleSubmit}>
           <label className = "session-form-label">USERNAME
@@ -44,7 +41,7 @@ class SessionForm extends React.Component {
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
-              placeholder="enter a username"
+              placeholder="Enter a username"
               className = "session-form-input"
             />
 
@@ -59,7 +56,7 @@ class SessionForm extends React.Component {
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
-              placeholder="enter your password"
+              placeholder="Enter your password"
               className="session-form-input"
             />
             <br/>
@@ -67,13 +64,14 @@ class SessionForm extends React.Component {
 
           <br/>
 
-          <button>LOGIN</button>
+          <button 
+            className="session-form-button" 
+            id="session-form-login-button"
+          >LOGIN</button>
         </form>;
     }
 
     if (this.props.formType === 'signup') {
-      header = <h2>SignUp</h2>;
-
       form =
         <form onSubmit={this.handleSubmit}>
           <label className = "session-form-label">USERNAME
@@ -82,7 +80,7 @@ class SessionForm extends React.Component {
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
-              placeholder="choose a username"
+              placeholder="Choose a username"
               className="session-form-input"
             />
             <br/>
@@ -94,7 +92,7 @@ class SessionForm extends React.Component {
               type="email"
               value={this.state.email}
               onChange={this.handleInput('email')}
-              placeholder="write your email"
+              placeholder="Write your email"
               className="session-form-input"
             />
             <br/>
@@ -106,13 +104,16 @@ class SessionForm extends React.Component {
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
-              placeholder="choose a password"
+              placeholder="Choose a password"
               className="session-form-input"
             />
             <br/>
           </label>
           <br/>
-          <button>SIGN UP</button>
+          <button 
+            className="session-form-button" 
+            id="session-form-signup-button"
+          >SIGN UP</button>
         </form>;
     }
 
@@ -125,7 +126,6 @@ class SessionForm extends React.Component {
             </strong>
           )
         })}
-        {header}
         {form}
       </div>
     );

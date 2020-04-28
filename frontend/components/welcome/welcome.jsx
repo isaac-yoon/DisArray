@@ -14,20 +14,22 @@ const Welcome = ({ currentUser, logout, openModal }) => {
     );
   } else {
     return (
-      <div className='links'>
+      <div>
         <nav className="login-signup">
-          <button onClick={() => openModal('login')}>
-            LOGIN
-          </button>
+          <button
+            id="welcome-login-button"
+            onClick={() => openModal('login')}
+          >LOGIN</button>
 
             &nbsp;
             &nbsp;
             &nbsp;
             &nbsp;
 
-          <button onClick={() => openModal('signup')}>
-            SIGNUP
-          </button>
+          <button
+            id="welcome-signup-button"
+            onClick={() => openModal('signup')}
+          >SIGNUP</button>
         </nav>
       </div>
     )
