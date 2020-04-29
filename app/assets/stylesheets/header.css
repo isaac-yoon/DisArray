@@ -6,12 +6,12 @@ header {
 
 .welcome-nav-bar-login-signup-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .login-signup {
   display: flex;
-  align-self: right;
+  align-self: center;
 }
 
 .login-signup button {

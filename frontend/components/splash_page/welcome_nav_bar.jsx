@@ -14,7 +14,7 @@ const WelcomeNavBar = ({ currentUser, logout, openModal }) => {
     );
   } else {
     return (
-      <div 
+      <div
         className = "welcome-nav-bar-login-signup-links"
       >
         <nav className="login-signup">

@@ -28,6 +28,7 @@ class SessionForm extends React.Component {
           password: ''
         });
         this.props.closeModal();
+        this.props.history.push('/channels/@me');
       });
   }
 
@@ -177,9 +178,9 @@ class SessionForm extends React.Component {
       <div className="session-form">
         {this.props.errors.map(error => {
           return (
-            <strong>
-              {error}
-            </strong>
+            <ul className="session-errors">
+              <li id="session-errors-error">{error}</li>
+            </ul>
           )
         })}
         {form}

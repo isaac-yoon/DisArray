@@ -32,6 +32,11 @@ Things to Do
 	- The solution was to only reset the input fields and close the modal upon a successful processing of form rather than always doing it upon submission.
 	- Code should be under session_form.jsx under the handleSubmit function.
 
+- Image Rendering on Heroku
+	- had to refactor code
+		1. use rails helper method image_url('')
+		2. attach image onto windows in application.html.erb
+
 4.29.2020
 - Routing issue
 	- How do I redirect to the home page when a user types in a /randomlettershere?
@@ -39,5 +44,5 @@ Things to Do
 		- Have a route that with an exact path "/" and render a null component
 		- Below it, have a Redirect path = "/" that redirects to the home page
 
-	
+
 

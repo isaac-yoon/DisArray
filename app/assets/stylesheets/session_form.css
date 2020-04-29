@@ -48,3 +48,7 @@
 .session-form-button:active {
   background-color: rgb(98, 116, 179)
 }
+
+#session-errors-error {
+  color: #FFFFFF;
+}

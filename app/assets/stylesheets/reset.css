@@ -68,9 +68,11 @@ button {
 
 /* I usually expand input and textarea to full-width */
 input[type="text"],
+input[type="password"],
 textarea {
   width: 100%;
 }
+
 
 /* More friendly border */
 input,

@@ -6,11 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Users = User.create([
-#   { username: '', email: '',  },
-# ])
+
+User.destroy_all
+
+Users = User.create([
+  { username: 'DemoLogin', email: 'demouser@demo.disarray', password: '123456' },
+])
 
 # Servers = Server.create([
 
 # ])
-
