@@ -1,5 +1,6 @@
 DESIGN DECISIONS and BUG LOGS
-
+Things to Do
+[ ] - typewriter javascript library for demo login user
 
 
 4.27.2020
@@ -32,5 +33,11 @@ DESIGN DECISIONS and BUG LOGS
 	- Code should be under session_form.jsx under the handleSubmit function.
 
 4.29.2020
+- Routing issue
+	- How do I redirect to the home page when a user types in a /randomlettershere?
+		- Issue: using switch only allows the developer to render one component
+		- Have a route that with an exact path "/" and render a null component
+		- Below it, have a Redirect path = "/" that redirects to the home page
 
+	
 
