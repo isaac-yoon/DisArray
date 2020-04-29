@@ -17,8 +17,10 @@ const WelcomeMessage = (props) => {
           className="welcome-message"
           id="welcome-message-2"
         >
-          Disarray is the easiest way to communicate over voice, video, and text, whether you’re part of a school club, a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
-          </p>
+          Disarray is the easiest way to communicate over voice, video, and text, whether you’re part of a school club, 
+        <br/>
+          a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
+        </p>
       </div>
 
     </main>
