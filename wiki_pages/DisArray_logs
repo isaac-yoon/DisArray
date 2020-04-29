@@ -19,3 +19,18 @@ DESIGN DECISIONS and BUG LOGS
 
 	- I opted to use the login modal and prefill values using a demologin user account that was already saved in 
 
+- hit a pretty nasty bug involving and errors modals today
+	- This is how the bug was created. I wrote some code that involved closing a modal upon submission of a form. 
+	- This was written so that I could have a demo user be logged in and have the modal close upon login. 
+	- There were no issues with functionality at first glance because a demo login user will always have the correct credentials. 
+	- However, problems arose when a user attempted to login with incorrect credentials.
+	- What would happen is the modal would close even if they attempted to login with incorrect credentials. 
+	- Upon reopening the modal, the errors would persist. 
+	- The desired behavior was the errors would be cleared upon the modal closing. 
+	- The errors state would only be updated when after another login attempt. 
+	- The solution was to only reset the input fields and close the modal upon a successful processing of form rather than always doing it upon submission.
+	- Code should be under session_form.jsx under the handleSubmit function.
+
+4.29.2020
+
+
