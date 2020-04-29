@@ -7,7 +7,7 @@ const WelcomeImage = (props) => {
     <div className="welcome-image-container">
       <img
         alt="smallbox"
-        src="/assets/mariobox.svg"
+        src={window.smallbox}
         className="welcome-image-small-box"
       />
       <img
@@ -17,29 +17,29 @@ const WelcomeImage = (props) => {
       />
       <img
         alt="android"
-        src="/assets/android.svg"
+        src={window.android}
         className="welcome-image-android"
       />
       <img
         alt="iphone"
-        src="/assets/iphone.svg"
+        src={window.iphone}
         className="welcome-image-iphone"
       />
       <img
         alt="gamecontroller"
-        src="/assets/gamecontroller.svg"
+        src={window.gamecontroller}
         className="welcome-image-gamecontroller"
       />
       <div className="laptop-headphones-parent">
         <div className="laptop-headphones-child">
           <img
             alt="laptop"
-            src="/assets/laptop.svg"
+            src={window.laptop}
             className="welcome-image-laptop"
           />
           <img
             alt="headphones"
-            src="/assets/headphones.svg"
+            src={window.headphones}
             className="welcome-image-headphones"
           />        
         </div>

@@ -57,6 +57,7 @@
   height: 300px;
   left: 75%;
   top: 41%;
+  z-index: 10;
 }
 
 .laptop-headphones-child {
