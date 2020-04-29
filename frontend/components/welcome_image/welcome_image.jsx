@@ -12,7 +12,7 @@ const WelcomeImage = (props) => {
       />
       <img
         alt="desktop"
-        src="/assets/desktop.svg"
+        src={window.desktop}
         className="welcome-image-desktop"
       />
       <img
