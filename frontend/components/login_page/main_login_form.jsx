@@ -28,8 +28,10 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="main-login-form-container">
-        <div className="session-form">
-          <h2>Login</h2>
+        <div className="session-form" id="main-login-form">
+          <p id="main-login-form-welcome-message-1">Welcome back!</p>
+          <br/>
+          <p id="main-login-form-welcome-message-2">We're so excited to see you again!</p>
           <form>
             <div className="session-form">
               {this.props.errors.map(error => {
@@ -45,6 +47,7 @@ class LoginForm extends React.Component {
               <input
                 type="text"
                 className="session-form-input"
+                id="main-login-form-input"
                 value={this.state.username}
                 onChange={this.handleInput('username')}
               />
@@ -54,6 +57,7 @@ class LoginForm extends React.Component {
               <input
                 type="password"
                 className = "session-form-input"
+                id="main-login-form-input"
                 value={this.state.password}
                 onChange={this.handleInput('password')}
               />
@@ -64,6 +68,7 @@ class LoginForm extends React.Component {
             <button 
               className="session-form-button" 
               onClick={this.handleSubmit}
+              id="main-login-form-button"
             >Login</button>
             
           </form>

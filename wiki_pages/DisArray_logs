@@ -44,5 +44,10 @@ Things to Do
 		- Have a route that with an exact path "/" and render a null component
 		- Below it, have a Redirect path = "/" that redirects to the home page
 
+- Components Structure
+	- Have one component that houses all components in a single page
+	- render the one component in routes to create auth/protected routes
 
+4.30.2020
+- 
 
