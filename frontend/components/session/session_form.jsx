@@ -94,7 +94,6 @@ class SessionForm extends React.Component {
               placeholder="Enter a username"
               className = "session-form-input"
             />
-
             <br/>
           </label>
 

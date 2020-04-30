@@ -1,5 +1,8 @@
 require_relative 'boot'
 
+require_relative "../app/middlewares/snake_case_parameters"
+config.middleware.use SnakeCaseParameters
+
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
