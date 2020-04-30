@@ -13,9 +13,9 @@ const App = () => (
     <Modal />
     
     <Switch>
-      <AuthRoute path="/login" component = { MainLoginFormContainer } />
+      <AuthRoute exact path="/" component= {Splash} />
+      <AuthRoute exact path="/login" component = { MainLoginFormContainer } />
       <ProtectedRoute exact path="/channels/@me" component= { Main } />
-      <AuthRoute path="/" component= {Splash} />
       <Redirect path = "/" to = "/" />
     </Switch>
 
