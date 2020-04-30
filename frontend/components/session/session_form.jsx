@@ -33,7 +33,9 @@ class SessionForm extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.formType === 'demo-login') this.demoLogin();
+    if (this.props.formType === 'demo-login') {
+      this.demo()
+    }
   }
 
   componentWillUnmount() {
@@ -45,6 +47,36 @@ class SessionForm extends React.Component {
       username: 'DemoLogin',
       password: '123456'
     })
+  }
+
+  demo() {
+    const eInput = document.getElementById('email-input');
+    const pInput = document.getElementById('password-input');
+    const demoEmail = "demo@user.com";
+    const demoPass = "12345678";
+    let ei = 0;
+    let pi = 0;
+
+    const typePass = () => {
+      if (pi <= demoPass.length) {
+        pInput.value = demoPass.substr(0, pi++);
+        setTimeout(() => typePass(), 50);
+      } else {
+        setTimeout(() => this.props.processForm({
+          username: 'DemoLogin',
+          password: '123456'
+        }).then(() => this.props.closeModal()).then(() => this.props.history.push('/channels/@me')), 200)
+      }
+    }
+
+    const typeEmail = () => {
+      if (ei <= demoEmail.length) {
+        eInput.value = demoEmail.substr(0, ei++);
+        setTimeout(() => typeEmail(), 75);
+      } else typePass()
+    }
+
+    typeEmail();
   }
 
   render() {
@@ -100,6 +132,7 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('username')}
               placeholder="Enter a username"
               className="session-form-input"
+              id="email-input"
             />
 
             <br />
@@ -115,6 +148,7 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('password')}
               placeholder="Enter your password"
               className="session-form-input"
+              id="password-input"
             />
             <br />
           </label>
@@ -122,6 +156,7 @@ class SessionForm extends React.Component {
           <br />
 
           <button
+            onClick={this.demo}
             className="session-form-button"
             id="session-form-login-button"
           >LOGIN</button>
