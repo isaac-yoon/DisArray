@@ -49,5 +49,12 @@ Things to Do
 	- render the one component in routes to create auth/protected routes
 
 4.30.2020
-- 
+- Issue with Server Index Container
+	- in mapStateToProps, there was an issue with state.entities.servers
+	- state.entities.servers was undefined
+	- issue was in the reducers
+		- rather than putting my serversReducer in entities, I put it in the rootReducer
+		- adding the serversReducer to my entitiesReducer fixed the problems
+	
+
 

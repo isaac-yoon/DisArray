@@ -46,3 +46,11 @@
   color: gray;
 }
 
+
+.main-app-nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+/* .main-app-nav-bar-discordicon {
+
+} */
