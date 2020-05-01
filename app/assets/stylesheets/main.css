@@ -46,11 +46,76 @@
   color: gray;
 }
 
+.main-app {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
 
 .main-app-nav-bar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  width: 100px;
+  align-items: center;
+  height: 100%;
 }
+
+.guild-separator {
+  height: 2px;
+  width: 32px;
+  border-radius: 1px;
+  background-color: gray;
+  display: block;
+  /* align-items: center; */
+}
+
 /* .main-app-nav-bar-discordicon {
 
 } */
+
+.server-index-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Main App Container */
+.main-app-content-page {
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.main-app-main-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#main-app-top-bar {
+  display: block;
+  background-color: red;
+  width: 100%;
+}
+
+
+.main-app-content-container {
+  display: flex;
+  height: 100%;
+}
+
+#main-app-content-side-bar {
+  height: 100%;
+  background-color: green;
+}
+
+#main-app-content {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+}

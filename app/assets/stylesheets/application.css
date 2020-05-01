@@ -41,3 +41,7 @@ html {
   width: 50%;
   height: 90%;
 }
+
+button {
+  cursor: pointer;
+}

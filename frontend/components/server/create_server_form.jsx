@@ -62,11 +62,6 @@ class CreateServerForm extends React.Component {
 
           </label>
         </form>
-
-        This is the Create Server Form
-        TESTING
-        TESTING
-
       </div>
     );
   }

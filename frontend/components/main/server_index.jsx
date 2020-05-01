@@ -9,13 +9,12 @@ class ServerIndex extends React.Component {
 
   render() {
     return(
-      <ul className = "server-index-list">
+      <div className = "server-index-list">
         Servers:
         {this.props.servers.map((server) => (
           <ServerIndexItem key={server.id} server={server} />
         ))}
-
-      </ul>
+      </div>
     )
   }
 }

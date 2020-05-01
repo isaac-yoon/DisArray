@@ -42,8 +42,9 @@ class LoginForm extends React.Component {
                 )})
               }
             </div>
-
+              <br/>
             <label className = "session-form-label">Username:
+            <br/>
               <input
                 type="text"
                 className="session-form-input"
@@ -53,7 +54,10 @@ class LoginForm extends React.Component {
               />
             </label>
 
+            <br/>
+
             <label className = "session-form-label">Password:
+            <br/>
               <input
                 type="password"
                 className = "session-form-input"
@@ -64,13 +68,21 @@ class LoginForm extends React.Component {
             </label>
 
             <br/>
-
+            <br/>
             <button 
               className="session-form-button" 
               onClick={this.handleSubmit}
               id="main-login-form-button"
             >Login</button>
-            
+
+            <br />
+            <br />
+            <button
+              className="session-form-button"
+              onClick={this.handleSubmit}
+              id="main-login-form-button"
+            >Try the Demo</button>  
+
           </form>
         </div>
       </div>

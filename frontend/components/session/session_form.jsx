@@ -42,13 +42,6 @@ class SessionForm extends React.Component {
     this.props.clearErrors()
   }
 
-  demoLogin() {
-    this.setState({
-      username: 'DemoLogin',
-      password: '123456'
-    })
-  }
-
   demo() {
     const eInput = document.getElementById('email-input');
     const pInput = document.getElementById('password-input');

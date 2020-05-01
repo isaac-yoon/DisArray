@@ -13,19 +13,15 @@ const NavBar = ({currentUser, logout, openModal}) => {
           />
         </Link>
 
-        <div className='main-app-nav-bar-middle'>
-          <h6>
-            You are logged in {currentUser.username}!
-          </h6>
+        <div className = "guild-separator"></div>
 
+        <div className='main-app-nav-bar-middle'>
           <ServerIndexContainer />
         </div>
 
         <button onClick = {() => openModal('create-server')}>
           Add Server
         </button>
-
-        
 
         <button 
           id='main-logout-button' 

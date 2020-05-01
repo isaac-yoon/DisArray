@@ -1,11 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const ServerIndexItem = ({server}) => {
   return(
-    <li className="server-index-item">
-      name: { server.name }
+    <div className="server-index-item">
+      {/* <Link to= > */}
+        { server.name }
+      {/* </Link> */}
       <br/>
-    </li>
+    </div>
   )
 }
 
