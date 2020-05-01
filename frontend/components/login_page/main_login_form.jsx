@@ -10,6 +10,11 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demo = this.demo.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors()
   }
 
 
@@ -18,6 +23,38 @@ class LoginForm extends React.Component {
       this.setState({ [type]: e.target.value });
     }
   };
+
+  demo() {
+    const { login, clearErrors } = this.props;
+
+    const eInput = document.getElementById('main-login-form-username-input');
+    const pInput = document.getElementById('main-login-form-password-input');
+    const demoEmail = "demo@user.com";
+    const demoPass = "12345678";
+    let ei = 0;
+    let pi = 0;
+
+    const typePass = () => {
+      if (pi <= demoPass.length) {
+        pInput.value = demoPass.substr(0, pi++);
+        setTimeout(() => typePass(), 50);
+      } else {
+        setTimeout(() => login({
+          username: 'DemoLogin',
+          password: '123456'
+        }).then(() => this.props.history.push('/channels/@me')), 200)
+      }
+    }
+
+    const typeEmail = () => {
+      if (ei <= demoEmail.length) {
+        eInput.value = demoEmail.substr(0, ei++);
+        setTimeout(() => typeEmail(), 75);
+      } else typePass()
+    }
+
+    typeEmail();
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -48,7 +85,7 @@ class LoginForm extends React.Component {
               <input
                 type="text"
                 className="session-form-input"
-                id="main-login-form-input"
+                id="main-login-form-username-input"
                 value={this.state.username}
                 onChange={this.handleInput('username')}
               />
@@ -61,7 +98,7 @@ class LoginForm extends React.Component {
               <input
                 type="password"
                 className = "session-form-input"
-                id="main-login-form-input"
+                id="main-login-form-password-input"
                 value={this.state.password}
                 onChange={this.handleInput('password')}
               />
@@ -79,8 +116,8 @@ class LoginForm extends React.Component {
             <br />
             <button
               className="session-form-button"
-              onClick={this.handleSubmit}
-              id="main-login-form-button"
+              onClick={this.demo}
+              id="main-login-form-demo-button"
             >Try the Demo</button>  
 
           </form>

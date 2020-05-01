@@ -55,6 +55,14 @@ Things to Do
 	- issue was in the reducers
 		- rather than putting my serversReducer in entities, I put it in the rootReducer
 		- adding the serversReducer to my entitiesReducer fixed the problems
-	
 
+
+5.1.2020
+- Issue with Demo Login Button in Main Login Form Container
+	- demo() function did not have access to props
+		- tried deconstructing it but 'this' was still undefined
+		- then I realized that 'this' was different inside the demo() function
+		- SOLUTION: binding this to the demo function fixed the issue!
+
+	
 

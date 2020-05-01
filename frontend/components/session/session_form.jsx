@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
   }
 
   demo() {
-    const eInput = document.getElementById('email-input');
+    const eInput = document.getElementById('username-input');
     const pInput = document.getElementById('password-input');
     const demoEmail = "demo@user.com";
     const demoPass = "12345678";
@@ -124,7 +124,7 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('username')}
               placeholder="Enter a username"
               className="session-form-input"
-              id="email-input"
+              id="username-input"
             />
 
             <br />
