@@ -60,15 +60,14 @@ class RegisterForm extends React.Component {
 
             <br />
 
-            <br />
-            <label className="session-form-label">EMAIL
+            <label className="session-form-label">Email:
             <br />
               <input
                 type="email"
                 value={this.state.email}
                 onChange={this.handleInput('email')}
-                placeholder="Write your email"
                 className="session-form-input"
+                id = "main-login-form-email-input"
               />
               <br />
             </label>
@@ -91,7 +90,7 @@ class RegisterForm extends React.Component {
               className="session-form-button"
               onClick={this.handleSubmit}
               id="main-login-form-button"
-            >SignUp</button>
+            >Register</button>
 
           </form>
         </div>
