@@ -2,8 +2,12 @@
   position: relative;
   width: 1000px;
   height: 700px;
+  left: 1%;
 }
 
+.welcome-image-container div {
+  left: 50%;
+}
 
 .welcome-image-small-box {
   left: 35%;
@@ -46,7 +50,7 @@
 }
 
 .welcome-image-headphones {
-  left: 55%;
+  left: 50%;
   bottom: 19%;
   position: absolute;
 }
@@ -55,7 +59,7 @@
   position: absolute;
   width: 500px;
   height: 300px;
-  left: 75%;
+  left: 50%;
   top: 41%;
 }
 

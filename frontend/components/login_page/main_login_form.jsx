@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -24,7 +25,8 @@ class LoginForm extends React.Component {
     }
   };
 
-  demo() {
+  demo(e) {
+    e.preventDefault();
     const { login, clearErrors } = this.props;
 
     const eInput = document.getElementById('main-login-form-username-input');
@@ -42,7 +44,7 @@ class LoginForm extends React.Component {
         setTimeout(() => login({
           username: 'DemoLogin',
           password: '123456'
-        }).then(() => this.props.history.push('/channels/@me')), 200)
+        }).then(() => this.props.history.push('/channels/@me')))
       }
     }
 
@@ -104,7 +106,17 @@ class LoginForm extends React.Component {
               />
             </label>
 
-            <br/>
+            <div className="main-login-form-register">
+              <p id="register-message">
+                Need an account?
+              </p>
+              &nbsp;
+              &nbsp;
+              <Link to="/register" id="register-button">
+                Register
+              </Link>
+
+            </div>
             <br/>
             <button 
               className="session-form-button" 

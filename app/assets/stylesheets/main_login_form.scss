@@ -12,9 +12,9 @@
 
 #main-login-form {
   position: absolute;
-  top: 15%;
+  top: 5%;
   background-color: #36393f;
-  height: 500px;
+  height: 550px;
   width: 500px;
   border-radius: 10px;
 }
@@ -46,4 +46,26 @@
 
 #main-login-form-button {
   width: 300px;
+}
+
+#main-login-form-demo-button {
+  width: 300px;
+}
+
+.main-login-form-register {
+  display: flex;
+}
+
+#register-message {
+  color: #B9BBBE;
+}
+
+#register-button {
+  color: #7289DA;
+  text-decoration: none;
+}
+
+#register-button:hover {
+  color: red;
+  text-decoration: underline;
 }

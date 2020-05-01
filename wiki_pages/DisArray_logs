@@ -64,5 +64,5 @@ Things to Do
 		- then I realized that 'this' was different inside the demo() function
 		- SOLUTION: binding this to the demo function fixed the issue!
 
-	
-
+	- demo() function was submitting the form upon click as well as trying to execute the ghost typewriter program
+		- SOLUTION: adding a e.preventDefault() to prevent form submission
