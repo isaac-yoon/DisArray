@@ -66,3 +66,4 @@ Things to Do
 
 	- demo() function was submitting the form upon click as well as trying to execute the ghost typewriter program
 		- SOLUTION: adding a e.preventDefault() to prevent form submission
+

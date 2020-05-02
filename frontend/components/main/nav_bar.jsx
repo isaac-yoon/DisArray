@@ -5,13 +5,11 @@ import {Link} from 'react-router-dom';
 const NavBar = ({currentUser, logout, openModal}) => {
     return(
       <div className="main-app-nav-bar">
-        <Link to="/channels/@me">
-          <img
-            alt="discordicon"
-            src={window.discordicon}
-            className="main-app-nav-bar-discordicon"
-          />
-        </Link>
+          <Link to="/channels/@me">
+            <div className = "main-app-icon-container" id="discordicon-container">
+              <img alt="discordicon" src={window.discordicon} className="main-app-nav-bar-discordicon"/>
+            </div>
+          </Link>
 
         <div className = "guild-separator"></div>
 
@@ -19,8 +17,13 @@ const NavBar = ({currentUser, logout, openModal}) => {
           <ServerIndexContainer />
         </div>
 
-        <button onClick = {() => openModal('create-server')}>
-          Add Server
+        <div className="guild-separator"></div>
+
+        <button 
+          onClick = {() => openModal('create-server')}
+          id = "main-add-server"
+        >
+          Add
         </button>
 
         <button 
@@ -28,7 +31,6 @@ const NavBar = ({currentUser, logout, openModal}) => {
           onClick={logout}
         >
         Log Out</button>
-
       </div>
     )
 }

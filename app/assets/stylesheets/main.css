@@ -66,15 +66,32 @@
 .guild-separator {
   height: 2px;
   width: 32px;
+  margin: 10px;
+  border: 1px solid gray;
   border-radius: 1px;
   background-color: gray;
   display: block;
-  /* align-items: center; */
 }
 
-/* .main-app-nav-bar-discordicon {
+.main-app-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
 
-} */
+.main-app-icon-container:hover {
+  border-radius: 10px;
+}
+
+
+.main-app-nav-bar-discordicon {
+  width: 35px;
+  height: 35px;
+}
 
 .server-index-list {
   display: flex;
@@ -98,12 +115,22 @@
   width: 100%;
 }
 
+.main-app-nav-bar button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 1px;
+}
+
+.main-app-nav-bar button:hover {
+  border-radius: 10px;
+}
+
 #main-app-top-bar {
   display: block;
   background-color: red;
   width: 100%;
 }
-
 
 .main-app-content-container {
   display: flex;
@@ -119,4 +146,18 @@
   height: 100%;
   width: 100%;
   background-color: pink;
+}
+
+.server-index-item {
+  border: 1px solid black;
+  margin: 1px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.server-index-item:hover {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
 }
