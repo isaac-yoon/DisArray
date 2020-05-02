@@ -56,7 +56,7 @@
 .main-app-nav-bar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100px;
   align-items: center;
   height: 100%;
