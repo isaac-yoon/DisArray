@@ -117,6 +117,17 @@ NOT THE SPLASH PAGE
   flex-direction: column;
 }
 
+#main-add-server {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 /* Main App Container */

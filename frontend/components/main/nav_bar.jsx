@@ -19,18 +19,17 @@ const NavBar = ({currentUser, logout, openModal}) => {
 
         <div className="guild-separator"></div>
 
-        <button 
-          onClick = {() => openModal('create-server')}
-          id = "main-add-server"
-        >
-          Add
+        <button onClick = {() => openModal('create-server')}>
+          <div id="main-add-server">
+            Add
+          </div>
         </button>
 
-        <button 
-          id='main-logout-button' 
-          onClick={logout}
-        >
-        Log Out</button>
+        <button onClick={logout}>
+          <div id="main-logout-button">
+            Log Out
+          </div>
+        </button>
       </div>
     )
 }
