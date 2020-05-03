@@ -19,9 +19,6 @@ class ChannelIndex extends React.Component {
   render() {
     return (
       <div className = "channel-info-container">
-        <div className = "channel-info-server-name">
-          PLACEHOLDER FOR SERVER NAME
-        </div>
         <div className="channel-index-list">
           {this.props.channels.map((channel) => (
             <ChannelIndexItem key={channel.id} channel={channel} />

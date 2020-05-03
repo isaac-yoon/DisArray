@@ -17,8 +17,7 @@ const App = () => (
       <AuthRoute exact path="/" component= {Splash} />
       <AuthRoute exact path="/login" component = { MainLoginFormContainer } />
       <AuthRoute exact path="/register" component = { MainRegisterFormContainer } />
-      <ProtectedRoute exact path="/channels/@me" component= { Main } />
-      <ProtectedRoute path="/channels/@me/:server_id" component= { Main } />
+      <ProtectedRoute path="/channels/@me" component= { Main } />
       <Redirect path = "/" to = "/" />
     </Switch>
 
