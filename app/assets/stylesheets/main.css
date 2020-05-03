@@ -46,12 +46,28 @@
   color: gray;
 }
 
+
+
+
+
+
+
 .main-app {
   display: flex;
   flex-direction: row;
   width: 100vw;
   height: 100vh;
 }
+
+
+
+
+
+
+/* 
+Main Navigation Bar for the Main App Page
+NOT THE SPLASH PAGE
+ */
 
 .main-app-nav-bar {
   display: flex;
@@ -62,6 +78,8 @@
   height: 100%;
   color: white;
 }
+
+
 
 .guild-separator {
   height: 2px;
@@ -102,6 +120,8 @@
 
 
 /* Main App Container */
+
+
 .main-app-content-page {
   color: white;
   height: 100vh;
@@ -150,11 +170,14 @@
 }
 
 .server-index-item {
+  display: flex;
   border: 1px solid black;
   margin: 1px;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .server-index-item:hover {
@@ -162,3 +185,5 @@
   width: 50px;
   height: 50px;
 }
+
+
