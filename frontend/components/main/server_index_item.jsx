@@ -3,12 +3,12 @@ import {Link} from 'react-router-dom';
 
 const ServerIndexItem = ({server}) => {
   return(
-    <div className="server-index-item">
-      {/* <Link to= > */}
-        { server.name[0] }
-      {/* </Link> */}
-      <br/>
-    </div>
+      <Link to = {`/channels/@me/${server.id}`}>
+        <div className="server-index-item">
+          { server.name[0] }
+        <br/>
+        </div>
+      </Link>
   )
 }
 

@@ -4,6 +4,9 @@ export const RECEIVE_SERVERS = 'RECEIVE_SERVERS';
 export const RECEIVE_SERVER = 'RECEIVE_SERVER';
 export const REMOVE_SERVER = 'REMOVE_SERVER';
 
+export const REPLACE_SERVERS = 'REPLACE_SERVERS';
+
+
 export const receiveServers = servers => ({
   type: RECEIVE_SERVERS,
   servers
@@ -18,7 +21,6 @@ export const removeServer = serverId => ({
   type: REMOVE_SERVER,
   serverId
 })
-
 
 export const getServers = () => (dispatch) => {
   return ServerAPIUtil.getServers()

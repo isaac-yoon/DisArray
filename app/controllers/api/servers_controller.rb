@@ -1,10 +1,10 @@
 class Api::ServersController < ApplicationController
 
   def index
-    @servers = Server.all
+    @servers = Server.where(owner_id: current_user.id)
     render :index
   end
-
+  
   def create
     @server = Server.new(server_params)
     @server.owner_id = current_user.id
@@ -17,7 +17,7 @@ class Api::ServersController < ApplicationController
   end
 
   def destroy
-    @server = Server.find_by(owner_id: params[:id])
+    @server = Server.find_by(id: params[:id])
 
     if @server.nil?
       render json: ['Error - server not found'], status: 422

@@ -1,7 +1,4 @@
 DESIGN DECISIONS and BUG LOGS
-Things to Do
-[ ] - typewriter javascript library for demo login user
-
 
 4.27.2020
 - database schema
@@ -66,4 +63,17 @@ Things to Do
 
 	- demo() function was submitting the form upon click as well as trying to execute the ghost typewriter program
 		- SOLUTION: adding a e.preventDefault() to prevent form submission
+
+
+5.2.2020
+- Issue with state and servers
+	- I had only be testing my code with one user. Upon logging in another user's account, I realized there were some major bugs in my code. 
+	- For starters, in my servers controller, I was fetching all servers upon log in. 
+		- Fixed that by modifying index action in servers controller, selecting servers where it's owner id matched the current user's id
+		- This only fixed it if the page was refreshed. However, it did not fix it during initial log in. 
+			- What was happening was upon initial log in, the servers that was present during the last log in was being loaded. 
+- FIXED: in my serversReducer, in RECEIVE_SERVERS, get rid of oldState so that oldState is not being appended to another user's login.
+- Questions to ask: when would you use oldState and when would you just replace it?
+	- performance => oldState would work better in some cases
+
 

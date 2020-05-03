@@ -11,7 +11,7 @@ const serversReducer = (oldState = {}, action) => {
     case RECEIVE_SERVER:
       return Object.assign({}, oldState, {[action.server.id]: action.server})
     case RECEIVE_SERVERS:
-      return Object.assign({}, oldState, action.servers)
+      return Object.assign({}, action.servers)
     case REMOVE_SERVER:
       let nextState = Object.assign({}, oldState)
       delete nextState[action.serverId]
