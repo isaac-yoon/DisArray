@@ -12,7 +12,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     getServers: () => dispatch(getServers()),
-    // clearServers: () => dispatch(receiveServers([]))
   }
 }
 

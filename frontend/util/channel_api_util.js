@@ -13,13 +13,13 @@ export const destroyChannel = (channelId) => (
   })
 )
 
-export const getChannels = () => (
-  $.ajax({
+export const getChannels = (serverId) => {
+  return $.ajax({
     method: 'GET',
     url: '/api/channels',
+    data: { serverId:serverId }
   })
-)
-
+}
 // export const getChannel = (channelId) => (
 //   $.ajax({
 //     method: 'GET',

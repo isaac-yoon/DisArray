@@ -1,5 +1,7 @@
 import React from 'react';
 import NavBarContainer from './nav_bar_container';
+import SideBar from '../channels/main_app_side_bar'
+
 
 const Main = () => {
   return(
@@ -12,7 +14,7 @@ const Main = () => {
 
         <div className = "main-app-content-container">
           <div id="main-app-content-side-bar">
-            This is the side-bar component
+            <SideBar />
           </div>
           <div id="main-app-content">
             This is the main component that will house messages later

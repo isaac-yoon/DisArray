@@ -1,11 +1,11 @@
 class Api::ChannelsController < ApplicationController
   def index
-    @server = Server.find_by(id: params[:id])
-    if @server.nil?
-      render json: ['Server could not be found'], status: 422
-    else
-      @channels = @server.channels
-    end
+    @server = Server.find_by(id: params[:server_id])
+    # if @server.nil?
+    #   render json: ['Server could not be found'], status: 422
+    # else
+    # end
+    @channels = @server.channels
     render :index
   end
 
