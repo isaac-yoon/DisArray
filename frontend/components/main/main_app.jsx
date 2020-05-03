@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarContainer from './nav_bar_container';
-import SideBar from '../channels/main_app_side_bar'
+import SideBar from '../sidebar/main_app_side_bar'
 
 
 const Main = () => {

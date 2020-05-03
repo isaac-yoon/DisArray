@@ -172,6 +172,7 @@ NOT THE SPLASH PAGE
 #main-app-content-side-bar {
   height: 100%;
   background-color: green;
+  width: 300px;
 }
 
 #main-app-content {

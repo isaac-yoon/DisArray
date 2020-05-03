@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import * as APIChannelUtil from './util/channel_api_util';
-import * as APIServerUtil from './util/server_api_util';
+import * as APIChannelActions from './actions/channel_actions';
+import * as APIServerActions from './actions/server_actions';
 import configureStore from './store/store';
 import Root from './components/root';
 
@@ -23,13 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // BEGIN TESTING
-  window.createChannel = APIChannelUtil.createChannel;
-  window.destroyChannel = APIChannelUtil.destroyChannel;
-  window.getChannels = APIChannelUtil.getChannels;
-  // window.getChannel = APIChannelUtil.getChannel;
-  window.editChannel = APIChannelUtil.editChannel;
+  window.createChannel = APIChannelActions.createChannel;
+  window.deleteChannel = APIChannelActions.deleteChannel;
+  window.getChannels = APIChannelActions.getChannels;
+  // window.getChannel = APIChannelActions.getChannel;
+  window.editChannel = APIChannelActions.editChannel;
 
-  window.destroyServer = APIServerUtil.destroyServer;
+  window.deleteServer = APIServerActions.deleteServer;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;

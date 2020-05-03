@@ -5,7 +5,7 @@ const ServerIndexItem = ({server}) => {
   return(
       <Link to = {`/channels/@me/${server.id}/`}>
         <div className="server-index-item">
-          { server.name[0] }
+          { server.name[0].toUpperCase() }
         <br/>
         </div>
       </Link>

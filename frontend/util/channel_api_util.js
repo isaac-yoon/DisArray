@@ -17,7 +17,7 @@ export const getChannels = (serverId) => {
   return $.ajax({
     method: 'GET',
     url: '/api/channels',
-    data: { serverId:serverId }
+    data: { serverId : serverId }
   })
 }
 // export const getChannel = (channelId) => (
