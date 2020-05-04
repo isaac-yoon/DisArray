@@ -5,12 +5,11 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import TopContainer from './top_server_name_container';
 import TopHomePage from './top_home_page';
 // import { Link } from 'react-router-dom';
-const Test = () => (<h1>TEST</h1>);
 
 const SideBar = ({ currentUser, logout, openModal }) => {
   return (
     <div className="main-app-side-bar">
-
+      
       <div className="main-app-side-bar-name-container">
         <Switch>
           <ProtectedRoute path= "/channels/@me/:server_id" component = {TopContainer} />

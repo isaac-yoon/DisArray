@@ -27,8 +27,8 @@ export const getServers = () => (dispatch) => {
     .then(servers => dispatch(receiveServers(servers)))
 }
 
-export const getServer = () => (dispatch) => {
-  return ServerAPIUtil.getServer()
+export const getServer = (serverId) => (dispatch) => {
+  return ServerAPIUtil.getServer(serverId)
     .then(server => dispatch(receiveServer(server)))
 }
 
