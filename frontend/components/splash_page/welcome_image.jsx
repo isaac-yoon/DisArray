@@ -87,7 +87,7 @@ const WelcomeImage = (props) => {
         src={window.square}
         id="welcome-image-square-1"
       />
-      
+
       <img
         alt="square"
         src={window.square}
@@ -98,6 +98,54 @@ const WelcomeImage = (props) => {
         alt="square"
         src={window.square}
         id="welcome-image-square-3"
+      />
+
+      <img
+        alt="circle"
+        src={window.circle}
+        id="welcome-image-circle-1"
+      />
+
+      <img
+        alt="circle"
+        src={window.circle}
+        id="welcome-image-circle-2"
+      />
+
+      <img
+        alt="circle"
+        src={window.circle}
+        id="welcome-image-circle-3"
+      />
+
+      <img
+        alt="circlefill"
+        src={window.circlefill}
+        id="welcome-image-circlefill-1"
+      />
+      
+      <img
+        alt="circlefill"
+        src={window.circlefill}
+        id="welcome-image-circlefill-2"
+      />
+
+      <img
+        alt="circlefill"
+        src={window.circlefill}
+        id="welcome-image-circlefill-3"
+      />
+
+      <img
+        alt="circlefill"
+        src={window.circlefill}
+        id="welcome-image-circlefill-4"
+      />
+
+      <img
+        alt="circlefill"
+        src={window.circlefill}
+        id="welcome-image-circlefill-5"
       />
 
       <img
