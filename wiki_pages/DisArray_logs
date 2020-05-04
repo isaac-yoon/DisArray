@@ -76,4 +76,13 @@ DESIGN DECISIONS and BUG LOGS
 - Questions to ask: when would you use oldState and when would you just replace it?
 	- performance => oldState would work better in some cases
 
+5.3.2020
+- Frontend Routes
+	- made some changes with frontend routes
+	- specifically, channels/@me/:serverId/:channelId vs. channels/:serverId/:channelId
+	- made it the former option because it was easier to use react switch statements to switch components out
 
+- when trying to render using mapDispatchToState using the servers slice of state, it would error out in a specific manner
+	- when refreshing while on a server index item
+	- this was probably because for a brief moment, the server slice of state was blank
+	- this was fixed using a ternary in the render function of server name container
