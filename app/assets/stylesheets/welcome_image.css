@@ -2,7 +2,7 @@
   position: relative;
   width: 1000px;
   height: 700px;
-  left: 1%;
+  left: 0.1%;
 }
 
 .welcome-image-container div {
@@ -21,6 +21,35 @@
   top: 15%;
   left: 60%;
   margin-left: -289.5px;
+  position: absolute;
+}
+
+#welcome-image-bomb {
+  top: 25%;
+  left: 12%;
+  position: absolute;
+}
+
+#welcome-image-coin-1 {
+  top: 28%;
+  left: 20%;
+  position: absolute;
+}
+
+#welcome-image-coin-2 {
+  left: 75%;
+  position: absolute;
+}
+
+#welcome-image-potion {
+  top: 53%;
+  position: absolute;
+}
+
+#welcome-image-gamepack {
+  top: 12%;
+  z-index: -1;
+  left: 85%;
   position: absolute;
 }
 
@@ -55,6 +84,13 @@
   position: absolute;
 }
 
+#welcome-image-disc {
+  position: absolute;
+  top: 67%;
+  left: 110%;
+  z-index: -1;
+}
+
 .laptop-headphones-parent {
   position: absolute;
   width: 500px;
@@ -85,4 +121,41 @@
   .welcome-image-desktop {
     display: none;
   }
+  #welcome-image-coin-1 {
+    display: none;
+  }
+  .welcome-image-coin-2 {
+    display: none;
+  }
+  #welcome-image-bomb {
+    display: none;
+  }
+  #welcome-image-potion {
+    display: none;
+  }
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    transition: all .5s ease;
+}
+
+.floating2 {  
+    animation-name: floating;
+    animation-duration: 3.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    transition: all .5s ease;
+}
+
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
 }

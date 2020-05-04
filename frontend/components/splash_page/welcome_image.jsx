@@ -19,6 +19,46 @@ const WelcomeImage = (props) => {
       />
 
       <img
+        alt="bomb"
+        src={window.bomb}
+        id="welcome-image-bomb"
+        className="floating"
+      />
+
+      <img
+        alt="coin"
+        src={window.coin}
+        id="welcome-image-coin-1"
+        className="floating2"
+      />
+
+      <img
+        alt="coin"
+        src={window.coin}
+        id="welcome-image-coin-2"
+        className="floating"
+      />
+
+      <img
+        alt="potion"
+        src={window.potion}
+        id="welcome-image-potion"
+      />
+
+      <img
+        alt="gamepack"
+        src={window.gamepack}
+        id="welcome-image-gamepack"
+        className="floating2"
+      />
+
+      <img
+        alt="disc"
+        src={window.disc}
+        id="welcome-image-disc"
+      />
+
+      <img
         alt="android"
         src={window.android}
         className="welcome-image-android"
