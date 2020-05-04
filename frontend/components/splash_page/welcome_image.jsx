@@ -59,6 +59,18 @@ const WelcomeImage = (props) => {
       />
 
       <img
+        alt="x"
+        src={window.xicon}
+        id="welcome-image-x-1"
+      />
+
+      <img
+        alt="x"
+        src={window.xicon}
+        id="welcome-image-x-2"
+      />
+
+      <img
         alt="android"
         src={window.android}
         className="welcome-image-android"
