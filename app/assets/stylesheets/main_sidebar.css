@@ -1,0 +1,21 @@
+#channel-index-header {
+  color: #8e9297;
+}
+
+.side-bar-server-name {
+  padding: 15px;
+  border-bottom: 1px groove black;
+}
+
+.main-app-side-bar-name-container {
+  font-size: 16px;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 600;
+  /* border-bottom: 0.3px groove black; */
+  /* -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; */
+}

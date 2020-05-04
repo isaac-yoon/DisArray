@@ -7,7 +7,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 
 const TopHomePage = ({ currentUser, logout, openModal }) => {
   return (
-    <div className="main-app-side-bar-name-container">
+    <div>
       PLACEHOLDER FOR MAIN HOME PAGE
     </div>
   )

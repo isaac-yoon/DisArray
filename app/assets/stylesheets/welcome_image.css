@@ -104,6 +104,42 @@
   top: 55%;
 }
 
+#welcome-image-triangle-1 {
+  position: absolute;
+  opacity: 0.3;
+  left: 70%;
+  top: 5%;
+}
+
+#welcome-image-triangle-2 {
+  position: absolute;
+  opacity: 0.3;
+  left: 5%;
+  top: 35%;
+}
+
+#welcome-image-square-1 {
+  position: absolute;
+  opacity: 0.3;
+  top: -5%;
+  left: 108%;
+}
+
+#welcome-image-square-2 {
+  position: absolute;
+  opacity: 0.3;
+  left: 100%;
+  top: 22%;
+}
+
+#welcome-image-square-3 {
+  position: absolute;
+  opacity: 0.3;
+  left: 74%;
+  top: 72%;
+  z-index: -1;
+}
+
 .laptop-headphones-parent {
   position: absolute;
   width: 500px;
@@ -144,6 +180,12 @@
     display: none;
   }
   #welcome-image-potion {
+    display: none;
+  }
+  #welcome-image-triangle-1 {
+    display: none;
+  }
+  #welcome-image-triangle-2 {
     display: none;
   }
 }

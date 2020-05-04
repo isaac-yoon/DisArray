@@ -1,3 +1,7 @@
+/* .main-app-nav-bar {
+  overflow: hidden;
+} */
+
 .main-app-nav-bar button {
   border-radius: 50%;
   width: 50px;
@@ -27,6 +31,7 @@
   align-items: center;
   justify-content: center;
   -webkit-transition: background-color 0.2s;
+  /* overflow: scroll; */
 }
 
 .server-index-item:hover {

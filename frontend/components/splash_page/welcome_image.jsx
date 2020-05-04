@@ -71,6 +71,36 @@ const WelcomeImage = (props) => {
       />
 
       <img
+        alt="triangle"
+        src={window.triangle}
+        id="welcome-image-triangle-1"
+      />
+
+      <img
+        alt="triangle"
+        src={window.triangle}
+        id="welcome-image-triangle-2"
+      />
+
+      <img
+        alt="square"
+        src={window.square}
+        id="welcome-image-square-1"
+      />
+      
+      <img
+        alt="square"
+        src={window.square}
+        id="welcome-image-square-2"
+      />
+
+      <img
+        alt="square"
+        src={window.square}
+        id="welcome-image-square-3"
+      />
+
+      <img
         alt="android"
         src={window.android}
         className="welcome-image-android"

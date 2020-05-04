@@ -29,8 +29,8 @@ class TopServerName extends React.Component {
     // debugger
     // const {servers} = this.props
     return (
-      <div className="main-app-side-bar-name-container">
-        { this.props.servers[this.props.match.params.server_id] ? this.props.servers[this.props.match.params.server_id].name : null }
+      <div className="side-bar-server-name">
+        { this.props.servers[this.props.match.params.server_id] ? this.props.servers[this.props.match.params.server_id].name.toUpperCase() : null }
       </div>
     )
   }
