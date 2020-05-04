@@ -98,12 +98,13 @@ NOT THE SPLASH PAGE
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  border: 1px solid black;
+  background-color: #36393f;
   margin-top: 10px;
 }
 
 .main-app-icon-container:hover {
   border-radius: 10px;
+  background-color: #7289DA;
 }
 
 
@@ -121,12 +122,14 @@ NOT THE SPLASH PAGE
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 #main-logout-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 
@@ -147,17 +150,6 @@ NOT THE SPLASH PAGE
   width: 100%;
 }
 
-.main-app-nav-bar button {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin: 1px;
-}
-
-.main-app-nav-bar button:hover {
-  border-radius: 10px;
-}
-
 #main-app-top-bar {
   display: block;
   background-color: red;
@@ -169,33 +161,15 @@ NOT THE SPLASH PAGE
   height: 100%;
 }
 
+
 #main-app-content-side-bar {
   height: 100%;
-  background-color: green;
+  background-color: #2f3136;
   width: 300px;
 }
 
 #main-app-content {
   height: 100%;
   width: 100%;
-  background-color: pink;
+  background-color: #36393F;
 }
-
-.server-index-item {
-  display: flex;
-  border: 1px solid black;
-  margin: 1px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-}
-
-.server-index-item:hover {
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
-}
-
-

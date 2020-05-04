@@ -19,13 +19,15 @@ const NavBar = ({currentUser, logout, openModal}) => {
 
         <div className="guild-separator"></div>
 
-        <button onClick = {() => openModal('create-server')}>
+        <button id="main-add-server" onClick = {() => openModal('create-server')}>
           <div id="main-add-server">
-            Add
+            <svg class="circleIcon-LvPL6c" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+              <path id="plus-sign" fill="currentColor" d="M21 11.001H13V3.00098H11V11.001H3V13.001H11V21.001H13V13.001H21V11.001Z"></path>
+            </svg>
           </div>
         </button>
 
-        <button onClick={logout}>
+        <button id="main-logout-button" onClick={logout}>
           <div id="main-logout-button">
             Log Out
           </div>
