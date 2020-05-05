@@ -19,3 +19,66 @@
   -ms-flex: 1;
   flex: 1; */
 }
+
+.main-app-nav-bar {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  width: 75px;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+
+
+
+.guild-separator {
+  height: 2px;
+  width: 32px;
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 1px;
+  background-color: gray;
+  display: block;
+}
+
+.main-app-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #36393f;
+  margin-top: 10px;
+}
+
+.main-app-icon-container:hover {
+  border-radius: 10px;
+  background-color: #7289DA;
+}
+
+
+.main-app-nav-bar-discordicon {
+  width: 35px;
+  height: 35px;
+}
+
+.server-index-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-add-server {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+#main-logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
