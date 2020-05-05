@@ -86,3 +86,10 @@ DESIGN DECISIONS and BUG LOGS
 	- when refreshing while on a server index item
 	- this was probably because for a brief moment, the server slice of state was blank
 	- this was fixed using a ternary in the render function of server name container
+
+5.4.2020
+- had an issue where the container was not being correctly sized
+	- the width was defined in my CSS file as 300px but it was becoming smaller in certain edge cases
+	- using a min-width property of 300px fixed it
+
+
