@@ -111,3 +111,11 @@
   width: 100%;
   background-color: #36393F;
 }
+
+.splash-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-bottom: 50px;
+}
