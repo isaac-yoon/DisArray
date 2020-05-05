@@ -84,3 +84,7 @@
   font-weight: bold;
   padding: 10px;
 }
+
+.add-channel-button-svg:hover {
+  cursor: pointer;
+}

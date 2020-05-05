@@ -27,6 +27,7 @@ function Modal({ modal, closeModal }) {
       break;
     case 'create-channel':
       component = <CreateChannelFormContainer />;
+      break;
     default:
       return null;
   }

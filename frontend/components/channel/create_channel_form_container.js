@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { createChannel } from '../../actions/channel_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import CreateChannelForm from './create_channel_form';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => ({
   errors: state.errors.session,
@@ -12,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateChannelForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CreateChannelForm));
