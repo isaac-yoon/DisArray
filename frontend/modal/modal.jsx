@@ -5,7 +5,7 @@ import LoginFormContainer from '../components/session/login_form_container';
 import SignupFormContainer from '../components/session/signup_form_container';
 import DemoLoginFormContainer from '../components/session/demo_login_form_container';
 import CreateServerFormContainer from '../components/server/create_server_form_container';
-
+import CreateChannelFormContainer from '../components/channel/create_channel_form_container';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -25,6 +25,8 @@ function Modal({ modal, closeModal }) {
     case 'create-server':
       component = <CreateServerFormContainer />;
       break;
+    case 'create-channel':
+      component = <CreateChannelFormContainer />;
     default:
       return null;
   }
