@@ -83,8 +83,19 @@
   font-size: 12px;
   font-weight: bold;
   padding: 10px;
+  border-bottom: 1px groove black;
 }
 
 .add-channel-button-svg:hover {
   cursor: pointer;
 }
+
+.channel-index-item {
+  display: flex;
+  padding: 10px;
+}
+
+/* #channel-index-hashtag {
+
+} */
+

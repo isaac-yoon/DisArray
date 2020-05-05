@@ -8,9 +8,11 @@ const mapStateToProps = (state, ownProps) => ({
   errors: state.errors.session,
 });
 
-const mapDispatchToProps = dispatch => ({
-  createChannel: (channel) => dispatch(createChannel(channel)),
-  closeModal: () => dispatch(closeModal()),
-});
+const mapDispatchToProps = dispatch => {
+  return {
+    createChannel: (channel) => dispatch(createChannel(channel)),
+    closeModal: () => dispatch(closeModal()),
+  }
+}
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CreateChannelForm));
