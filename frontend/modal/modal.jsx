@@ -6,6 +6,7 @@ import SignupFormContainer from '../components/session/signup_form_container';
 import DemoLoginFormContainer from '../components/session/demo_login_form_container';
 import CreateServerFormContainer from '../components/server/create_server_form_container';
 import CreateChannelFormContainer from '../components/channel/create_channel_form_container';
+import { withRouter } from 'react-router-dom';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -53,4 +54,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Modal));

@@ -99,3 +99,33 @@
 
 } */
 
+.main-app-side-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.main-app-side-bar-bottom {
+  align-content: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+
+/* how do I do this effect with flexbox? */
+
+.side-bar-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 300px;
+  border-top: 1px groove black;
+  /* align-content: flex-end; */
+}
+
+.side-bar-bottom button {
+  padding: 10px;
+}
+
+.side-bar-bottom div {
+  padding: 10px;
+}

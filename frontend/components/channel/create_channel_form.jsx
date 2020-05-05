@@ -2,9 +2,11 @@ import React from 'react';
 
 class CreateChannelForm extends React.Component {
   constructor(props) {
+    debugger
     super(props);
     this.state = {
       name: '',
+      serverId: props.location.pathname.split('/')[3] || '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,6 +33,7 @@ class CreateChannelForm extends React.Component {
   }
 
   render() {
+    debugger
     return (
       <div className = "create-channel-form">
         {this.props.errors.map(error => {

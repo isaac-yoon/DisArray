@@ -4,6 +4,7 @@ import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 import { Switch, Redirect, Route } from 'react-router-dom';
 import TopContainer from './top_server_name_container';
 import TopHomePage from './top_home_page';
+import BottomName from './bottom_name_container';
 // import { Link } from 'react-router-dom';
 
 const SideBar = ({ currentUser, logout, openModal }) => {
@@ -21,6 +22,10 @@ const SideBar = ({ currentUser, logout, openModal }) => {
         <Switch>
           <ProtectedRoute path= "/channels/@me/:server_id" component = {ChannelIndexContainer} />
         </Switch>
+      </div>
+
+      <div className="main-app-side-bar-bottom">
+        <BottomName />
       </div>
 
     </div>
