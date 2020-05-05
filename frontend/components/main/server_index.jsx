@@ -8,6 +8,7 @@ class ServerIndex extends React.Component {
   }
 
   render() {
+    debugger
     return(
       <div className = "server-index-list">
         {this.props.servers.map((server) => (

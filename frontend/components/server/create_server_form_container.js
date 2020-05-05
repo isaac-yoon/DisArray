@@ -3,6 +3,7 @@ import { createServer } from '../../actions/server_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import CreateServerForm from './create_server_form';
 
+
 const mapStateToProps = (state, ownProps) => ({
   errors: state.errors.session,
 });
