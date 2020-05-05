@@ -170,3 +170,7 @@ noscript {
   overflow: hidden;
   white-space: nowrap;
 }
+
+*:focus {
+  outline: none;
+}
