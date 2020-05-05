@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MainNavBar = ({ currentUser, logout, openModal }) => {
+const SplashNavBar = ({ currentUser, logout, openModal }) => {
   return (
     <div className = "main-nav-bar">
 
@@ -24,7 +24,7 @@ const MainNavBar = ({ currentUser, logout, openModal }) => {
             id="linked-in-icon"
           />
         </a>
-        
+
         &nbsp;
         &nbsp;
         &nbsp;
@@ -52,4 +52,4 @@ const MainNavBar = ({ currentUser, logout, openModal }) => {
   )
 }
 
-export default MainNavBar;
+export default SplashNavBar;
