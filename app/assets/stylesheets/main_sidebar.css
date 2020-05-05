@@ -58,12 +58,6 @@
   background-color: #7289DA;
 }
 
-
-.main-app-nav-bar-discordicon {
-  width: 65px;
-  height: 65px;
-}
-
 .server-index-list {
   display: flex;
   flex-direction: column;
