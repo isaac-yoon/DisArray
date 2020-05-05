@@ -76,3 +76,11 @@
   justify-content: center;
   border: none;
 }
+
+#channel-index-header-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+}
