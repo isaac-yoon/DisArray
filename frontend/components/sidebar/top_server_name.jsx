@@ -26,7 +26,6 @@ class TopServerName extends React.Component {
   // }
 
   render() {
-    // debugger
     // const {servers} = this.props
     return (
       <div className="side-bar-server-name">

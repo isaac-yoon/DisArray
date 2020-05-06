@@ -2,7 +2,6 @@ import React from 'react';
 
 class CreateChannelForm extends React.Component {
   constructor(props) {
-    debugger
     super(props);
     this.state = {
       name: '',
@@ -33,7 +32,6 @@ class CreateChannelForm extends React.Component {
   }
 
   render() {
-    debugger
     return (
       <div className = "create-channel-form">
         {this.props.errors.map(error => {

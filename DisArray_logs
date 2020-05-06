@@ -92,4 +92,9 @@ DESIGN DECISIONS and BUG LOGS
 	- the width was defined in my CSS file as 300px but it was becoming smaller in certain edge cases
 	- using a min-width property of 300px fixed it
 
+5.5.2020
+- issue where could not extract wildcard from match.params
+	- wildcard was not set up properly
+	- had a hacky solution
+		- SOLUTION: access the serverId directly through the URL (through props.history.pathname)
 
