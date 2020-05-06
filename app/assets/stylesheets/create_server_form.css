@@ -65,9 +65,24 @@
 
 }
 
+#actual-image-preview {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  contain: content;
+}
+
 .image-preview {
   max-width: 100px;
   max-height: 100px;
+  border-radius: 50%;
+  background-color: blue;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .bottom-nav-links {

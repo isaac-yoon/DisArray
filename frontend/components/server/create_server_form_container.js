@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createServer } from '../../actions/server_actions';
+import { createServer, getServers } from '../../actions/server_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import CreateServerForm from './create_server_form';
 
@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   createServer: (server) => dispatch(createServer(server)),
+  getServers: () => dispatch(getServers()),
   closeModal: () => dispatch(closeModal()),
 });
 

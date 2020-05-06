@@ -10,8 +10,16 @@ class CreateServerForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFile = this.handleFile.bind(this);
   }
 
+  // componentDidMount() {
+  //   this.props.getServers();
+  // }
+
+  handleImageClick() {
+    $("#create-server-add-photo").trigger('click');
+  }
 
   handleInput(type) {
     return (e) => {
@@ -90,14 +98,20 @@ class CreateServerForm extends React.Component {
             />
           </div>
 
-          <div className="image-preview">
+          <div 
+            className="image-preview"
+            onClick={this.handleImageClick}
+          >
             <input 
               type="file" 
               name="" 
               id="create-server-add-photo"
-              onChange={this.handleFile.bind(this)}
+              onChange={this.handleFile}
+              style={{display: "none"}}
             />
-            {preview}
+            <div id="actual-image-preview">
+              {preview}
+            </div>
           </div>
         </div>
 
