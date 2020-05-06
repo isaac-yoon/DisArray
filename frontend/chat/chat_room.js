@@ -13,17 +13,38 @@ class ChatRoom extends React.Component {
   componentDidMount() {
     App.cable.subscriptions.create(
       { channel: "ChatChannel" },
+      // this needs to match chat_channel.rb
       {
         received: data => {
-          this.setState({
-            messages: this.state.messages.concat(data.message)
-          });
+          switch (data.type) {
+            case 'message':
+              this.setState({
+                messages: this.state.messages.concat(data.message)
+              });
+              break;
+            case 'messages':
+              this.setState({
+                messages: data.messages
+              });
+              break;
+          }
         },
+        // received will be invoked when the subscription broadcasts from the backend
         speak: function (data) {
-          return this.perform("speak", data);
+          return this.perform("speak", data)
+        },
+        load: function() { 
+          return this.perform("load") 
         }
+        // performs the speak method in the backend while passing in some data
       }
     );
+  }
+
+  loadChat(e) {
+    debugger
+    e.preventDefault();
+    App.cable.subscriptions.subscriptions[0].load();
   }
 
   componentDidUpdate() {
@@ -45,6 +66,10 @@ class ChatRoom extends React.Component {
     return (
       <div className="chatroom-container">
         <div>ChatRoom</div>
+        <button className="load-button"
+          onClick={this.loadChat.bind(this)}>
+          Load Chat History
+        </button>
         <div className="message-list">{messageList}</div>
         <div ref={this.bottom} />
         <MessageForm />
