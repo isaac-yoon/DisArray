@@ -39,7 +39,7 @@ class ChannelIndex extends React.Component {
         </div>
         <div className="channel-index-list">
           {this.props.channels.map((channel) => (
-            <ChannelIndexItem key={channel.id} channel={channel} />
+            <ChannelIndexItem key={channel.id} channel={channel} openModal={openModal} />
           ))}
         </div>
       </div>

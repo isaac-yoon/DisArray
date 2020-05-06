@@ -20,7 +20,7 @@ class Api::ChannelsController < ApplicationController
   end
 
   def update
-    @channel = Channel.find_by(id: params[:id])
+    @channel = Channel.find_by(id: params[:channel][:channel_id])
 
     if @channel.server.owner_id == current_user.id && @channel.update(channel_params)
       render :show
@@ -46,6 +46,6 @@ class Api::ChannelsController < ApplicationController
 
   private
   def channel_params
-    params.require(:channel).permit(:name, :server_id)
+    params.require(:channel).permit(:name)
   end
 end

@@ -77,6 +77,8 @@
   border: none;
 }
 
+/* Channel Index */
+
 #channel-index-header-container {
   display: flex;
   justify-content: space-between;
@@ -93,17 +95,17 @@
 .channel-index-item {
   display: flex;
   padding: 10px;
+  justify-content: space-between;
 }
 
-/* #channel-index-hashtag {
-
-} */
+#channel-index-edit-button:hover {
+  cursor: pointer;
+}
 
 .main-app-side-bar {
   display: flex;
   flex-direction: column;
 }
-
 
 .main-app-side-bar-bottom {
   align-content: flex-end;

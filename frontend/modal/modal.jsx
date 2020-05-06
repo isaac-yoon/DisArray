@@ -1,11 +1,14 @@
 import React from 'react';
 import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
+
 import LoginFormContainer from '../components/session/login_form_container';
 import SignupFormContainer from '../components/session/signup_form_container';
 import DemoLoginFormContainer from '../components/session/demo_login_form_container';
 import CreateServerFormContainer from '../components/server/create_server_form_container';
 import CreateChannelFormContainer from '../components/channel/create_channel_form_container';
+import EditChannelFormContainer from '../components/channel/edit_channel_form_container';
+
 import { withRouter } from 'react-router-dom';
 
 function Modal({ modal, closeModal }) {
@@ -28,6 +31,9 @@ function Modal({ modal, closeModal }) {
       break;
     case 'create-channel':
       component = <CreateChannelFormContainer />;
+      break;
+    case 'edit-channel':
+      component = <EditChannelFormContainer />;
       break;
     default:
       return null;

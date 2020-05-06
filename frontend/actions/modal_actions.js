@@ -13,3 +13,10 @@ export const closeModal = () => {
     type: CLOSE_MODAL
   };
 };
+
+// export const openEditChannelModal = modal => {
+//   return {
+//     type: OPEN_MODAL,
+//     modal,
+//   }
+// }

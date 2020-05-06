@@ -26,12 +26,6 @@ const NavBar = ({logout, openModal}) => {
             </svg>
           </div>
         </button>
-
-        <button id="main-logout-button" onClick={logout}>
-          <div id="main-logout-button">
-            Log Out
-          </div>
-        </button>
       </div>
     )
 }

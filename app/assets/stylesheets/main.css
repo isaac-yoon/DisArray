@@ -1,0 +1,44 @@
+/* Main App Container */
+
+/* This for the main app styling */
+/* Overall structure of the app */
+
+.main-app-content-page {
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.main-app-main-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.main-app-content-container {
+  display: flex;
+  height: 100%;
+}
+
+#main-app-content-side-bar {
+  height: 100%;
+  background-color: #2f3136;
+  width: 300px;
+  min-width: 300px;
+}
+
+#main-app-content {
+  height: 100%;
+  width: 100%;
+  background-color: #36393F;
+}
+
+.splash-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-bottom: 50px;
+}

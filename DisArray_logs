@@ -98,3 +98,7 @@ DESIGN DECISIONS and BUG LOGS
 	- had a hacky solution
 		- SOLUTION: access the serverId directly through the URL (through props.history.pathname)
 
+- issue where a user can only edit channel if the channel :id is present in the URL
+	- if a user clicks on a channel and then clicks the edit channel button, it works
+	- otherwise, it does not work
+	- some ideas : maybe make a custom modal action, thunk action creator, that passes in the channel_id

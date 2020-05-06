@@ -36,15 +36,6 @@ class CreateServerForm extends React.Component {
         });
         this.props.closeModal();
       })
-    // this.props.createServer(server)
-    //   .then(() => {
-    //     this.setState({
-    //       name: '',
-    //       photoFile: ''
-    //     });
-    //     this.props.closeModal();
-    //   })
-      // .then(() => this.props.history.push('/channels/@me'));
   }
 
   handleFile(e) {

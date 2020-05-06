@@ -8,10 +8,6 @@ const Main = () => {
     <div className = "main-app">
       <NavBarContainer />
       <div className = "main-app-content-page">
-        <div id="main-app-top-bar">
-          This is the top bar that is always present for some asethetic reason
-        </div>
-
         <div className = "main-app-content-container">
           <div id="main-app-content-side-bar">
             <SideBar />
