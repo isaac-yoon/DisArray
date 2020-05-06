@@ -53,7 +53,6 @@ class CreateServerForm extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
 
     return (
@@ -65,36 +64,55 @@ class CreateServerForm extends React.Component {
             </ul>
           )
         })}
+        
+        <div id="create-server-header">
+          CREATE YOUR SERVER
+        </div>
 
-        <form onSubmit={this.handleSubmit}>
-          <label className="create-server-label">
+        <div id="create-server-message">
+          By creating a server, you will have access to free
+            <br/>
+          text chat to use amongst your friends.
+        </div>
+
+        <div className="create-server-inputs">
+          <div className="text-input-area">
+            <div id="server-name-text">
+              SERVER NAME
+            </div>
             <br/>
             <input
               type="text"
               value={this.state.name}
               onChange={this.handleInput('name')}
               placeholder="Choose a name"
-              className="create-server-input"
-            >
-            </input>
-            <br/>
+              className="create-server-text-input"
+            />
+          </div>
+
+          <div className="image-preview">
             <input 
               type="file" 
               name="" 
-              id=""
+              id="create-server-add-photo"
               onChange={this.handleFile.bind(this)}
             />
-
-            <h3>Image Preview</h3>
             {preview}
-            <button
-              className="create-server-button"
-            >
-            Create Server
-            </button>
+          </div>
+        </div>
 
-          </label>
-        </form>
+        <div className="bottom-nav-links">
+          <div>
+            BACK
+          </div>
+
+          <button
+            onClick={this.handleSubmit}
+            className="create-server-button"
+          >Create Server
+          </button>
+        </div>
+
       </div>
     );
   }

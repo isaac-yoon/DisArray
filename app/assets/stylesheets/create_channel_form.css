@@ -1,0 +1,44 @@
+.modal-child-create-channel-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #36393f;
+  border-radius: 5px;
+  max-height: 660px;
+  min-height: 200px;
+  width: 440px;
+}
+
+.create-channel-form-top-container div {
+  color: white;
+}
+
+.create-channel-form {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  height: 250px;
+}
+
+#text-channel-name {
+  color: #8E9297;
+}
+
+.create-channel-input {
+  width: 200px;
+  height: 50px;
+  padding: 5px 10px 5px;
+  margin: 8px 0;
+  border: 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px inset black;
+  background-color: #292B2F;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.create-channel-button {
+
+}

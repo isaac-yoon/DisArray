@@ -41,28 +41,36 @@ class CreateChannelForm extends React.Component {
             </ul>
           )
         })}
+        <div className="create-channel-form-top-container">
+          <div>
+            CREATE TEXT CHANNEL
+          </div>
+        </div>
 
-        <form onSubmit={this.handleSubmit}>
-          <label className="create-channel-label">
-            <br/>
-            <input
-              type="text"
-              value={this.state.name}
-              onChange={this.handleInput('name')}
-              placeholder="Choose a name"
-              className="create-channel-input"
-            >
-            </input>
-            <br/>
+        <br/>
+        <div>
+          <div id="text-channel-name">
+            CHANNEL NAME
+          </div>
+          <input
+            type="text"
+            value={this.state.name}
+            onChange={this.handleInput('name')}
+            placeholder="Choose a name"
+            className="create-channel-input"
+          >
+          </input>
 
-            <button
-              className="create-channel-button"
-            >
-            Create Channel
-            </button>
+        </div>
+        <br/>
 
-          </label>
-        </form>
+        <button
+          className="create-channel-button"
+          onClick={this.handleSubmit}
+        >
+        Create Channel
+        </button>
+
       </div>
     );
   }

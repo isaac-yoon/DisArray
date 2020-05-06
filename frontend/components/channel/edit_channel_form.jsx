@@ -33,7 +33,7 @@ class EditChannelForm extends React.Component {
 
   render() {
     return (
-      <div className="create-channel-form">
+      <div className="edit-channel-form">
         {this.props.errors.map(error => {
           return (
             <ul className="session-errors">
@@ -43,20 +43,20 @@ class EditChannelForm extends React.Component {
         })}
 
         <form onSubmit={this.handleSubmit}>
-          <label className="create-channel-label">
+          <label className="edit-channel-label">
             <br />
             <input
               type="text"
               value={this.state.name}
               onChange={this.handleInput('name')}
               placeholder="Choose a name"
-              className="create-channel-input"
+              className="edit-channel-input"
             >
             </input>
             <br />
 
             <button
-              className="create-channel-button"
+              className="edit-channel-button"
             >
               Edit Channel
             </button>

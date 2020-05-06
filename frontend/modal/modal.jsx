@@ -18,22 +18,22 @@ function Modal({ modal, closeModal }) {
   let component;
   switch (modal) {
     case 'login':
-      component = <LoginFormContainer />;
+      component = <div className="modal-child" onClick={e => e.stopPropagation()}><LoginFormContainer /></div>;
       break;
     case 'signup':
-      component = <SignupFormContainer />;
+      component = <div className="modal-child" onClick={e => e.stopPropagation()}><SignupFormContainer /></div>;
       break;
     case 'demo-login':
-      component = <DemoLoginFormContainer />;
+      component = <div className="modal-child" onClick={e => e.stopPropagation()}><DemoLoginFormContainer /></div>;
       break;
     case 'create-server':
-      component = <CreateServerFormContainer />;
+      component = <div className = "modal-child-create-server-form" onClick={e => e.stopPropagation()}><CreateServerFormContainer /></div>;
       break;
     case 'create-channel':
-      component = <CreateChannelFormContainer />;
+      component = <div className="modal-child-create-channel-form" onClick={e => e.stopPropagation()}><CreateChannelFormContainer /></div>;
       break;
     case 'edit-channel':
-      component = <EditChannelFormContainer />;
+      component = <div className="modal-child-edit-channel-form" onClick={e => e.stopPropagation()}><EditChannelFormContainer /></div>;
       break;
     default:
       return null;
@@ -41,9 +41,7 @@ function Modal({ modal, closeModal }) {
   
   return (
     <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
-        {component}
-      </div>
+      {component}
     </div>
   );
 }

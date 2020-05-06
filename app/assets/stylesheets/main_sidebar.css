@@ -105,10 +105,11 @@
 .main-app-side-bar {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .main-app-side-bar-bottom {
-  align-content: flex-end;
+  align-self: flex-end;
   position: absolute;
   bottom: 0;
 }
