@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBarContainer from './nav_bar_container';
 import SideBar from '../sidebar/main_app_side_bar'
-
+import ChatRoom from '../../chat/chat_room';
 
 const Main = () => {
   return(
@@ -14,6 +14,7 @@ const Main = () => {
           </div>
           <div id="main-app-content">
             This is the main component that will house messages later
+            <ChatRoom />
           </div>
         </div>
       </div>

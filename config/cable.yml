@@ -6,5 +6,6 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: <%= ENV["REDIS_URL"] %>
+  # added this to make it work when pushing to Heroku
   channel_prefix: DisArray_production
