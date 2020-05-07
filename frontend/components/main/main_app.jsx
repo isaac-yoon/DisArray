@@ -13,8 +13,19 @@ const Main = () => {
             <SideBar />
           </div>
           <div id="main-app-content">
-            This is the main component that will house messages later
-            <ChatRoom />
+            <div id="main-app-channel-name">
+              PLACEHOLDER FOR CHANNEL NAME
+            </div>
+
+            <div className="main-app-content-secondary-container">
+              <ChatRoom />
+              <div className="main-app-friends-bar">
+                <div id="main-app-friends-bar-top">
+                  PLACEHOLDER FOR FRIENDS
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

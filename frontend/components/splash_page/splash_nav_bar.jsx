@@ -44,7 +44,7 @@ const SplashNavBar = ({ currentUser, logout, openModal }) => {
           <button 
             className = "button" 
             id="main-nav-bar-login-button"
-          >Login</button>
+          >LOGIN</button>
         </Link>
       </div>
 

@@ -33,6 +33,8 @@
   height: 100%;
   width: 100%;
   background-color: #36393F;
+  display: flex;
+  flex-direction: column;
 }
 
 .splash-footer {
@@ -41,4 +43,26 @@
   align-items: center;
   color: white;
   padding-bottom: 50px;
+}
+
+#main-app-channel-name {
+  padding: 15px;
+  border-bottom: 1px groove black;
+  line-height: 20px;
+}
+
+.main-app-content-secondary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-app-friends-bar {
+  border-left: 1px groove black;
+  height: calc(631px - 51px);
+  min-width: 300px;
+}
+
+#main-app-friends-bar-top {
+  padding: 10px;
 }

@@ -42,7 +42,6 @@ class ChatRoom extends React.Component {
   }
 
   loadChat(e) {
-    debugger
     e.preventDefault();
     App.cable.subscriptions.subscriptions[0].load();
   }
