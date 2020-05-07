@@ -60,6 +60,7 @@ class ChatRoom extends React.Component {
             {/* {currentUser.username ? currentUser.username : null } : {message} */}
             { message }
           </li>
+            <div id="channel-message-bottom"ref={this.bottom} />
 
         </div>
       )
@@ -73,7 +74,6 @@ class ChatRoom extends React.Component {
           Load Chat History
         </button>
         <div className="message-list">{messageList}</div>
-        <div ref={this.bottom} />
         <MessageForm />
       </div>
     )

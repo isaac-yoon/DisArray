@@ -6,7 +6,8 @@ import ChatRoom from './chat_room';
 
 const mapStateToProps = (state) => {
   return {
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    messages: state.channelMessages,
   }
 }
 
