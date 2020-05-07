@@ -42,7 +42,6 @@ class ChatRoom extends React.Component {
   }
 
   loadChat(e) {
-    e.preventDefault();
     App.cable.subscriptions.subscriptions[0].load();
   }
 
@@ -51,11 +50,14 @@ class ChatRoom extends React.Component {
   }
 
   render() {
+    debugger
+    const { currentUser } = this.props;
+
     const messageList = this.state.messages.map(message => {
       return(
         <div key={message.id}>
-          <li>
-            {message}
+          <li id="message-list-items">
+            {currentUser.username ? currentUser.username : null } : {message}
           </li>
 
         </div>
@@ -64,7 +66,7 @@ class ChatRoom extends React.Component {
 
     return (
       <div className="chatroom-container">
-        <div>ChatRoom</div>
+        <div>Channel</div>
         <button className="load-button"
           onClick={this.loadChat.bind(this)}>
           Load Chat History
