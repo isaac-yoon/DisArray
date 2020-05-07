@@ -57,7 +57,8 @@ class ChatRoom extends React.Component {
       return(
         <div key={message.id}>
           <li id="message-list-items">
-            {currentUser.username ? currentUser.username : null } : {message}
+            {/* {currentUser.username ? currentUser.username : null } : {message} */}
+            { message }
           </li>
 
         </div>
