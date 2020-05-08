@@ -11,7 +11,7 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
 * Chatting: universal chat message room for all users using Action Cable
 
 ## Implementation
-  * Conditional Rendering of Components
+  * Conditional Rendering of Components <br/>
       There are many moving parts in DisArray. Based on whatever frontend route a user is on, certain components need to be rendered displaying information about a server, channel, or even the current user. Because there are so many moving parts, designing the overall structure of the app and making it modular in nature proved to be a challenge. I solved this using a mixture of Switch statements and component destructuring within different levels of my app. 
 
       ```javascript
@@ -73,13 +73,11 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
         )
       }
       ```
-      
+
       Even more subcomponents that will render conditionally based on the URL.
 
-  * Chatting
-    1. Functionality
-    2. Development Challenge
-    3. Implementation
+  * Chatting <br/>
+    DisArray utilizes Action Cable, which integrates Websockets into the Rails. However, it proved to be challenge to integrate Action Cable into the redux cycle. Based on the current set up of my app, sending a message through Action Cable will create messages on the Rails backend. However, it will utilize the local state of the chatroom to populate the room with chat messages. Upon the component mounting, it will fetch all the channel messages and update the channel messages slice of state.
 
 ## Technologies
 - Backend
