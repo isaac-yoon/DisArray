@@ -7,7 +7,7 @@ import TopHomePage from './top_home_page';
 import BottomName from './bottom_name_container';
 // import { Link } from 'react-router-dom';
 
-const SideBar = ({ currentUser, logout, openModal }) => {
+const SideBar = () => {
   return (
     <div className="main-app-side-bar">
       

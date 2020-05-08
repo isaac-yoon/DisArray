@@ -14,7 +14,7 @@ const Main = () => {
           </div>
           <div id="main-app-content">
             <div id="main-app-channel-name">
-              PLACEHOLDER FOR CHANNEL NAME
+              CHANNEL NAME
             </div>
 
             <div className="main-app-content-secondary-container">

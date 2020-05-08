@@ -11,7 +11,7 @@ class ChatRoom extends React.Component {
   }
 
   componentDidMount() {
-    const { fetchChannelMessages } = this.props;
+    const { fetchChannelMessages, createChannelMessage } = this.props;
     
     fetchChannelMessages();
     
@@ -25,7 +25,7 @@ class ChatRoom extends React.Component {
               this.setState({
                 messages: this.state.messages.concat(data.message)
               });
-              // addMessage(data.message)
+              // createChannelMessage(data.message)
               break;
             case 'messages':
               this.setState({

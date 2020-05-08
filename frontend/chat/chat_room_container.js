@@ -1,10 +1,8 @@
 import { connect } from 'react-redux';
 import ChatRoom from './chat_room';
-// import { logout } from '../../actions/session_actions';
-// import { openModal } from '../../actions/modal_actions';
 import {
   fetchChannelMessages,
-  addChannelMessage
+  createChannelMessage
 } from '../actions/channel_message_actions';
 
 const mapStateToProps = (state) => {
@@ -15,7 +13,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addChannelMessage: (message) => dispatch(addChannelMessage(message)),
+  createChannelMessage: (message) => dispatch(createChannelMessage(message)),
   fetchChannelMessages: (messages) => dispatch(fetchChannelMessages(messages))
 })
 

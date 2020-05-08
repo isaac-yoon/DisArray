@@ -21,3 +21,8 @@ export const fetchChannelMessages = () => (dispatch) => {
   return ChannelMessagesAPIUtil.getChannelMessages()
     .then((channelMessages) => dispatch(setChannelMessages(channelMessages)))
 }
+
+// export const createChannelMessage = (message) => (dispatch) => {
+//   return ChannelMessagesAPIUtil.createChannelMessages(message)
+//     .then((res) => dispatch(addChannelMessage(res)))
+// }
