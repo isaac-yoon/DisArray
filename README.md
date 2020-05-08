@@ -21,9 +21,9 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
             
             <Switch>
               <AuthRoute exact path="/" component= {Splash} />
-              <AuthRoute exact path="/login" component = { MainLoginFormContainer } />
-              <AuthRoute exact path="/register" component = { MainRegisterFormContainer } />
-              <ProtectedRoute path="/channels/@me" component= { Main } />
+              <AuthRoute exact path="/login" component = {MainLoginFormContainer} />
+              <AuthRoute exact path="/register" component = {MainRegisterFormContainer} />
+              <ProtectedRoute path="/channels/@me" component= {Main} />
               <Redirect path = "/" to = "/" />
             </Switch>
 
