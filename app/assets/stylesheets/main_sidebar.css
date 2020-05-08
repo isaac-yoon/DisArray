@@ -23,8 +23,8 @@
 .main-app-nav-bar {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  width: 75px;
+  min-width: 75px;
+  max-width: 75px;
   align-items: center;
   height: 100%;
   color: white;

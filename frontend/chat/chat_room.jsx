@@ -11,7 +11,10 @@ class ChatRoom extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchChannelMessages();
+    const { fetchChannelMessages } = this.props;
+    
+    fetchChannelMessages();
+    
     App.cable.subscriptions.create(
       { channel: "ChatChannel" },
       // this needs to match chat_channel.rb

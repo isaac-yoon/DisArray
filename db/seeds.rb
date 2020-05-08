@@ -8,10 +8,11 @@
 
 
 User.destroy_all
-
 Users = User.create([
   { username: 'DemoLogin', email: 'demouser@demo.disarray', password: '123456' },
 ])
+
+
 
 # Servers = Server.create([
 
