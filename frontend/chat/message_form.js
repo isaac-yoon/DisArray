@@ -34,12 +34,16 @@ class MessageForm extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input
+            id="channel-message-form-textinput"
             type="text"
             value={this.state.body}
             onChange={this.update("body")}
-            placeholder="Type message here"
+            // placeholder="Type message here"
           />
-          <input type="submit" />
+          <input 
+            id="channel-message-form-submit-button"
+            type="submit" 
+          />
         </form>
       </div>
     );   

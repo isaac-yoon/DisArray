@@ -9,6 +9,17 @@
   color: black;
 }
 
+#channel-message-form-textinput {
+  border-radius: 10px;
+  /* align-self: flex-end; */
+  /* position: absolute;
+  bottom: 0; */
+}
+
+#channel-message-form-submit-button {
+  display: none;
+}
+
 .message-list {
   overflow-y: scroll;
   height: 300px;
