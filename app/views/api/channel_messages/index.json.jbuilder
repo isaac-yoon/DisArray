@@ -1,3 +1,5 @@
-json.channelMessages do |channelMessage|
-  json.partial! 'channel_messages/channel_message', channelMessage: channelMessage
+@channel_messages.each do |channel_message|
+  json.set! channel_message.id do
+    json.partial! 'api/channel_messages/channel_message', channel_message: channel_message
+  end
 end

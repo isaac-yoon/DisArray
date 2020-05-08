@@ -13,11 +13,10 @@ export const createChannelMessages = (message) => (
 //   })
 // )
 
-export const getChannelMessages = (channelId) => {
+export const getChannelMessages = () => {
   return $.ajax({
     method: 'GET',
-    // url: '/api/channels',
-    data: { channelId: channelId }
+    url: '/api/channel_messages'
   })
 }
 

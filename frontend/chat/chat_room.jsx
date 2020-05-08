@@ -11,6 +11,7 @@ class ChatRoom extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchChannelMessages();
     App.cable.subscriptions.create(
       { channel: "ChatChannel" },
       // this needs to match chat_channel.rb
@@ -21,11 +22,13 @@ class ChatRoom extends React.Component {
               this.setState({
                 messages: this.state.messages.concat(data.message)
               });
+              // addMessage(data.message)
               break;
             case 'messages':
               this.setState({
                 messages: data.messages
               });
+              // setMessages(data.messages)
               break;
           }
         },
@@ -42,7 +45,9 @@ class ChatRoom extends React.Component {
   }
 
   loadChat(e) {
+    debugger
     App.cable.subscriptions.subscriptions[0].load();
+    debugger
   }
 
   componentDidUpdate() {
@@ -50,7 +55,6 @@ class ChatRoom extends React.Component {
   }
 
   render() {
-    debugger
     const { currentUser } = this.props;
 
     const messageList = this.state.messages.map(message => {
@@ -60,7 +64,7 @@ class ChatRoom extends React.Component {
             {/* {currentUser.username ? currentUser.username : null } : {message} */}
             { message }
           </li>
-            <div id="channel-message-bottom"ref={this.bottom} />
+          <div id="channel-message-bottom"ref={this.bottom} />
 
         </div>
       )

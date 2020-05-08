@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import * as APIChannelActions from './actions/channel_actions';
 import * as APIServerActions from './actions/server_actions';
+import * as ChannelMessagesAPIUtil from './util/channel_message_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
 
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.deleteServer = APIServerActions.deleteServer;
 
+  window.getChannelMessages = ChannelMessagesAPIUtil.getChannelMessages;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 

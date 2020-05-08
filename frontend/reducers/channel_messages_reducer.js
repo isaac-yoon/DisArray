@@ -5,6 +5,7 @@ import {
 
 const channelMessagesReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
+  debugger
 
   switch(action.type) {
     case ADD_MESSAGE:

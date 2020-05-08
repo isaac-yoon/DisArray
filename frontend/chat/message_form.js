@@ -1,5 +1,4 @@
 import React from 'react';
-// import App from '../components/app';
 
 class MessageForm extends React.Component {
   constructor(props) {
