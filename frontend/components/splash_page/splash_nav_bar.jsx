@@ -5,7 +5,7 @@ const SplashNavBar = ({ currentUser, logout, openModal }) => {
   return (
     <div className = "main-nav-bar">
 
-      <div className = "main-nav-bar-discordicon">
+      {/* <div className = "main-nav-bar-discordicon">
         <Link to="/">
           <img 
             src={window.discordiconbackground}
@@ -13,7 +13,7 @@ const SplashNavBar = ({ currentUser, logout, openModal }) => {
             id="main-nav-bar-discordiconbackground"
           />
         </Link>
-      </div>
+      </div> */}
 
       <div className = "main-nav-bar-middle">
         <a href="https://www.linkedin.com/in/lucidlaughter/">
