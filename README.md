@@ -86,6 +86,9 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
   * PostgreSQL database
   * Amazon Web Services
 
+- Hosting
+  * Heroku
+
 - Frontend
   * React/Redux
   * REACT DOM
