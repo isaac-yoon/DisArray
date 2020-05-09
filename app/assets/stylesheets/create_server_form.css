@@ -57,13 +57,13 @@
   display: block;
 }
 
-.create-server-text-input-field {
+/* .create-server-text-input-field {
 
 }
 
 #create-server-add-photo-input {
 
-}
+} */
 
 #actual-image-preview {
   max-width: 100px;
@@ -89,6 +89,5 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: end;
-  /* justify-self: self-end; */
+  align-self: center;
 }

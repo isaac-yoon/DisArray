@@ -116,10 +116,6 @@ class CreateServerForm extends React.Component {
         </div>
 
         <div className="bottom-nav-links">
-          <div>
-            BACK
-          </div>
-
           <button
             onClick={this.handleSubmit}
             className="create-server-button"
