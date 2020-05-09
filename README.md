@@ -77,7 +77,7 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
       Even more subcomponents that will render conditionally based on the URL.
 
   * Chatting <br/>
-    DisArray utilizes Action Cable, which integrates Websockets into the Rails. However, it proved to be challenge to integrate Action Cable into the redux cycle. Based on the current set up of my app, sending a message through Action Cable will create messages on the Rails backend. However, it will utilize the local state of the chatroom to populate the room with chat messages. Upon the component mounting, it will fetch all the channel messages and update the channel messages slice of state.
+    DisArray utilizes Action Cable, a technology that integrates Websockets into the Rails. However, it proved to be challenge to integrate Action Cable into the redux cycle. Based on the current set up of my app, sending a message through Action Cable will create messages on the Rails backend. However, it will utilize the local state of the chatroom to populate the room with chat messages. Upon the component mounting, it will fetch all the channel messages and update the channel messages slice of state.
 
 ## Technologies
 - Backend
