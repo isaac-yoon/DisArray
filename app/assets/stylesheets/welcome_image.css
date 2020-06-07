@@ -169,8 +169,9 @@
 #welcome-image-circle-1 {
   position: absolute;
   opacity: 0.3;
-  left: 37%;
-  top: 63%;
+  left: 50%;
+  margin-top: 500px;
+  margin-left: -250px;
   z-index: -1;
 }
 
