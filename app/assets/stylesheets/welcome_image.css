@@ -105,8 +105,9 @@
 
 #welcome-image-disc {
   position: absolute;
-  top: 67%;
-  left: 106%;
+  left: 50%;
+  margin-left: 400px;
+  margin-top: 520px;
   z-index: -1;
 }
 
