@@ -129,8 +129,9 @@
 #welcome-image-triangle-1 {
   position: absolute;
   opacity: 0.3;
-  left: 70%;
-  top: 5%;
+  left: 50%;
+  margin-left: 10px;
+  margin-top: 75px;
 }
 
 #welcome-image-triangle-2 {
