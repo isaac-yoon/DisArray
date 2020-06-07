@@ -137,8 +137,9 @@
 #welcome-image-triangle-2 {
   position: absolute;
   opacity: 0.3;
-  left: 5%;
-  top: 35%;
+  left: 50%;
+  margin-top: 200px;
+  margin-left: -600px;
 }
 
 #welcome-image-square-1 {
