@@ -8,67 +8,74 @@
 }
 
 .welcome-image-small-box {
-  left: 35%;
-  top: 3%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: 65px;
   -webkit-transition: none;
   transition: none;
   position: absolute;
 }
 
 .welcome-image-desktop {
-  top: 15%;
-  left: 60%;
+  left: 50%;
   margin-left: -289.5px;
+  margin-top: 150px;
   position: absolute;
 }
 
 #welcome-image-bomb {
-  top: 25%;
-  left: 12%;
+  margin-top: 150px;
+  left: 50%;
+  margin-left: -500px;
   position: absolute;
 }
 
 #welcome-image-coin-1 {
-  top: 28%;
-  left: 20%;
+  margin-top: 200px;
+  left: 50%;
+  margin-left: -425px;
   position: absolute;
 }
 
 #welcome-image-coin-2 {
-  left: 75%;
+  left: 50%;
+  margin-left: 150px;
   position: absolute;
 }
 
 #welcome-image-potion {
-  top: 53%;
+  left: 50%;
+  margin-left: -625px;
+  margin-top: 420px;
   position: absolute;
 }
 
 #welcome-image-gamepack {
-  top: 12%;
   z-index: -1;
-  left: 85%;
+  left: 50%;
+  margin-left: 300px;
+  margin-top: 100px;
   position: absolute;
 }
 
 .welcome-image-android {
-  top: 45%;
-  left: 45%;
-  margin-left: -384px;
+  left: 50%;
+  margin-left: -550px;
+  margin-top: 365px;
   position: absolute;
 }
 
 .welcome-image-iphone {
-  top: 46%;
-  left: 45%;
-  margin-left: -229.5px;
+  left: 50%;
+  margin-top: 370px;
+  margin-left: -400px;
   position: absolute;
 }
 
 .welcome-image-gamecontroller {
-  top: 67%;
-  left: 65%;
-  margin-left: -255px;
+  margin-top: 513px;
+  left: 50%;
+  margin-left: -260px;
   position: absolute;
 }
 
@@ -78,128 +85,9 @@
 
 .welcome-image-headphones {
   left: 50%;
-  bottom: 19%;
+  margin-left: 0px;
+  margin-top: -25px;
   position: absolute;
-}
-
-#welcome-image-disc {
-  position: absolute;
-  top: 67%;
-  left: 106%;
-  z-index: -1;
-}
-
-#welcome-image-x-1 {
-  position: absolute;
-  opacity: 0.3;
-  left: 5%;
-}
-
-#welcome-image-x-2 {
-  position: absolute;
-  opacity: 0.3;
-  left: 120%;
-  top: 55%;
-}
-
-#welcome-image-triangle-1 {
-  position: absolute;
-  opacity: 0.3;
-  left: 70%;
-  top: 5%;
-}
-
-#welcome-image-triangle-2 {
-  position: absolute;
-  opacity: 0.3;
-  left: 5%;
-  top: 35%;
-}
-
-#welcome-image-square-1 {
-  position: absolute;
-  opacity: 0.3;
-  top: -5%;
-  left: 108%;
-}
-
-#welcome-image-square-2 {
-  position: absolute;
-  opacity: 0.3;
-  left: 100%;
-  top: 22%;
-}
-
-#welcome-image-square-3 {
-  position: absolute;
-  opacity: 0.3;
-  left: 74%;
-  top: 72%;
-  z-index: -1;
-}
-
-#welcome-image-circle-1 {
-  position: absolute;
-  opacity: 0.3;
-  left: 37%;
-  top: 63%;
-  z-index: -1;
-}
-
-#welcome-image-circle-2 {
-  position: absolute;
-  opacity: 0.3;
-  left: 21%;
-  top: 15%;
-  z-index: -1;
-}
-
-#welcome-image-circle-3 {
-  position: absolute;
-  opacity: 0.3;
-  left: 118%;
-  top: 17%;
-  z-index: -1;
-}
-
-#welcome-image-circlefill-1 {
-  position: absolute;
-  opacity: 0.3;
-  left: 123%;
-  top: 0%;
-  z-index: -1;
-}
-
-#welcome-image-circlefill-2 {
-  position: absolute;
-  opacity: 0.3;
-  left: 27%;
-  top: 4%;
-  z-index: -1;
-}
-
-#welcome-image-circlefill-3 {
-  position: absolute;
-  opacity: 0.3;
-  left: 1%;
-  top: 51%;
-  z-index: -1;
-}
-
-#welcome-image-circlefill-4 {
-  position: absolute;
-  opacity: 0.3;
-  left: 95%;
-  top: 12%;
-  z-index: -1;
-}
-
-#welcome-image-circlefill-5 {
-  position: absolute;
-  opacity: 0.3;
-  left: 121%;
-  top: 62%;
-  z-index: -1;
 }
 
 .laptop-headphones-parent {
@@ -207,13 +95,147 @@
   width: 500px;
   height: 300px;
   left: 50%;
-  top: 41%;
+  margin-left: -220px;
+  margin-top: 333px;
 }
 
 .laptop-headphones-child {
   position: relative;
-  width: 100%;
-  height: 100%;
+}
+
+#welcome-image-disc {
+  position: absolute;
+  left: 50%;
+  margin-left: 400px;
+  margin-top: 520px;
+  z-index: -1;
+}
+
+#welcome-image-x-1 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: -580px;
+}
+
+#welcome-image-x-2 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: 500px;
+  margin-top: 400px;
+}
+
+#welcome-image-triangle-1 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: 10px;
+  margin-top: 75px;
+}
+
+#welcome-image-triangle-2 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-top: 200px;
+  margin-left: -600px;
+}
+
+#welcome-image-square-1 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: 500px;
+  margin-top: -35px;
+}
+
+#welcome-image-square-2 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: 450px;
+  margin-top: 200px;
+}
+
+#welcome-image-square-3 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-top: 500px;
+  z-index: -1;
+}
+
+#welcome-image-circle-1 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-top: 500px;
+  margin-left: -250px;
+  z-index: -1;
+}
+
+#welcome-image-circle-2 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: 100px;
+  z-index: -1;
+}
+
+#welcome-image-circle-3 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: 400px;
+  margin-top: 100px;
+  z-index: -1;
+}
+
+#welcome-image-circlefill-1 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: 300px;
+  margin-top: 0px;
+  z-index: -1;
+}
+
+#welcome-image-circlefill-2 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: 50px;
+  z-index: -1;
+}
+
+#welcome-image-circlefill-3 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: -606px;
+  margin-top: 400px;
+  z-index: -1;
+}
+
+#welcome-image-circlefill-4 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: 310px;
+  margin-top: 250px;
+  z-index: -1;
+}
+
+#welcome-image-circlefill-5 {
+  position: absolute;
+  opacity: 0.3;
+  left: 50%;
+  margin-left: 508px;
+  margin-top: 450px;
+  z-index: -1;
 }
 
 @media only screen and (max-width: 600px) {
