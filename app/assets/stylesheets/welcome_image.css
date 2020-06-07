@@ -196,16 +196,18 @@
 #welcome-image-circlefill-1 {
   position: absolute;
   opacity: 0.3;
-  left: 123%;
-  top: 0%;
+  left: 50%;
+  margin-left: 300px;
+  margin-top: 0px;
   z-index: -1;
 }
 
 #welcome-image-circlefill-2 {
   position: absolute;
   opacity: 0.3;
-  left: 27%;
-  top: 4%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: 50px;
   z-index: -1;
 }
 
