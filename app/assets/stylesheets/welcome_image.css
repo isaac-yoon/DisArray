@@ -232,8 +232,9 @@
 #welcome-image-circlefill-5 {
   position: absolute;
   opacity: 0.3;
-  left: 121%;
-  top: 62%;
+  left: 50%;
+  margin-left: 508px;
+  margin-top: 450px;
   z-index: -1;
 }
 
