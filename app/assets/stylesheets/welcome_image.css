@@ -214,8 +214,9 @@
 #welcome-image-circlefill-3 {
   position: absolute;
   opacity: 0.3;
-  left: 1%;
-  top: 51%;
+  left: 50%;
+  margin-left: -606px;
+  margin-top: 400px;
   z-index: -1;
 }
 
