@@ -15,7 +15,7 @@ const WelcomeNavBar = ({ currentUser, logout, openModal }) => {
         <button
           id="welcome-demo-button"
           onClick={() => openModal('demo-login')}
-        >DEMO LOGIN</button>
+        >TRY DEMO</button>
 
         <button
           id="welcome-signup-button"
