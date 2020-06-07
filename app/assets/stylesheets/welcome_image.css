@@ -153,8 +153,9 @@
 #welcome-image-square-2 {
   position: absolute;
   opacity: 0.3;
-  left: 100%;
-  top: 22%;
+  left: 50%;
+  margin-left: 450px;
+  margin-top: 200px;
 }
 
 #welcome-image-square-3 {
