@@ -168,11 +168,13 @@ const WelcomeImage = (props) => {
 
       <div className="laptop-headphones-parent">
         <div className="laptop-headphones-child">
+          
           <img
             alt="laptop"
             src={window.laptop}
             className="welcome-image-laptop"
           />
+
           <img
             alt="headphones"
             src={window.headphones}

@@ -8,67 +8,74 @@
 }
 
 .welcome-image-small-box {
-  left: 35%;
-  top: 3%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: 65px;
   -webkit-transition: none;
   transition: none;
   position: absolute;
 }
 
 .welcome-image-desktop {
-  top: 15%;
-  left: 60%;
+  left: 50%;
   margin-left: -289.5px;
+  margin-top: 150px;
   position: absolute;
 }
 
 #welcome-image-bomb {
-  top: 25%;
-  left: 12%;
+  margin-top: 150px;
+  left: 50%;
+  margin-left: -500px;
   position: absolute;
 }
 
 #welcome-image-coin-1 {
-  top: 28%;
-  left: 20%;
+  margin-top: 200px;
+  left: 50%;
+  margin-left: -425px;
   position: absolute;
 }
 
 #welcome-image-coin-2 {
-  left: 75%;
+  left: 50%;
+  margin-left: 150px;
   position: absolute;
 }
 
 #welcome-image-potion {
-  top: 53%;
+  left: 50%;
+  margin-left: -625px;
+  margin-top: 420px;
   position: absolute;
 }
 
 #welcome-image-gamepack {
-  top: 12%;
   z-index: -1;
-  left: 85%;
+  left: 50%;
+  margin-left: 300px;
+  margin-top: 100px;
   position: absolute;
 }
 
 .welcome-image-android {
-  top: 45%;
-  left: 45%;
-  margin-left: -384px;
+  left: 50%;
+  margin-left: -550px;
+  margin-top: 365px;
   position: absolute;
 }
 
 .welcome-image-iphone {
-  top: 46%;
-  left: 45%;
-  margin-left: -229.5px;
+  left: 50%;
+  margin-top: 370px;
+  margin-left: -400px;
   position: absolute;
 }
 
 .welcome-image-gamecontroller {
-  top: 67%;
-  left: 65%;
-  margin-left: -255px;
+  margin-top: 513px;
+  left: 50%;
+  margin-left: -260px;
   position: absolute;
 }
 
@@ -78,8 +85,24 @@
 
 .welcome-image-headphones {
   left: 50%;
-  bottom: 19%;
+  margin-left: 0px;
+  margin-top: -25px;
   position: absolute;
+}
+
+.laptop-headphones-parent {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 50%;
+  margin-left: -220px;
+  margin-top: 333px;
+}
+
+.laptop-headphones-child {
+  position: relative;
+  /* width: 100%;
+  height: 100%; */
 }
 
 #welcome-image-disc {
@@ -133,8 +156,8 @@
 #welcome-image-square-3 {
   position: absolute;
   opacity: 0.3;
-  left: 74%;
-  top: 72%;
+  left: 50%;
+  margin-top: 500px;
   z-index: -1;
 }
 
@@ -200,20 +223,6 @@
   left: 121%;
   top: 62%;
   z-index: -1;
-}
-
-.laptop-headphones-parent {
-  position: absolute;
-  width: 500px;
-  height: 300px;
-  left: 50%;
-  top: 41%;
-}
-
-.laptop-headphones-child {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 @media only screen and (max-width: 600px) {
