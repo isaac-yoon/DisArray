@@ -187,8 +187,9 @@
 #welcome-image-circle-3 {
   position: absolute;
   opacity: 0.3;
-  left: 118%;
-  top: 17%;
+  left: 50%;
+  margin-left: 400px;
+  margin-top: 100px;
   z-index: -1;
 }
 
