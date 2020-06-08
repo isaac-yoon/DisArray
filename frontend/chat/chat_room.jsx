@@ -48,9 +48,7 @@ class ChatRoom extends React.Component {
   }
 
   loadChat(e) {
-    debugger
     App.cable.subscriptions.subscriptions[0].load();
-    debugger
   }
 
   componentDidUpdate() {
