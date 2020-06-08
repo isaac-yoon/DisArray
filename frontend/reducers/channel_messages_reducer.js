@@ -8,7 +8,6 @@ const channelMessagesReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case ADD_MESSAGE:
-      debugger
       return Object.assign({}, oldState, action.message)
     case SET_MESSAGES:
       return action.messages
