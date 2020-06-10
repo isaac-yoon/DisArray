@@ -12,7 +12,7 @@ class ChatRoom extends React.Component {
 
   componentDidMount() {
     const { fetchChannelMessages, createChannelMessage } = this.props;
-    
+    debugger
     fetchChannelMessages();
     
     App.cable.subscriptions.create(
@@ -52,7 +52,8 @@ class ChatRoom extends React.Component {
   }
 
   componentDidUpdate() {
-    this.bottom.current.scrollIntoView();
+    debugger
+    if (this.bottom.current !== null) this.bottom.current.scrollIntoView();
   }
 
   render() {
