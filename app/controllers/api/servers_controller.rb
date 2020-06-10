@@ -45,7 +45,39 @@ class Api::ServersController < ApplicationController
     @server = Server.find_by(id: params[:id])
     render :show
   end
-  
+
+  def join
+    # find by invite code
+    @server = Server.find_by(invite_code: params[:invite_code])
+    # @server = Server.find_by(invite_code: params[:inviteCode])
+
+    if @server
+      if current_user.servers.include?(@server)
+        render json: ['Member already exists in server'], status: 422
+      else
+        ServerMembership.create({
+          member_id: current_user.id, 
+          server_id: @server.id
+        })
+        render :show
+      end
+    else
+      render json: ['Server not found'], status: 404
+    end
+  end
+
+  def leave
+    @server = current_user.servers.find_by(id: params[:server_id])
+    @server_membership = ServerMembership.find_by(member_id: current_user.id, server_id: params[:server_id])
+
+    if @server && @server_membership
+      @server_membership.destroy
+      render json: @server.id
+    else
+      render json: ['Cannot find server or member does not exist in server'], status: 422
+    end
+  end
+
   private
   def server_params
     params.require(:server).permit(:name, :photo)
