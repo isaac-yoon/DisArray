@@ -4,19 +4,24 @@ import MessageForm from './message_form';
 class ChatRoom extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      messages: []
+      messages: [],
+      channelId: props.location.pathname.split('/')[4] || '',
     }
+
     this.bottom = React.createRef();
   }
 
   componentDidMount() {
     const { fetchChannelMessages, createChannelMessage } = this.props;
-    debugger
     fetchChannelMessages();
-    
+
     App.cable.subscriptions.create(
-      { channel: "ChatChannel" },
+      {
+        channel: "ChatChannel",
+        // room: this.state.channelId,
+      },
       // this needs to match chat_channel.rb
       {
         received: data => {
@@ -65,7 +70,7 @@ class ChatRoom extends React.Component {
             {/* {currentUser.username ? currentUser.username : null } : {message} */}
             { message }
           </li>
-          <div id="channel-message-bottom"ref={this.bottom} />
+          <div id="channel-message-bottom" ref={this.bottom} />
 
         </div>
       )
@@ -74,11 +79,14 @@ class ChatRoom extends React.Component {
     return (
       <div className="chatroom-container">
         <div>Channel</div>
+
         <button className="load-button"
           onClick={this.loadChat.bind(this)}>
           Load Chat History
         </button>
+
         <div className="message-list">{messageList}</div>
+        
         <MessageForm />
       </div>
     )
