@@ -1,7 +1,10 @@
 class ChatChannel < ApplicationCable::Channel
   def subscribed
     # stream_from "some_channel"
-    stream_for 'chat_channel'
+    # stream_for 'chat_channel'
+    # debugger
+    stream_for "chat_channel_#{params[:channelId]}"
+
     # this is only one channel so far
     # @channel = Channel.find_by(id: params[:channel_id])
     # how to pass in channel_id?
@@ -23,11 +26,10 @@ class ChatChannel < ApplicationCable::Channel
     # ChatChannel.broadcast_to('chat_channel', socket)
     # ChatChannel.broadcast_to(@channel, socket)
 
-
     message = ChannelMessage.new(data['message'])
     if message.save
       socket = { message: message.body, type: 'message' }
-      ChatChannel.broadcast_to('chat_channel', socket)
+      ChatChannel.broadcast_to("chat_channel_#{data['channelId']}", socket)
     end
   end
 
@@ -40,6 +42,5 @@ class ChatChannel < ApplicationCable::Channel
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
     # sort of like dependent destroy, kind of
-
   end
 end

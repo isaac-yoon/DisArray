@@ -22,15 +22,12 @@ class CreateChannelForm extends React.Component {
     e.preventDefault();
 
     const channel = Object.assign({}, this.state)
-    
+
     this.props.createChannel(channel)
       .then(() => {
-        this.setState({
-          name: '',
-        });
+        this.setState({name: ''});
         this.props.closeModal();
       })
-      // .then(() => this.props.history.push('/channels/@me'));
   }
 
   render() {
@@ -50,27 +47,27 @@ class CreateChannelForm extends React.Component {
         </div>
 
         <br/>
+        
         <div>
+
           <div id="text-channel-name">
             CHANNEL NAME
           </div>
+
           <input
             type="text"
             value={this.state.name}
             onChange={this.handleInput('name')}
             placeholder="Choose a name"
             className="create-channel-input"
-          >
-          </input>
+          ></input>
 
         </div>
+
         <br/>
 
-        <button
-          className="create-channel-button"
-          onClick={this.handleSubmit}
-        >
-        Create Channel
+        <button className="create-channel-button" onClick={this.handleSubmit}>
+          Create Channel
         </button>
 
       </div>

@@ -20,7 +20,7 @@ class ChatRoom extends React.Component {
     App.cable.subscriptions.create(
       {
         channel: "ChatChannel",
-        // room: this.state.channelId,
+        channelId: this.state.channelId,
       },
       // this needs to match chat_channel.rb
       {
@@ -32,12 +32,12 @@ class ChatRoom extends React.Component {
               });
               // createChannelMessage(data.message)
               break;
-            case 'messages':
-              this.setState({
-                messages: data.messages
-              });
-              // setMessages(data.messages)
-              break;
+            // case 'messages':
+            //   this.setState({
+            //     messages: data.messages
+            //   });
+            //   // setMessages(data.messages)
+            //   break;
           }
         },
         // received will be invoked when the subscription broadcasts from the backend
@@ -56,9 +56,56 @@ class ChatRoom extends React.Component {
     App.cable.subscriptions.subscriptions[0].load();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.bottom.current !== null) this.bottom.current.scrollIntoView();
+
+    // if the URL changes
+
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      this.setState(
+        {messages: [], channelId: this.props.location.pathname.split('/')[4] || ''},
+        () => {
+          // unsubscribe only w
+          App.cable.disconnect()
+          App.cable.subscriptions.create(
+            {
+              channel: "ChatChannel",
+              channelId: this.state.channelId,
+            },
+            // this needs to match chat_channel.rb
+            {
+              received: data => {
+                switch (data.type) {
+                  case 'message':
+                    this.setState({
+                      messages: this.state.messages.concat(data.message)
+                    });
+                    // createChannelMessage(data.message)
+                    break;
+                  case 'messages':
+                    this.setState({
+                      messages: data.messages
+                    });
+                    // setMessages(data.messages)
+                    break;
+                }
+              },
+              // received will be invoked when the subscription broadcasts from the backend
+              speak: function (data) {
+                return this.perform("speak", data)
+              },
+              load: function () {
+                return this.perform("load")
+              }
+              // performs the speak method in the backend while passing in some data
+            }
+          );
+        }
+      )
+    }
   }
+
+  // maybe add a componentWillUnmount 
 
   render() {
     const { currentUser } = this.props;
@@ -87,7 +134,7 @@ class ChatRoom extends React.Component {
 
         <div className="message-list">{messageList}</div>
         
-        <MessageForm />
+        <MessageForm channelId = {this.state.channelId} />
       </div>
     )
   }

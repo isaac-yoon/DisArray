@@ -6,7 +6,9 @@ class MessageForm extends React.Component {
     this.state = { 
       body: '',
       author_id: 1,
+      // thread in author_id from current_user
       channel_id: 1,
+      // somehow add in channel id
     };
   }
 
@@ -18,10 +20,10 @@ class MessageForm extends React.Component {
   }
 
   handleSubmit() {
-    // debugger
     event.preventDefault();
     App.cable.subscriptions.subscriptions[0].speak({
-      message: this.state
+      message: this.state,
+      channelId: this.props.channelId
     });
     this.setState({
       body: ''
