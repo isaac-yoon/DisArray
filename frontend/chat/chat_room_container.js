@@ -4,6 +4,7 @@ import {
   fetchChannelMessages,
   createChannelMessage
 } from '../actions/channel_message_actions';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
   return {
@@ -17,4 +18,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchChannelMessages: (messages) => dispatch(fetchChannelMessages(messages))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChatRoom);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ChatRoom));
