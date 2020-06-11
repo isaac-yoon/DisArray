@@ -8,6 +8,7 @@ class Api::ServersController < ApplicationController
   def create
     @server = Server.new(server_params)
     @server.owner_id = current_user.id
+    # @server.invite_code = SecureRandom.hex(5).upcase
 
     if @server.save
       render :show
@@ -49,7 +50,6 @@ class Api::ServersController < ApplicationController
   def join
     # find by invite code
     @server = Server.find_by(invite_code: params[:invite_code])
-    # @server = Server.find_by(invite_code: params[:inviteCode])
 
     if @server
       if current_user.servers.include?(@server)
@@ -59,6 +59,8 @@ class Api::ServersController < ApplicationController
           member_id: current_user.id, 
           server_id: @server.id
         })
+
+        # @server
         render :show
       end
     else
@@ -80,6 +82,6 @@ class Api::ServersController < ApplicationController
 
   private
   def server_params
-    params.require(:server).permit(:name, :photo)
+    params.require(:server).permit(:name, :photo, :invite_code)
   end
 end

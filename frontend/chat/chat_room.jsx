@@ -15,14 +15,13 @@ class ChatRoom extends React.Component {
 
   componentDidMount() {
     const { fetchChannelMessages, createChannelMessage } = this.props;
-    fetchChannelMessages();
-
+    
     App.cable.subscriptions.create(
       {
+        // this needs to match chat_channel.rb
         channel: "ChatChannel",
         channelId: this.state.channelId,
       },
-      // this needs to match chat_channel.rb
       {
         received: data => {
           switch (data.type) {
@@ -30,26 +29,21 @@ class ChatRoom extends React.Component {
               this.setState({
                 messages: this.state.messages.concat(data.message)
               });
-              // createChannelMessage(data.message)
               break;
-            // case 'messages':
-            //   this.setState({
-            //     messages: data.messages
-            //   });
-            //   // setMessages(data.messages)
-            //   break;
+              }
+            },
+            // received will be invoked when the subscription broadcasts from the backend
+            speak: function (data) {
+              return this.perform("speak", data)
+            },
+            load: function() { 
+              return this.perform("load") 
+            }
+            // performs the speak method in the backend while passing in some data
           }
-        },
-        // received will be invoked when the subscription broadcasts from the backend
-        speak: function (data) {
-          return this.perform("speak", data)
-        },
-        load: function() { 
-          return this.perform("load") 
-        }
-        // performs the speak method in the backend while passing in some data
-      }
-    );
+          );
+
+    fetchChannelMessages();
   }
 
   loadChat(e) {
@@ -65,7 +59,7 @@ class ChatRoom extends React.Component {
       this.setState(
         {messages: [], channelId: this.props.location.pathname.split('/')[4] || ''},
         () => {
-          // unsubscribe only w
+          // unsubscribe to channel if the pathname changes
           App.cable.disconnect()
           App.cable.subscriptions.create(
             {
@@ -80,13 +74,6 @@ class ChatRoom extends React.Component {
                     this.setState({
                       messages: this.state.messages.concat(data.message)
                     });
-                    // createChannelMessage(data.message)
-                    break;
-                  case 'messages':
-                    this.setState({
-                      messages: data.messages
-                    });
-                    // setMessages(data.messages)
                     break;
                 }
               },
@@ -125,12 +112,6 @@ class ChatRoom extends React.Component {
 
     return (
       <div className="chatroom-container">
-        <div>Channel</div>
-
-        <button className="load-button"
-          onClick={this.loadChat.bind(this)}>
-          Load Chat History
-        </button>
 
         <div className="message-list">{messageList}</div>
         

@@ -39,11 +39,10 @@ export const editServer = (server) => (
 )
 
 export const joinServer = (inviteCode) => {
-  // if it doesn't work, try making sure inviteCode matches with the Ruby backend server controller file
   return $.ajax({
     method: 'POST',
     url: `/api/servers/join`,
-    data: inviteCode
+    data: { inviteCode }
   })
 }
 

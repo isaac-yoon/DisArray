@@ -12,10 +12,12 @@ export const receiveServers = servers => ({
   servers
 })
 
-export const receiveServer = server => ({
-  type: RECEIVE_SERVER,
-  server
-})
+export const receiveServer = server => {
+  return {
+    type: RECEIVE_SERVER,
+    server
+  }
+}
 
 export const removeServer = serverId => ({
   type: REMOVE_SERVER,
@@ -49,7 +51,9 @@ export const deleteServer = serverId => dispatch => {
 
 export const joinServer = inviteCode => dispatch => {
   return ServerAPIUtil.joinServer(inviteCode)
-    .then((server) => dispatch(receiveServer(server)))
+    .then((server) => {
+      return dispatch(receiveServer(server))
+    })
 }
 
 export const leaveServer = serverId => dispatch => {
