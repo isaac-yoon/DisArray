@@ -35,6 +35,9 @@ function Modal({ modal, closeModal }) {
     case 'edit-channel':
       component = <div className="modal-child-edit-channel-form" onClick={e => e.stopPropagation()}><EditChannelFormContainer /></div>;
       break;
+    case 'join-server':
+      component = <div className="modal-child-join-server-form" onClick={e => e.stopPropagation()}><JoinServerFormContainer /></div>;
+      break;
     default:
       return null;
   }
