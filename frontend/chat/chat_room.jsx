@@ -36,9 +36,9 @@ class ChatRoom extends React.Component {
             speak: function (data) {
               return this.perform("speak", data)
             },
-            load: function() { 
-              return this.perform("load") 
-            }
+            // load: function() { 
+            //   return this.perform("load") 
+            // }
             // performs the speak method in the backend while passing in some data
           }
           );
@@ -46,9 +46,9 @@ class ChatRoom extends React.Component {
     fetchChannelMessages();
   }
 
-  loadChat(e) {
-    App.cable.subscriptions.subscriptions[0].load();
-  }
+  // loadChat(e) {
+  //   App.cable.subscriptions.subscriptions[0].load();
+  // }
 
   componentDidUpdate(prevProps) {
     if (this.bottom.current !== null) this.bottom.current.scrollIntoView();
@@ -90,6 +90,10 @@ class ChatRoom extends React.Component {
         }
       )
     }
+  }
+
+  componentWillUnmount() {
+    App.cable.disconnect();
   }
 
   // maybe add a componentWillUnmount 

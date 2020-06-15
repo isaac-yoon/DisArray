@@ -42,5 +42,8 @@ class ChatChannel < ApplicationCable::Channel
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
     # sort of like dependent destroy, kind of
+    
+    # stop_all_streams
+    stop_stream_from "chat_room_#{params[:channelId]}"
   end
 end

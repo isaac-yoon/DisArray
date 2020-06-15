@@ -49,6 +49,7 @@ export const joinServer = (inviteCode) => {
 export const leaveServer = (serverId) => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/servers/${serverId}`,
+    url: `/api/servers/`,
+    data: { serverId }
   })
 }
