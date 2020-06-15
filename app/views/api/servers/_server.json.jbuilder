@@ -1,4 +1,4 @@
-json.extract! server, :id, :name, :owner_id
+json.extract! server, :id, :name, :owner_id, :invite_code, :member_ids
 
 # extract attributes / column names on a table
 

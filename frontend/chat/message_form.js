@@ -5,10 +5,8 @@ class MessageForm extends React.Component {
     super(props);
     this.state = { 
       body: '',
-      author_id: 1,
-      // thread in author_id from current_user
-      channel_id: 1,
-      // somehow add in channel id
+      author_id: this.props.currentUser.id,
+      channel_id: this.props.channelId,
     };
   }
 

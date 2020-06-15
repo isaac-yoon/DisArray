@@ -8,6 +8,7 @@ import DemoLoginFormContainer from '../components/session/demo_login_form_contai
 import CreateServerFormContainer from '../components/server/create_server_form_container';
 import CreateChannelFormContainer from '../components/channel/create_channel_form_container';
 import EditChannelFormContainer from '../components/channel/edit_channel_form_container';
+import JoinServerFormContainer from '../components/server/join_server_form_container';
 
 import { withRouter } from 'react-router-dom';
 
@@ -15,7 +16,9 @@ function Modal({ modal, closeModal }) {
   if (!modal) {
     return null;
   }
+  
   let component;
+
   switch (modal) {
     case 'login':
       component = <div className="modal-child" onClick={e => e.stopPropagation()}><LoginFormContainer /></div>;
@@ -34,6 +37,9 @@ function Modal({ modal, closeModal }) {
       break;
     case 'edit-channel':
       component = <div className="modal-child-edit-channel-form" onClick={e => e.stopPropagation()}><EditChannelFormContainer /></div>;
+      break;
+    case 'join-server':
+      component = <div className="modal-child-join-server-form" onClick={e => e.stopPropagation()}><JoinServerFormContainer /></div>;
       break;
     default:
       return null;

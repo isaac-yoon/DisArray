@@ -20,7 +20,7 @@ const SideBar = () => {
 
       <div className="main-app-side-bar-content">
         <Switch>
-          <ProtectedRoute path= "/channels/@me/:server_id" component = {ChannelIndexContainer} />
+          <ProtectedRoute path= "/channels/@me/:server_id/" component = {ChannelIndexContainer} />
         </Switch>
       </div>
 

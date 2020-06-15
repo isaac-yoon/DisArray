@@ -6,7 +6,8 @@ class CreateServerForm extends React.Component {
     this.state = {
       name: '',
       photoFile: null,
-      photoUrl: null
+      photoUrl: null,
+      inviteCode: Math.random().toString(18).toUpperCase().slice(3),
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,11 +37,14 @@ class CreateServerForm extends React.Component {
     if (this.state.photoFile) {
       formData.append('server[photo]', this.state.photoFile)
     }
+
+    formData.append('server[inviteCode]', this.state.inviteCode)
     
     this.props.createServer(formData).then(() => {
         this.setState({
           name: '',
-          photoFile: ''
+          photoFile: '',
+          inviteCode: Math.random().toString(18).toUpperCase().slice(3)
         });
         this.props.closeModal();
       })
