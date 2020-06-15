@@ -1,9 +1,6 @@
 import { connect } from 'react-redux';
 import ChatRoom from './chat_room';
-import {
-  fetchChannelMessages,
-  createChannelMessage
-} from '../actions/channel_message_actions';
+import { fetchChannelMessages } from '../actions/channel_message_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
@@ -14,7 +11,6 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  // createChannelMessage: (message) => dispatch(createChannelMessage(message)),
   fetchChannelMessages: (messages) => dispatch(fetchChannelMessages(messages))
 })
 

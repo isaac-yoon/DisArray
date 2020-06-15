@@ -9,7 +9,6 @@ class Api::ServersController < ApplicationController
   def create
     @server = Server.new(server_params)
     @server.owner_id = current_user.id
-    # @server.invite_code = SecureRandom.hex(5).upcase
 
     if @server.save
       ServerMembership.create({
@@ -65,8 +64,7 @@ class Api::ServersController < ApplicationController
           member_id: current_user.id, 
           server_id: @server.id
         })
-
-        # @server
+        
         render :show
       end
     else

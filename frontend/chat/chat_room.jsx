@@ -36,19 +36,12 @@ class ChatRoom extends React.Component {
             speak: function (data) {
               return this.perform("speak", data)
             },
-            // load: function() { 
-            //   return this.perform("load") 
-            // }
             // performs the speak method in the backend while passing in some data
           }
           );
 
     fetchChannelMessages();
   }
-
-  // loadChat(e) {
-  //   App.cable.subscriptions.subscriptions[0].load();
-  // }
 
   componentDidUpdate(prevProps) {
     if (this.bottom.current !== null) this.bottom.current.scrollIntoView();
@@ -97,14 +90,12 @@ class ChatRoom extends React.Component {
   }
 
   render() {
-    const { currentUser } = this.props;
-
     const messageList = this.state.messages.map(message => {
       return(
         <div key={message.id}>
           <li id="message-list-items">
-            {/* {currentUser.username ? currentUser.username : null } : {message} */}
             { message }
+            {/* add name of the user by pulling out message.author_id? */}
           </li>
           <div id="channel-message-bottom" ref={this.bottom} />
 
