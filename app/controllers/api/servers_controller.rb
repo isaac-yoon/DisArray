@@ -9,6 +9,7 @@ class Api::ServersController < ApplicationController
   def create
     @server = Server.new(server_params)
     @server.owner_id = current_user.id
+    # @server.photo.attach(params[:server][:photo]) if params[:server][:photo]
 
     if @server.save
       ServerMembership.create({
@@ -64,7 +65,7 @@ class Api::ServersController < ApplicationController
           member_id: current_user.id, 
           server_id: @server.id
         })
-        
+
         render :show
       end
     else
@@ -85,6 +86,7 @@ class Api::ServersController < ApplicationController
   end
 
   private
+
   def server_params
     params.require(:server).permit(:name, :photo, :invite_code)
   end
