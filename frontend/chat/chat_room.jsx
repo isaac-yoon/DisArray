@@ -7,14 +7,14 @@ class ChatRoom extends React.Component {
 
     this.state = {
       messages: [],
-      channelId: props.location.pathname.split('/')[4] || '',
+      channelId: this.props.match.params.channelId,
     }
 
     this.bottom = React.createRef();
   }
 
   componentDidMount() {
-    const { fetchChannelMessages, createChannelMessage } = this.props;
+    const { fetchChannelMessages } = this.props;
     
     App.cable.subscriptions.create(
       {

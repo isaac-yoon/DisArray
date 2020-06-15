@@ -2,6 +2,9 @@ import React from 'react';
 import NavBarContainer from './nav_bar_container';
 import SideBar from '../sidebar/main_app_side_bar'
 import ChatRoomContainer from '../../chat/chat_room_container';
+import ChatRoom from '../../chat/chat_room';
+import { AuthRoute, ProtectedRoute } from '../../util/route_util';
+
 
 const Main = () => {
   return(
@@ -18,7 +21,7 @@ const Main = () => {
             </div>
 
             <div className="main-app-content-secondary-container">
-              <ChatRoomContainer />
+              <ProtectedRoute path="/channels/@me/:serverId/:channelId" component={ ChatRoomContainer }  />
               <div className="main-app-friends-bar">
                 <div id="main-app-friends-bar-top">
                   PLACEHOLDER FOR FRIENDS
