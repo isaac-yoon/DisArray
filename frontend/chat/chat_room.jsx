@@ -117,7 +117,10 @@ class ChatRoom extends React.Component {
 
         <div className="message-list">{messageList}</div>
         
-        <MessageForm channelId = {this.state.channelId} />
+        <MessageForm 
+          channelId = {this.state.channelId}
+          currentUser = {this.props.currentUser}
+        />
       </div>
     )
   }
