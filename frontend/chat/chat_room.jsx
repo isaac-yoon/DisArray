@@ -96,8 +96,6 @@ class ChatRoom extends React.Component {
     App.cable.disconnect();
   }
 
-  // maybe add a componentWillUnmount 
-
   render() {
     const { currentUser } = this.props;
 
