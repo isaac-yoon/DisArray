@@ -7,7 +7,6 @@ class Api::ServersController < ApplicationController
   end
   
   def create
-    debugger
     @server = Server.new(server_params)
     @server.owner_id = current_user.id
     # @server.photo.attach(params[:server][:photo]) if params[:server][:photo]
