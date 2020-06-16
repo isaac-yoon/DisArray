@@ -105,3 +105,15 @@ DESIGN DECISIONS and BUG LOGS
 		- run it by TA
 
 
+6.15.2020
+
+- lots of issues regarding conditional rendering of chatrooms based on channelId
+	- some of the issues were:
+		(1) double, sometimes triple messages showing up - because multiple instances of a websocket connection was being instantiated
+		(2) channelId was not being taken correctly from the URL - using location.pathname.split('/') - VERY HACKY
+		(3) had a very complicated mass of code that used conditionals to check if the URL changed and updated the chatroom component accordingly
+
+	- this was ALL FIXED with a simple restructuring of the problem
+		(1) only mount the chatroom if a channel is clicked
+		(2) channelId refactored to use match.params after using a ProtectedRoute in the main_app component
+		(3) deleted that complicated mass of code
