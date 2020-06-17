@@ -17,10 +17,6 @@ const Main = () => {
             <SideBar />
           </div>
           <div id="main-app-content">
-            <div id="main-app-channel-name">
-              CHANNEL NAME
-            </div>
-
             <div className="main-app-content-secondary-container">
               <Switch>
                 <ProtectedRoute exact path="/channels/@me/:serverId/:channelId" component={ ChatRoomContainer }  />
