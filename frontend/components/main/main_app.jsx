@@ -1,10 +1,11 @@
 import React from 'react';
+import { ProtectedRoute } from '../../util/route_util';
+import { Switch } from 'react-router-dom';
+
 import NavBarContainer from './nav_bar_container';
 import SideBar from '../sidebar/main_app_side_bar'
 import ChatRoomContainer from '../../chat/chat_room_container';
-import ChatRoom from '../../chat/chat_room';
-import { AuthRoute, ProtectedRoute } from '../../util/route_util';
-
+import PlaceHolder from './placeholder';
 
 const Main = () => {
   return(
@@ -21,7 +22,10 @@ const Main = () => {
             </div>
 
             <div className="main-app-content-secondary-container">
-              <ProtectedRoute path="/channels/@me/:serverId/:channelId" component={ ChatRoomContainer }  />
+              <Switch>
+                <ProtectedRoute exact path="/channels/@me/:serverId/:channelId" component={ ChatRoomContainer }  />
+                <ProtectedRoute path="/channels/@me/" component={ PlaceHolder }  />
+              </Switch>
               <div className="main-app-friends-bar">
                 <div id="main-app-friends-bar-top">
                   PLACEHOLDER FOR FRIENDS
