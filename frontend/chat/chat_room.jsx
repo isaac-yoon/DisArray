@@ -1,5 +1,6 @@
 import React from 'react';
 import MessageForm from './message_form';
+import { getChannelMessages } from '../reducers/selectors';
 
 class ChatRoom extends React.Component {
   constructor(props) {
@@ -10,12 +11,14 @@ class ChatRoom extends React.Component {
       channelId: this.props.match.params.channelId,
     }
 
+    this.props.fetchChannelMessages()
+      .then((res) => this.setState({ messages: getChannelMessages(this.props.messages, this.props.match.params.channelId) }));
+    // add a selector here
+
     this.bottom = React.createRef();
   }
 
-  componentDidMount() {
-    const { fetchChannelMessages } = this.props;
-    
+  componentDidMount() {    
     App.cable.subscriptions.create(
       {
         // this needs to match chat_channel.rb
@@ -24,25 +27,22 @@ class ChatRoom extends React.Component {
       },
       {
         received: data => {
+          debugger
           switch (data.type) {
             case 'message':
               this.setState({
-                messages: this.state.messages.concat(data.message)
+                messages: this.state.messages.concat(data)
               });
               break;
-              }
-            },
-            // received will be invoked when the subscription broadcasts from the backend
-            speak: function (data) {
-              return this.perform("speak", data)
-            },
-            // performs the speak method in the backend while passing in some data
           }
-          );
-
-    fetchChannelMessages()
-      .then(() => this.setState({messages: Object.values(this.props.messages)}));
-      // create a selector and import the selector
+        },
+        // received will be invoked when the subscription broadcasts from the backend
+        speak: function (data) {
+          return this.perform("speak", data)
+        },
+        // performs the speak method in the backend while passing in some data
+      }
+    );
   }
 
   componentDidUpdate(prevProps) {

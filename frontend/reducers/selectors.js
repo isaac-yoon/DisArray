@@ -1,12 +1,13 @@
-export const getChannelMessages = ({ messages, filter }) => {
+// returns channel messages that are specific to the channel
+// filter = channel id
+
+
+export const getChannelMessages = (messages, filter) => {
   let result = [];
 
-  for (let id in messages) {
-    if (messages[id] === filter) result.push(messages[id]);
-  }
+  Object.values(messages).forEach((message) => {
+    if (message.channelId == filter) result.push(message);
+  });
 
   return result;
 };
-
-// returns channel messages that are specific to the channel
-// filter should be the channel id
