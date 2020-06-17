@@ -17,6 +17,10 @@ const Main = () => {
             <SideBar />
           </div>
           <div id="main-app-content">
+            <div id="main-app-channel-name">
+              #
+            </div>
+
             <div className="main-app-content-secondary-container">
               <Switch>
                 <ProtectedRoute exact path="/channels/@me/:serverId/:channelId" component={ ChatRoomContainer }  />
@@ -24,7 +28,7 @@ const Main = () => {
               </Switch>
               <div className="main-app-friends-bar">
                 <div id="main-app-friends-bar-top">
-                  PLACEHOLDER FOR FRIENDS
+                  PLACEHOLDER FOR MEMBERS LIST
                 </div>
               </div>
             </div>

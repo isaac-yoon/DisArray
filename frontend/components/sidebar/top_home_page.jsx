@@ -11,6 +11,6 @@ const TopHomePage = ({ currentUser, logout, openModal }) => {
       PLACEHOLDER FOR MAIN HOME PAGE
     </div>
   )
-}
+};
 
 export default TopHomePage;

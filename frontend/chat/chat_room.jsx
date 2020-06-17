@@ -40,7 +40,9 @@ class ChatRoom extends React.Component {
           }
           );
 
-    fetchChannelMessages();
+    fetchChannelMessages()
+      .then(() => this.setState({messages: Object.values(this.props.messages)}));
+      // create a selector and import the selector
   }
 
   componentDidUpdate(prevProps) {
@@ -52,11 +54,13 @@ class ChatRoom extends React.Component {
   }
 
   render() {
+    console.log('state messages', this.state.messages);
+    console.log('props messages', this.props.messages);
     const messageList = this.state.messages.map(message => {
       return(
         <div key={message.id}>
           <li id="message-list-items">
-            { message }
+            { message.body }
             {/* add name of the user by pulling out message.author_id? */}
           </li>
           <div id="channel-message-bottom" ref={this.bottom} />
