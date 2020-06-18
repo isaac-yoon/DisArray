@@ -100,4 +100,4 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
   - [x] Enable users to join servers
   - [x] Implement chatting within channels only rather than having a universal chat room for all users
   - [x] Add styling and have channel messages display username and timestamp
-  - [] Add direct messaging capabilities between users
+  - [ ] Add direct messaging capabilities between users
