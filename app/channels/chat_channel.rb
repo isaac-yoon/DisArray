@@ -35,7 +35,7 @@ class ChatChannel < ApplicationCable::Channel
         authorId: message.author_id, 
         body: message.body,
         channelId: message.channel_id,
-        timestamp: message.created_at,
+        createdAt: message.created_at,
       }
 
       ChatChannel.broadcast_to("chat_channel_#{data['channelId']}", socket)

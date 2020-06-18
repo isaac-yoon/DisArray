@@ -58,26 +58,24 @@ class ChatRoom extends React.Component {
 
   formatTimestamp(dateTime) {
     let today = new Date();
-    let dateCreated;
     let result = '';
     let yesterday = (d => new Date(d.setDate(d.getDate() - 1)))(new Date); 
     let time;
 
-    if (dateTime) {
-      dateCreated = new Date(dateTime);
+    if (dateTime !== null || dateTime !== undefined) {
+      let dateCreated = new Date(dateTime);
   
       if (today.toLocaleDateString() === dateCreated.toLocaleDateString()) {
         result = 'Today at '
       } else if (dateCreated > yesterday) {
         result = 'Yesterday at '
       } else {
-        result = datedCreated.toLocaleDateString()
+        result = dateCreated.toLocaleDateString()
       }
   
       time = dateCreated.toLocaleTimeString();
       return result + time;
     } 
-    
   }
 
   render() {
@@ -90,7 +88,7 @@ class ChatRoom extends React.Component {
           <li id="message-list-items">
             { message.body }
             { message.authorId }
-            { this.formatTimestamp(message.timestamp) }
+            { this.formatTimestamp(message.createdAt) }
             {/* add name of the user by pulling out message.author_id? */}
           </li>
           <div id="channel-message-bottom" ref={this.bottom} />
