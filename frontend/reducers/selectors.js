@@ -2,7 +2,7 @@
 // filter = channel id
 
 
-export const getChannelMessages = (messages, filter) => {
+export const filterChannelMessages = (messages, filter) => {
   let result = [];
 
   Object.values(messages).forEach((message) => {

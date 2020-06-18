@@ -1,3 +1,5 @@
+require 'date'
+
 class ChatChannel < ApplicationCable::Channel
   def subscribed
     # stream_from "some_channel"
@@ -25,6 +27,7 @@ class ChatChannel < ApplicationCable::Channel
     # ChatChannel.broadcast_to('chat_channel', socket)
     # ChatChannel.broadcast_to(@channel, socket)
     message = ChannelMessage.new(data['message'])
+
     if message.save
       socket = { 
         type: 'message',
@@ -32,6 +35,7 @@ class ChatChannel < ApplicationCable::Channel
         authorId: message.author_id, 
         body: message.body,
         channelId: message.channel_id,
+        timestamp: message.created_at,
       }
 
       ChatChannel.broadcast_to("chat_channel_#{data['channelId']}", socket)
@@ -51,4 +55,8 @@ class ChatChannel < ApplicationCable::Channel
     # stop_all_streams
     # stop_stream_from "chat_room_#{params[:channelId]}"
   end
+
+  private
+
+
 end

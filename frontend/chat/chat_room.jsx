@@ -1,6 +1,6 @@
 import React from 'react';
 import MessageForm from './message_form';
-import { getChannelMessages } from '../reducers/selectors';
+import { filterChannelMessages } from '../reducers/selectors';
 
 class ChatRoom extends React.Component {
   constructor(props) {
@@ -12,13 +12,17 @@ class ChatRoom extends React.Component {
     }
 
     this.props.fetchChannelMessages()
-      .then((res) => this.setState({ messages: getChannelMessages(this.props.messages, this.props.match.params.channelId) }));
-    // add a selector here
+      .then(
+        () => this.setState({
+          messages: filterChannelMessages(this.props.messages, this.props.match.params.channelId) 
+        })
+      );
 
     this.bottom = React.createRef();
+    this.formatTimestamp = this.formatTimestamp.bind(this);
   }
 
-  componentDidMount() {    
+  componentDidMount() { 
     App.cable.subscriptions.create(
       {
         // this needs to match chat_channel.rb
@@ -26,8 +30,8 @@ class ChatRoom extends React.Component {
         channelId: this.state.channelId,
       },
       {
+        // received will be invoked when the subscription broadcasts from the backend
         received: data => {
-          debugger
           switch (data.type) {
             case 'message':
               this.setState({
@@ -36,11 +40,10 @@ class ChatRoom extends React.Component {
               break;
           }
         },
-        // received will be invoked when the subscription broadcasts from the backend
+        // performs the speak method in the backend while passing in some data
         speak: function (data) {
           return this.perform("speak", data)
         },
-        // performs the speak method in the backend while passing in some data
       }
     );
   }
@@ -53,14 +56,41 @@ class ChatRoom extends React.Component {
     App.cable.disconnect();
   }
 
+  formatTimestamp(dateTime) {
+    let today = new Date();
+    let dateCreated;
+    let result = '';
+    let yesterday = (d => new Date(d.setDate(d.getDate() - 1)))(new Date); 
+    let time;
+
+    if (dateTime) {
+      dateCreated = new Date(dateTime);
+  
+      if (today.toLocaleDateString() === dateCreated.toLocaleDateString()) {
+        result = 'Today at '
+      } else if (dateCreated > yesterday) {
+        result = 'Yesterday at '
+      } else {
+        result = datedCreated.toLocaleDateString()
+      }
+  
+      time = dateCreated.toLocaleTimeString();
+      return result + time;
+    } 
+    
+  }
+
   render() {
     console.log('state messages', this.state.messages);
     console.log('props messages', this.props.messages);
+
     const messageList = this.state.messages.map(message => {
       return(
         <div key={message.id}>
           <li id="message-list-items">
             { message.body }
+            { message.authorId }
+            { this.formatTimestamp(message.timestamp) }
             {/* add name of the user by pulling out message.author_id? */}
           </li>
           <div id="channel-message-bottom" ref={this.bottom} />

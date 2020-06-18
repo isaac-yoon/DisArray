@@ -5,7 +5,6 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import TopContainer from './top_server_name_container';
 import TopHomePage from './top_home_page';
 import BottomName from './bottom_name_container';
-// import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   return (
