@@ -74,20 +74,25 @@ class ChatRoom extends React.Component {
       }
   
       time = dateCreated.toLocaleTimeString();
-      return result + time;
+      return result + '   ' + time;
     } 
   }
 
   render() {
-    debugger;
     const { allUsers } = this.props;
     const messageList = this.state.messages.map(message => {
       return(
         <div key={message.id}>
           <li id="message-list-items">
-            <div> { allUsers[message.authorId].username } </div>
-            <div> {this.formatTimestamp(message.createdAt)}</div>
-            <div> { message.body }</div>
+            <div className="message-container">
+              <div className="message-username-timestamp-container">
+                <div id="message-username"> { allUsers[message.authorId].username } </div>
+                &nbsp;
+                &nbsp;
+                <div id="message-timestamp"> {this.formatTimestamp(message.createdAt)}</div>
+              </div>
+              <div id="message-body"> { message.body }</div>
+            </div>
           </li>
           <div id="channel-message-bottom" ref={this.bottom} />
 

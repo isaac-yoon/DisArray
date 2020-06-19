@@ -35,6 +35,11 @@
   border-bottom: 1px groove white;
 }
 
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
 
-/* .load-button {
-} */
+.message-username-timestamp-container {
+  display: flex;
+}
