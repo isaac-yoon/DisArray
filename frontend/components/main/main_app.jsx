@@ -3,7 +3,8 @@ import { ProtectedRoute } from '../../util/route_util';
 import { Switch } from 'react-router-dom';
 
 import NavBarContainer from './nav_bar_container';
-import SideBar from '../sidebar/main_app_side_bar'
+import SideBar from '../sidebar/main_app_side_bar';
+import ChannelNameContainer from './channel_name_container';
 import ChatRoomContainer from '../../chat/chat_room_container';
 import PlaceHolder from './placeholder';
 
@@ -18,7 +19,10 @@ const Main = () => {
           </div>
           <div id="main-app-content">
             <div id="main-app-channel-name">
-              #
+              <Switch>
+                < ProtectedRoute path="/channels/@me/:serverId/:channelId" component={ChannelNameContainer} />
+                < ProtectedRoute path="/channels/@me" component={ChannelNameContainer} />
+              </Switch>
             </div>
 
             <div className="main-app-content-secondary-container">
