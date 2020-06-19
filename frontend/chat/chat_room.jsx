@@ -79,9 +79,6 @@ class ChatRoom extends React.Component {
   }
 
   render() {
-    console.log('state messages', this.state.messages);
-    console.log('props messages', this.props.messages);
-
     const messageList = this.state.messages.map(message => {
       return(
         <div key={message.id}>

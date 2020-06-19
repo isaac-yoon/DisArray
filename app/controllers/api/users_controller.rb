@@ -1,5 +1,10 @@
 class Api::UsersController < ApplicationController
 
+  def index
+    @users = User.all
+    render :index
+  end
+
   def create
     @user = User.new(user_params)
 
@@ -12,7 +17,6 @@ class Api::UsersController < ApplicationController
   end
 
   private
-  
   def user_params
     params.require(:user).permit(:username, :password, :email)
   end

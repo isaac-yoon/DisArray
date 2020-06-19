@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ServerIndex from './server_index';
-import { getServers, receiveServers } from '../../actions/server_actions';
+import { getServers } from '../../actions/server_actions';
+import { fetchUsers } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -11,6 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     getServers: () => dispatch(getServers()),
+    fetchUsers: () => dispatch(fetchUsers()),
   }
 }
 
