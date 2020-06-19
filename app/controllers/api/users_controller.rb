@@ -3,6 +3,7 @@ class Api::UsersController < ApplicationController
   def index
     @users = User.all
     render :index
+    # possible optimization in the future - only find users where they are server members or friends of current user
   end
 
   def create

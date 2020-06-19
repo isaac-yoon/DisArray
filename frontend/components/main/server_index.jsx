@@ -6,6 +6,8 @@ class ServerIndex extends React.Component {
   componentDidMount() {
     this.props.getServers()
     this.props.fetchUsers();
+    // possible optimization in the future, 
+    // to not fetch all users but to fetch all of the current user's friends and server members ONLY
   }
 
   render() {
@@ -17,6 +19,6 @@ class ServerIndex extends React.Component {
       </div>
     )
   }
-}
+};
 
 export default ServerIndex;
