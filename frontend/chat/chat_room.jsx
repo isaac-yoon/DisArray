@@ -48,7 +48,7 @@ class ChatRoom extends React.Component {
     );
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     if (this.bottom.current !== null) this.bottom.current.scrollIntoView();
   }
 
@@ -79,14 +79,15 @@ class ChatRoom extends React.Component {
   }
 
   render() {
+    debugger;
+    const { allUsers } = this.props;
     const messageList = this.state.messages.map(message => {
       return(
         <div key={message.id}>
           <li id="message-list-items">
-            { message.body }
-            { message.authorId }
-            { this.formatTimestamp(message.createdAt) }
-            {/* add name of the user by pulling out message.author_id? */}
+            <div> { allUsers[message.authorId].username } </div>
+            <div> {this.formatTimestamp(message.createdAt)}</div>
+            <div> { message.body }</div>
           </li>
           <div id="channel-message-bottom" ref={this.bottom} />
 

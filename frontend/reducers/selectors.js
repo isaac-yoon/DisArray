@@ -10,3 +10,13 @@ export const filterChannelMessages = (messages, filter) => {
 
   return result;
 };
+
+// export const allUsers = (users) => {
+//   let result = [];
+
+//   Object.values(users).forEach((user) => {
+//     result.push(user);
+//   })
+
+//   return result;
+// };
