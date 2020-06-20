@@ -17,6 +17,20 @@ const ChannelIndexItem = ({ channel, openModal }) => {
         </div>
       </Link>
 
+      {/* COMMENT
+      need to change this
+          currently, this is only changing the URL. what I want to do is unmount the chatroom component and then automatically mount it upon the page loading
+          POSSIBLE THINGS TO TRY:
+          Rather than having a Link, have an event listener
+          that does two things:
+          (1) unmounts manually
+            - ReactDOM.unmountComponentAtNode(container)
+              - Remove a mounted React component from the DOM and clean up its event handlers and state. 
+              - If no component was mounted in the contaienr, calling this function does nothing. 
+              - Returns true if a component was unmounted and false if there was no component to unmount.
+          (2) pushes history to the chat channel
+      */}
+
     </div>
   )
 }

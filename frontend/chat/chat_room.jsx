@@ -1,6 +1,7 @@
 import React from 'react';
 import MessageForm from './message_form';
 import { filterChannelMessages } from '../reducers/selectors';
+import ReactDOM from "react-dom";
 
 class ChatRoom extends React.Component {
   constructor(props) {
@@ -20,10 +21,15 @@ class ChatRoom extends React.Component {
 
     this.bottom = React.createRef();
     this.formatTimestamp = this.formatTimestamp.bind(this);
+    this.createActionCableSubscription = this.createActionCableSubscription.bind(this);
   }
 
   componentDidMount() { 
-    App.cable.subscriptions.create(
+    this.createActionCableSubscription();
+  }
+
+  createActionCableSubscription() {
+    App.seek = App.cable.subscriptions.create(
       {
         // this needs to match chat_channel.rb
         channel: "ChatChannel",
@@ -48,8 +54,15 @@ class ChatRoom extends React.Component {
     );
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.bottom.current !== null) this.bottom.current.scrollIntoView();
+
+    if (prevProps.match.params.channelId !== this.props.match.params.channelId) {
+      App.cable.disconnect();
+      App.seek.unsubscribe();
+      delete App.seek
+      this.createActionCableSubscription();
+    }
   }
 
   componentWillUnmount() {
