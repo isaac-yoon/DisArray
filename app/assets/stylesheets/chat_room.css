@@ -11,6 +11,7 @@
 
 #channel-message-form-textinput {
   border-radius: 10px;
+  width: 650px;
   /* align-self: flex-end; */
   /* position: absolute;
   bottom: 0; */
