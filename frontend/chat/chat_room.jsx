@@ -33,7 +33,7 @@ class ChatRoom extends React.Component {
       {
         // this needs to match chat_channel.rb
         channel: "ChatChannel",
-        channelId: this.state.channelId,
+        channelId: this.props.match.params.channelId,
       },
       {
         // received will be invoked when the subscription broadcasts from the backend
@@ -58,6 +58,7 @@ class ChatRoom extends React.Component {
     if (this.bottom.current !== null) this.bottom.current.scrollIntoView();
 
     if (prevProps.match.params.channelId !== this.props.match.params.channelId) {
+      debugger
       App.cable.disconnect();
       App.seek.unsubscribe();
       delete App.seek
