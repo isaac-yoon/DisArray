@@ -25,15 +25,15 @@ class ChatRoom extends React.Component {
   }
 
   componentDidMount() { 
-    this.createActionCableSubscription();
+    this.createActionCableSubscription(this.props.match.params.channelId);
   }
 
-  createActionCableSubscription() {
+  createActionCableSubscription(channelId) {
     App.seek = App.cable.subscriptions.create(
       {
         // this needs to match chat_channel.rb
         channel: "ChatChannel",
-        channelId: this.props.match.params.channelId,
+        channelId: channelId,
       },
       {
         // received will be invoked when the subscription broadcasts from the backend
@@ -58,16 +58,20 @@ class ChatRoom extends React.Component {
     if (this.bottom.current !== null) this.bottom.current.scrollIntoView();
 
     if (prevProps.match.params.channelId !== this.props.match.params.channelId) {
-      debugger
       App.cable.disconnect();
       App.seek.unsubscribe();
       delete App.seek
-      this.createActionCableSubscription();
+      this.createActionCableSubscription(this.props.match.params.channelId);
+      this.setState({
+        messages: filterChannelMessages(this.props.messages, this.props.match.params.channelId)
+      });
     }
   }
 
   componentWillUnmount() {
     App.cable.disconnect();
+    App.seek.unsubscribe();
+    delete App.seek
   }
 
   formatTimestamp(dateTime) {

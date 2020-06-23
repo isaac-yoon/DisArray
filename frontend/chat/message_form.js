@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 
 class MessageForm extends React.Component {
   constructor(props) {
@@ -17,11 +19,19 @@ class MessageForm extends React.Component {
       });
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.channelId !== this.props.match.params.channelId) {
+      this.setState({
+        channel_id: this.props.match.params.channelId,
+      })
+    }
+  }
+
   handleSubmit() {
     event.preventDefault();
     App.cable.subscriptions.subscriptions[0].speak({
       message: this.state,
-      channelId: this.props.channelId
+      channelId: this.props.match.params.channelId
     });
     this.setState({
       body: ''
@@ -49,4 +59,4 @@ class MessageForm extends React.Component {
   }
 }
 
-export default MessageForm;
+export default withRouter(MessageForm);
