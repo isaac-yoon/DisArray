@@ -1,7 +1,6 @@
 import React from 'react';
 import MessageForm from './message_form';
 import { filterChannelMessages } from '../reducers/selectors';
-import ReactDOM from "react-dom";
 
 class ChatRoom extends React.Component {
   constructor(props) {
@@ -62,9 +61,10 @@ class ChatRoom extends React.Component {
       App.seek.unsubscribe();
       delete App.seek
       this.createActionCableSubscription(this.props.match.params.channelId);
-      this.setState({
-        messages: filterChannelMessages(this.props.messages, this.props.match.params.channelId)
-      });
+      this.props.fetchChannelMessages()
+        .then(() => this.setState({
+            messages: filterChannelMessages(this.props.messages, this.props.match.params.channelId)
+        }));
     }
   }
 
