@@ -28,7 +28,8 @@
   align-items: center;
   height: 100%;
   color: white;
-  overflow: scroll;
+  overflow-x: visible;
+  overflow-y: scroll;
 }
 
 
