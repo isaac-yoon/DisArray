@@ -33,7 +33,7 @@ const Main = () => {
               </Switch>
               <div className="main-app-friends-bar">
                 <div id="main-app-friends-bar-top">
-                  < MemberListContainer />
+                  < ProtectedRoute path="/channels/@me/:serverId" component={ MemberListContainer } />
                 </div>
               </div>
             </div>
