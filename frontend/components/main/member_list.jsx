@@ -1,11 +1,26 @@
 import React from 'react';
 
 const MemberList = (props) => {
-  debugger
+  
+
+  const memberList = props.members.map((member) => {
+    return(
+      <div key={member.id}>
+        <li>
+          { member.username }
+        </li>
+      </div>
+    )
+  });
+
   return (
     <div>
-      {/* format members so that every member is on a separate line */}
-      { props.members.length > 0 ? props.members.map((member) => member.username ) : null }
+      <div>
+        Server Members
+      </div>
+      <div>
+        { memberList }
+      </div>
     </div>
   )
 };
