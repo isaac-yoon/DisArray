@@ -3,7 +3,7 @@ import MemberList from './member_list';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    members: ,
+    members: Object.values(state.entities.users),
   }
 };
 
