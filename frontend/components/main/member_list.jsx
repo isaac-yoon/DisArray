@@ -4,17 +4,47 @@ class MemberList extends React.Component {
   constructor(props) {
     super(props);
 
-  // need to filter all users with serverId
-  // state.entities.servers[serverId].memberIds = array of memberIds
-  // iterate through all memberIds and all users in users slice of state
-  // grab all users and put it into member list
+    this.state = {
+      members: [],
+    }
+  }
+
+  componentWillUnmount() {
+    this.setState({
+      members: [],
+    })
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.serverId !== this.props.match.params.serverId) {
+      this.setState({
+        members: [],
+      })
+    }
   }
 
   render() {
-    const memberList = this.props.members.map((member) => {
+    const { server, allUsers } = this.props;
+
+
+    allUsers.forEach((member) => {
+      if (server) {
+        server.memberIds.forEach((memberId) => {
+          if (member.id === memberId && !this.state.members.includes(member)) {
+            this.setState({
+              members: this.state.members.concat(member)
+            })
+          }
+        })
+      }
+    });
+
+    const membersList = this.state.members.map((member) => {
       return(
         <div key={member.id}>
-          <li> { member.username }</li>
+          <li>
+            { member.username }
+          </li>
         </div>
       )
     });
@@ -25,7 +55,7 @@ class MemberList extends React.Component {
           Server Members
         </div>
         <div>
-          { memberList }
+          { membersList }
         </div>
       </div>
     )
