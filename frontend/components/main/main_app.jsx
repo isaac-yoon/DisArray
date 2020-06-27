@@ -7,6 +7,7 @@ import SideBar from '../sidebar/main_app_side_bar';
 import ChannelNameContainer from './channel_name_container';
 import ChatRoomContainer from '../../chat/chat_room_container';
 import PlaceHolder from './placeholder';
+import MemberListContainer from './member_list_container';
 
 const Main = () => {
   return(
@@ -32,7 +33,10 @@ const Main = () => {
               </Switch>
               <div className="main-app-friends-bar">
                 <div id="main-app-friends-bar-top">
-                  PLACEHOLDER FOR MEMBERS LIST
+                  <Switch>
+                    < ProtectedRoute path="/channels/@me/:serverId" component={ MemberListContainer } />
+                    < ProtectedRoute path="/channels/@me" component={ PlaceHolder } />
+                  </Switch>
                 </div>
               </div>
             </div>

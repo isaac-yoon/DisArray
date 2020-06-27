@@ -8,7 +8,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 const TopHomePage = ({ currentUser, logout, openModal }) => {
   return (
     <div>
-      PLACEHOLDER FOR MAIN HOME PAGE
+      
     </div>
   )
 };
