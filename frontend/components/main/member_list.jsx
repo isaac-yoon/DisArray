@@ -1,5 +1,10 @@
 import React from 'react';
 
+
+// use local state to add all members of a particular server
+// because we're using local state here, we need to reset the local state whenever the URL changes 
+// or whenever the component is unmounted
+
 class MemberList extends React.Component {
   constructor(props) {
     super(props);
@@ -7,12 +12,6 @@ class MemberList extends React.Component {
     this.state = {
       members: [],
     }
-  }
-
-  componentWillUnmount() {
-    this.setState({
-      members: [],
-    })
   }
 
   componentDidUpdate(prevProps) {
