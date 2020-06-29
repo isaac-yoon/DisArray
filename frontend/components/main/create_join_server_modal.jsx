@@ -21,13 +21,21 @@ const CreateJoinServerModal = (props) => {
         <div id = "create-join-actions-container">
           <div className = "actions-links" id = "create-server-link">
             <b>Create</b> a new server and invite your friends. It's free!
-            {/* picture */}
+            <img 
+              alt="create server icon" 
+              src={window.createServerIcon}
+              className="action-links-icons"
+            />
             <div>Create a Server</div>
           </div>
 
           <div className = "actions-links" id = "join-server-link">
             <b>Join</b> a server with an invite code or link.
-            {/* picture */}
+            <img 
+              src={window.joinServerIcon}
+              alt="join server icon" 
+              className="action-links-icons"
+            />
             <div>Join a server</div>
           </div>
         </div>
