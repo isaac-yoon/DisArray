@@ -5,8 +5,8 @@
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 5px;
-  width: 650px;
-  height: 400px;
+  width: 550px;
+  height: 375px;
 }
 
 .create-join-server-modal {
@@ -40,7 +40,7 @@
   flex-direction: column;
   width: 228px;
   text-align: center;
-  border: 1px solid gray;
+  border: 1px solid rgba(0,0,0,0.2);
   border-radius: 8px;
   padding: 16px;
   font-size: 16px;
