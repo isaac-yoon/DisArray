@@ -16,10 +16,21 @@ const CreateJoinServerModal = (props) => {
 
   return(
     <div className = "create-join-server-modal">
-      <div>Oh, another server huh?</div>
+      <div id ="create-join-server-modal-header-text">Oh, another server huh?</div>
       <div className = "create-join-server-modal-options-container">
-        <div>Create a new server and invite your friends. It's free!</div>
-        <div>Join a server with an invite code or link.</div>
+        <div id = "create-join-actions-container">
+          <div className = "actions-links" id = "create-server-link">
+            Create a new server and invite your friends. It's free!
+            {/* picture */}
+            <div>Create a Server</div>
+          </div>
+
+          <div className = "actions-links" id = "join-server-link">
+            Join a server with an invite code or link.
+            {/* picture */}
+            <div>Join a server</div>
+          </div>
+        </div>
       </div>
     </div>
   )
