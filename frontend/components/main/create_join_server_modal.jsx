@@ -26,7 +26,7 @@ const CreateJoinServerModal = (props) => {
               src={window.createServerIcon}
               className="action-links-icons"
             />
-            <div>Create a Server</div>
+            <button className="action-link-button" id="create-action-link">Create a server</button>
           </div>
 
           <div className = "actions-links" id = "join-server-link">
@@ -36,7 +36,7 @@ const CreateJoinServerModal = (props) => {
               alt="join server icon" 
               className="action-links-icons"
             />
-            <div>Join a server</div>
+            <button className = "action-link-button" id="join-action-link">Join a server</button>
           </div>
         </div>
       </div>

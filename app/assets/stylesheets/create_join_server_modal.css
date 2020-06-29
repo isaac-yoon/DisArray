@@ -46,11 +46,35 @@
   font-size: 16px;
 }
 
+.actions-links:hover {
+  cursor: pointer;
+}
+
 .action-links-icons {
   height: 78px;
   width: 194px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.action-link-button {
+  min-width: 96px;
+  min-height: 38px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  font-style: helvetica;
+  font-weight: 500;
+}
+
+#create-action-link {
+  background-color: #7289da;
+}
+
+#join-action-link {
+  background-color: #43b581;
 }
 
 #create-server-link {
