@@ -2,17 +2,17 @@ import React from 'react';
 
 const CreateJoinServerModal = (props) => {
 
-  createServerClick() {
-    e.preventDefault();
-    // open create server modal
-    // close CreateJoinServerModal
-  }
+  // createServerClick() {
+  //   e.preventDefault();
+  //   // open create server modal
+  //   // close CreateJoinServerModal
+  // };
 
-  joinServerClick() {
-    e.preventDefault();
-    // open join server modal
-    // close CreateJoinServerModal
-  }
+  // joinServerClick() {
+  //   e.preventDefault();
+  //   // open join server modal
+  //   // close CreateJoinServerModal
+  // };
 
   return(
     <div className = "create-join-server-modal">
