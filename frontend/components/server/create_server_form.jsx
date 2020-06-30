@@ -14,10 +14,6 @@ class CreateServerForm extends React.Component {
     this.handleFile = this.handleFile.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.props.getServers();
-  // }
-
   handleImageClick() {
     $("#create-server-add-photo").trigger('click');
   }
@@ -120,6 +116,10 @@ class CreateServerForm extends React.Component {
         </div>
 
         <div className="bottom-nav-links">
+          <div
+            // onClick={() => openModal('create-join-server')}
+          >BACK
+          </div>
           <button
             onClick={this.handleSubmit}
             className="create-server-button"

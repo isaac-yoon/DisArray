@@ -40,7 +40,16 @@ class JoinServerForm extends React.Component {
         })}
 
         <div>
-          Join Server
+          JOIN A SERVER
+        </div>
+
+        <div>
+          Enter an invite below to join an existing server. The invite will look something like this:
+        </div>
+
+        <div className = "invite-codes-container">
+          <div>D942C8CMFH29</div>
+          <div>L23IJF019MUL</div>
         </div>
 
         <div className = "join-server-input">

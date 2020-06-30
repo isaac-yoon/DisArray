@@ -5,8 +5,8 @@
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 5px;
-  width: 650px;
-  height: 400px;
+  width: 600px;
+  height: 450px;
 }
 
 
@@ -15,6 +15,8 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 550px;
+  margin-left: 25px;
 }
 
 #create-server-header {
@@ -41,8 +43,9 @@
 .create-server-inputs {
   display: flex;
   flex-direction: row;
-  /* align-self: center; */
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .text-input-area {
@@ -57,11 +60,13 @@
   display: block;
 }
 
-/* .create-server-text-input-field {
-
+.create-server-text-input {
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: #e3e5e8;
 }
 
-#create-server-add-photo-input {
+/* #create-server-add-photo-input {
 
 } */
 
@@ -89,5 +94,4 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-self: center;
 }
