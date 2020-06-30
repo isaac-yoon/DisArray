@@ -26,9 +26,6 @@ const NavBar = ({logout, openModal}) => {
             </svg>
           </div>
         </button>
-        <button onClick = {() => openModal('join-server')}>
-          JOIN SERVER
-        </button>
       </div>
     )
 }
