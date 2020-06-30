@@ -29,6 +29,8 @@ class JoinServerForm extends React.Component {
   }
 
   render() {
+    const { openModal } = this.props;
+    
     return (
       <div className = "join-server-form">
         {this.props.errors.map(error => {
@@ -62,12 +64,20 @@ class JoinServerForm extends React.Component {
           />
         </div>
 
-        <button
-          onClick={this.handleSubmit}
-          className="join-server-button"
-        >
-          Join Server
-        </button>
+        <div>
+          <button
+            onClick={() => openModal('create-join-server')}
+            className="back-modal"
+          >BACK
+          </button>
+          <button
+            onClick={this.handleSubmit}
+            className="join-server-button"
+          >
+            Join Server
+          </button>
+        </div>
+
       </div>
     );
   }

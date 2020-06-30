@@ -62,6 +62,7 @@ class CreateServerForm extends React.Component {
 
   render() {
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+    const { openModal } = this.props;
 
     return (
       <div className = "create-server-form">
@@ -117,7 +118,8 @@ class CreateServerForm extends React.Component {
 
         <div className="bottom-nav-links">
           <div
-            // onClick={() => openModal('create-join-server')}
+            onClick={() => openModal('create-join-server')}
+            className = "back-modal"
           >BACK
           </div>
           <button
