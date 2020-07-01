@@ -25,6 +25,8 @@ class MemberList extends React.Component {
   render() {
     const { server, allUsers } = this.props;
 
+    // not sure this is the best place to hold this logic
+    // think of other places where this logic can go
 
     allUsers.forEach((member) => {
       if (server) {
@@ -49,12 +51,11 @@ class MemberList extends React.Component {
     });
 
     return (
-      <div>
+      <div className="member-list">
         <div>
-          Server Members
-        </div>
-        <div>
-          { membersList }
+          <ul id = "list-of-members">
+            { membersList }
+          </ul>
         </div>
       </div>
     )
