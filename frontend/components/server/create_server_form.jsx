@@ -103,6 +103,7 @@ class CreateServerForm extends React.Component {
             className="image-preview"
             onClick={this.handleImageClick}
           >
+            <p id="add-icon">ADD ICON</p>
             <input 
               type="file" 
               name="" 
