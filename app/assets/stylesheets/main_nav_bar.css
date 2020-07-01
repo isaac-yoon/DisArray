@@ -87,3 +87,9 @@
 #main-add-server {
   -webkit-transition: background-color 0.2s;
 }
+
+#user-logout-button-image {
+  width: 25px;
+  height: 25px;
+  fill: rgb(129, 131, 138);
+}
