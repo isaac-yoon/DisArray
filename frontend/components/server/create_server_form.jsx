@@ -74,9 +74,9 @@ class CreateServerForm extends React.Component {
           )
         })}
         
-        <div id="create-server-header">
+        <header id="create-server-header">
           CREATE YOUR SERVER
-        </div>
+        </header>
 
         <div id="create-server-message">
           By creating a server, you will have access to free
@@ -117,15 +117,18 @@ class CreateServerForm extends React.Component {
         </div>
 
         <div className="bottom-nav-links">
-          <div
+          <button
             onClick={() => openModal('create-join-server')}
             className = "back-modal"
-          >BACK
-          </div>
+          >
+            {/* need to add the back arrow here */}
+            BACK
+          </button>
+
           <button
             onClick={this.handleSubmit}
             className="create-server-button"
-          >Create Server
+          >Create
           </button>
         </div>
 

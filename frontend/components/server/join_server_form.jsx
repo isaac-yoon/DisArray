@@ -30,7 +30,7 @@ class JoinServerForm extends React.Component {
 
   render() {
     const { openModal } = this.props;
-    
+
     return (
       <div className = "join-server-form">
         {this.props.errors.map(error => {
@@ -41,12 +41,14 @@ class JoinServerForm extends React.Component {
           )
         })}
 
-        <div>
+        <header id = "join-server-header">
           JOIN A SERVER
-        </div>
+        </header>
 
-        <div>
-          Enter an invite below to join an existing server. The invite will look something like this:
+        <div id = "join-server-message">
+          Enter an invite below to join an existing server. 
+          <br/>
+          The invite will look something like these:
         </div>
 
         <div className = "invite-codes-container">
@@ -59,12 +61,12 @@ class JoinServerForm extends React.Component {
             type="text"
             value={this.state.inviteCode}
             onChange={this.handleInput('inviteCode')}
-            placeholder="Type your invite code"
             className="join-server-text-input"
           />
+          <span id="enter-an-invite">Enter an invite</span>
         </div>
 
-        <div>
+        <div className = "join-server-buttons-container">
           <button
             onClick={() => openModal('create-join-server')}
             className="back-modal"
@@ -74,7 +76,7 @@ class JoinServerForm extends React.Component {
             onClick={this.handleSubmit}
             className="join-server-button"
           >
-            Join Server
+            Join
           </button>
         </div>
 

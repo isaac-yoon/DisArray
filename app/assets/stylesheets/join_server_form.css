@@ -5,7 +5,7 @@
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 5px;
-  width: 650px;
+  width: 600px;
   height: 450px;
 }
 
@@ -16,6 +16,69 @@
   height: 100%;
 }
 
-.back-modal {
-  cursor: pointer;
+#join-server-header {
+  padding-top: 25px;
+  color: #43b581;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+}
+
+#join-server-message {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  padding: 10px 0;
+  color: #747f8d;
+}
+
+.invite-codes-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  color: #7289da;
+}
+
+.join-server-input {
+  width: 382px;
+  height: 40px;
+  align-self: center;
+}
+
+.join-server-input input {
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: #e3e5e8;
+  align-self: center;
+}
+
+.join-server-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #f6f6f7;
+  min-height: 74px;
+  min-width: 540px;
+  padding: 18px 40px;
+}
+
+#enter-an-invite {
+  color: #747f8d;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: helvetica;
+}
+
+/* back modal styling uses the same styling as seen in create_server_form.css */
+
+.join-server-button {
+  background-color: #43b581;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 16px;
 }
