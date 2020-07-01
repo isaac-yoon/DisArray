@@ -1,0 +1,87 @@
+.modal-child-create-join-server-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 5px;
+  width: 550px;
+  height: 375px;
+}
+
+.create-join-server-modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-join-server-modal-options-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#create-join-server-modal-header-text {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 25px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+#create-join-actions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 475px;
+}
+
+.actions-links {
+  display: flex;
+  flex-direction: column;
+  width: 228px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.actions-links:hover {
+  cursor: pointer;
+}
+
+.action-links-icons {
+  height: 78px;
+  width: 194px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.action-link-button {
+  min-width: 96px;
+  min-height: 38px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  font-style: helvetica;
+  font-weight: 500;
+}
+
+#create-action-link {
+  background-color: #7289da;
+}
+
+#join-action-link {
+  background-color: #43b581;
+}
+
+#create-server-link {
+
+}
+
+#join-server-link {
+
+}
+

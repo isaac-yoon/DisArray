@@ -12,6 +12,7 @@ const mapDispatchToProps = dispatch => ({
   createServer: (server) => dispatch(createServer(server)),
   getServers: () => dispatch(getServers()),
   closeModal: () => dispatch(closeModal()),
+  openModal: (modal) => dispatch(openModal(modal)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateServerForm);

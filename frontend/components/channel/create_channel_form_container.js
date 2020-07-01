@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createChannel } from '../../actions/channel_actions';
-import { openModal, closeModal } from '../../actions/modal_actions';
+import { closeModal } from '../../actions/modal_actions';
 import CreateChannelForm from './create_channel_form';
 import { withRouter } from 'react-router-dom';
 
