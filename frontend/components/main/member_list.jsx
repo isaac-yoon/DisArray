@@ -27,6 +27,7 @@ class MemberList extends React.Component {
 
     // not sure this is the best place to hold this logic
     // think of other places where this logic can go
+    // this should probably be in a selector
 
     allUsers.forEach((member) => {
       if (server) {
