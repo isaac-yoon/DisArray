@@ -10,3 +10,22 @@ export const filterChannelMessages = (messages, filter) => {
 
   return result;
 };
+
+
+
+// export const filterServerMembers = (allUsers, server) => {
+//   let result = [];
+
+//   allUsers.forEach((member) => {
+//     if (server) {
+//       server.memberIds.forEach((memberId) => {
+//         if (member.id === memberId) {
+//           result.push(member);
+//         }
+//       })
+//     }
+//   });
+
+//   return result;
+// };
+

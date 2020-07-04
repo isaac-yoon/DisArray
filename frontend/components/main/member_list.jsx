@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { filterServerMembers } from '../../reducers/selectors';
 
 // use local state to add all members of a particular server
 // because we're using local state here, we need to reset the local state whenever the URL changes 
