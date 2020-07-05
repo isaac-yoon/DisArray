@@ -44,7 +44,7 @@ class MemberList extends React.Component {
     const membersList = this.state.members.map((member) => {
       return(
         <div key={member.id}>
-          <li>
+          <li id="member-username">
             { member.username }
           </li>
         </div>
@@ -55,6 +55,7 @@ class MemberList extends React.Component {
       <div className="member-list">
         <div>
           <ul id = "list-of-members">
+            <div id="member-list-header">SERVER MEMBERS</div>
             { membersList }
           </ul>
         </div>

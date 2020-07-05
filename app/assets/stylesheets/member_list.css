@@ -1,3 +1,14 @@
 #list-of-members {
   padding: 7px;
 }
+
+#member-list-header {
+  font-size: 12px;
+  /* change font color to gray */
+}
+
+#member-username {
+  padding: 0px 0px 8px 8px;
+  /* make background a darker black */
+  /* play around with the width and height */
+}
