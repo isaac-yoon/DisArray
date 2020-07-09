@@ -54,8 +54,8 @@ class MemberList extends React.Component {
     return (
       <div className="member-list">
         <div>
+          <div id="member-list-header">SERVER MEMBERS</div>
           <ul id = "list-of-members">
-            <div id="member-list-header">SERVER MEMBERS</div>
             { membersList }
           </ul>
         </div>
