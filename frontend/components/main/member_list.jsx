@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { filterServerMembers } from '../../reducers/selectors';
 
 // use local state to add all members of a particular server
 // because we're using local state here, we need to reset the local state whenever the URL changes 
@@ -25,6 +25,9 @@ class MemberList extends React.Component {
   render() {
     const { server, allUsers } = this.props;
 
+    // not sure this is the best place to hold this logic
+    // think of other places where this logic can go
+    // this should probably be in a selector
 
     allUsers.forEach((member) => {
       if (server) {
@@ -41,7 +44,7 @@ class MemberList extends React.Component {
     const membersList = this.state.members.map((member) => {
       return(
         <div key={member.id}>
-          <li>
+          <li id="member-username">
             { member.username }
           </li>
         </div>
@@ -49,12 +52,12 @@ class MemberList extends React.Component {
     });
 
     return (
-      <div>
+      <div className="member-list">
         <div>
-          Server Members
-        </div>
-        <div>
-          { membersList }
+          <div id="member-list-header">SERVER MEMBERS</div>
+          <ul id = "list-of-members">
+            { membersList }
+          </ul>
         </div>
       </div>
     )

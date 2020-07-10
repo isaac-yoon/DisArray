@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import MemberList from './member_list';
-import { getServers } from '../../actions/server_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {

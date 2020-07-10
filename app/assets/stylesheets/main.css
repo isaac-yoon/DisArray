@@ -61,6 +61,7 @@
   border-left: 1px groove black;
   height: calc(631px - 51px);
   min-width: 300px;
+  background-color: #2F3136;
 }
 
 #main-app-friends-bar-top {

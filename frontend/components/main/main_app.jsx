@@ -28,14 +28,14 @@ const Main = () => {
 
             <div className="main-app-content-secondary-container">
               <Switch>
-                <ProtectedRoute exact path="/channels/@me/:serverId/:channelId" component={ ChatRoomContainer }  />
+                <ProtectedRoute exact path="/channels/@me/:serverId/:channelId" component={ ChatRoomContainer } />
                 <ProtectedRoute path="/channels/@me/" component={ PlaceHolder }  />
               </Switch>
               <div className="main-app-friends-bar">
                 <div id="main-app-friends-bar-top">
                   <Switch>
-                    < ProtectedRoute path="/channels/@me/:serverId" component={ MemberListContainer } />
-                    < ProtectedRoute path="/channels/@me" component={ PlaceHolder } />
+                    <ProtectedRoute path="/channels/@me/:serverId" component={ MemberListContainer } />
+                    <ProtectedRoute path="/channels/@me" component={ PlaceHolder } />
                   </Switch>
                 </div>
               </div>
