@@ -61,7 +61,7 @@
 .main-app-friends-bar {
   border-left: 1px groove black;
   height: 100%;
-  min-width: 300px;
+  width: 300px;
 }
 
 #main-app-friends-bar-top {

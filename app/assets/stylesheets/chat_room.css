@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: white;
+  width: 100%;
 }
 
 .chatroom-container input {
@@ -11,7 +12,7 @@
 
 #channel-message-form-textinput {
   border-radius: 10px;
-  width: 650px;
+  width: 100%;
   /* align-self: flex-end; */
   /* position: absolute;
   bottom: 0; */
@@ -23,8 +24,8 @@
 
 .message-list {
   overflow-y: scroll;
-  height: 550px;
-  width: 650px;
+  height: 100%;
+  width: 100%;
   border-radius: 25px;
 }
 

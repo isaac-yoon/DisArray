@@ -40,7 +40,7 @@ class MessageForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="chat-room-message-form">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input
             id="channel-message-form-textinput"
