@@ -3,6 +3,9 @@
 }
 
 .side-bar-server-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 15px;
   border-bottom: 1px groove black;
 }
@@ -138,4 +141,10 @@
 #main-top-home {
   padding: 15px;
   border-bottom: 1px groove black;
+}
+
+#server-name-dropdown {
+  padding-bottom: 15px;
+  font-size: 24px;
+  cursor: pointer;
 }
