@@ -42,8 +42,22 @@
 .message-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .message-username-timestamp-container {
   display: flex;
+  justify-content: space-between;
+}
+
+#message-form-container {
+  width: 97%;
+}
+
+#message-timestamp {
+  color: gray;
+}
+
+#message-username {
+  font-weight: 700;
 }

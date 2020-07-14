@@ -105,8 +105,6 @@ class ChatRoom extends React.Component {
             <div className="message-container">
               <div className="message-username-timestamp-container">
                 <div id="message-username"> { allUsers[message.authorId].username ? allUsers[message.authorId].username : null } </div>
-                &nbsp;
-                &nbsp;
                 <div id="message-timestamp"> {this.formatTimestamp(message.createdAt)}</div>
               </div>
               <div id="message-body"> { message.body }</div>
