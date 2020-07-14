@@ -8,14 +8,18 @@
 
 .chatroom-container input {
   color: black;
+  overflow: scroll;
 }
 
 #channel-message-form-textinput {
   border-radius: 10px;
   width: 100%;
-  /* align-self: flex-end; */
-  /* position: absolute;
-  bottom: 0; */
+  background-color: #27272B;
+  margin-bottom: 10px;
+  padding: 14px 14px 14px 20px;
+  height: 16px;
+  cursor: text;
+  color: white;
 }
 
 #channel-message-form-submit-button {
@@ -32,8 +36,7 @@
 #message-list-items {
   display: flex;
   flex-direction: row;
-  padding: 10px;
-  border-bottom: 1px groove white;
+  padding: 10px 15px 10px 15px;
 }
 
 .message-container {

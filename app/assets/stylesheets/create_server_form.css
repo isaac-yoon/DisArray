@@ -5,10 +5,9 @@
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 5px;
-  width: 650px;
-  height: 400px;
+  width: 600px;
+  height: 450px;
 }
-
 
 .create-server-form {
   display: flex;
@@ -19,7 +18,6 @@
 
 #create-server-header {
   padding-top: 25px;
-  color: #7289DA;
   font-weight: 700;
   line-height: 1.3;
   text-transform: uppercase;
@@ -41,8 +39,9 @@
 .create-server-inputs {
   display: flex;
   flex-direction: row;
-  /* align-self: center; */
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .text-input-area {
@@ -57,11 +56,13 @@
   display: block;
 }
 
-/* .create-server-text-input-field {
-
+.create-server-text-input {
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: #e3e5e8;
 }
 
-#create-server-add-photo-input {
+/* #create-server-add-photo-input {
 
 } */
 
@@ -70,6 +71,10 @@
   max-height: 100px;
   border-radius: 50%;
   contain: content;
+}
+
+#add-icon {
+  align-self: center;
 }
 
 .image-preview {
@@ -88,6 +93,33 @@
 .bottom-nav-links {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-self: center;
+  justify-content: space-around;
+  background-color: #f6f6f7;
+  min-height: 74px;
+  min-width: 540px;
+  padding: 18px 40px;
+}
+
+.back-modal {
+  cursor: pointer;
+  margin-right: 300px;
+  border: none;
+  font-size: 12px;
+  color: #99AAB5;
+  font-style: helvetica;
+  font-weight: 600;
+}
+
+/* .back-modal:hover {
+  text-decoration: underline;
+} */
+
+/* to be revisited. this needs to underline with the box dimensions, not directly underneath */
+
+.create-server-button {
+  background-color: #7289da;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 16px;
 }

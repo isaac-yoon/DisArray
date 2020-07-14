@@ -14,10 +14,6 @@ class CreateServerForm extends React.Component {
     this.handleFile = this.handleFile.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.props.getServers();
-  // }
-
   handleImageClick() {
     $("#create-server-add-photo").trigger('click');
   }
@@ -66,6 +62,7 @@ class CreateServerForm extends React.Component {
 
   render() {
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+    const { openModal } = this.props;
 
     return (
       <div className = "create-server-form">
@@ -77,9 +74,9 @@ class CreateServerForm extends React.Component {
           )
         })}
         
-        <div id="create-server-header">
+        <header id="create-server-header">
           CREATE YOUR SERVER
-        </div>
+        </header>
 
         <div id="create-server-message">
           By creating a server, you will have access to free
@@ -106,6 +103,7 @@ class CreateServerForm extends React.Component {
             className="image-preview"
             onClick={this.handleImageClick}
           >
+            <p id="add-icon">ADD ICON</p>
             <input 
               type="file" 
               name="" 
@@ -121,9 +119,17 @@ class CreateServerForm extends React.Component {
 
         <div className="bottom-nav-links">
           <button
+            onClick={() => openModal('create-join-server')}
+            className = "back-modal"
+          >
+            {/* need to add the back arrow here */}
+            BACK
+          </button>
+
+          <button
             onClick={this.handleSubmit}
             className="create-server-button"
-          >Create Server
+          >Create
           </button>
         </div>
 
