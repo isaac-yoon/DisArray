@@ -1,3 +1,10 @@
 .modal-child-edit-server-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
+  border-radius: 5px;
+  width: 550px;
+  height: 375px;
 }

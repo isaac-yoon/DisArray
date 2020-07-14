@@ -10,7 +10,6 @@ import CreateChannelFormContainer from '../components/channel/create_channel_for
 import EditChannelFormContainer from '../components/channel/edit_channel_form_container';
 import JoinServerFormContainer from '../components/server/join_server_form_container';
 import CreateJoinServerModalContainer from '../components/main/create_join_server_modal_container';
-import EditServerModalContainer from '../components/server/edit_server_modal_container';
 
 import { withRouter } from 'react-router-dom';
 
@@ -45,9 +44,6 @@ function Modal({ modal, closeModal }) {
       break;
     case 'create-join-server':
       component = <div className="modal-child-create-join-server-modal" onClick={e => e.stopPropagation()}><CreateJoinServerModalContainer /></div>;
-      break;
-    case 'edit-server':
-      component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}><EditServerModalContainer /></div>;
       break;
     default:
       return null;
