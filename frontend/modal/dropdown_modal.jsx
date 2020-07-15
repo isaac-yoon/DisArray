@@ -1,8 +1,11 @@
 import React from 'react';
-import { closeModal } from '../actions/modal_actions';
+import { openModal, closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
 
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+
 import EditServerModalContainer from '../components/server/edit_server_modal';
+
 import { withRouter } from 'react-router-dom';
 
 function dropdownModal({ modal, closeModal }) {
@@ -14,7 +17,7 @@ function dropdownModal({ modal, closeModal }) {
 
   switch (modal) {
     case 'edit-server':
-      component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}><EditServerModalContainer /></div>;
+      component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}><ProtectedRoute path="/channels/@me/:serverId" component={EditServerModalContainer} /></div>;
       break;
     default:
       return null;
@@ -35,6 +38,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal())
   };
 };

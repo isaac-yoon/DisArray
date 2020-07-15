@@ -1,13 +1,31 @@
 import React from 'react';
 
-const EditServerModal = (props) => {
-  const { openModal } = props;
+class EditServerModal extends React.Component {
+  constructor(props) {
+    debugger
+    super(props);
 
-  return (
-    <div>
-      <div>Invite Friends</div>
-    </div>
-  )
-};
+    this.state = {
+      serverId: this.props.match.params.serverId,
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.serverId !== this.props.match.params.serverId) {
+      this.setState({
+        serverId: this.props.match.params.serverId
+      })
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div>Invite Code</div>
+        <div>{this.props.inviteCode}</div>
+      </div>
+    )
+  }
+}
 
 export default EditServerModal;
