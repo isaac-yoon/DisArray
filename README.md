@@ -77,7 +77,58 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
       Even more subcomponents that will render conditionally based on the URL.
 
   * Chatting <br/>
-    DisArray utilizes Action Cable, a technology that integrates Websockets into the Rails. However, it proved to be challenge to integrate Action Cable into the redux cycle. Based on the current set up of my app, sending a message through Action Cable will create messages on the Rails backend. However, it will utilize the local state of the chatroom to populate the room with chat messages. Upon the component mounting, it will fetch all the channel messages and update the channel messages slice of state.
+    DisArray utilizes Action Cable, a technology that integrates Websockets into the Rails. However, it proved to be challenge to integrate Action Cable into the redux cycle. Based on the current set up of my app, sending a message through Action Cable will create messages on the Rails backend. However, it will utilize the local state of the chatroom to populate the room with chat messages. Upon the component mounting, it will fetch all the channel messages and update the channel messages slice of state. Using the redux cycle, the app will filter through all of the channel messages inside of the global state based on the server id and channel id, rendering the appropriate messages. 
+
+    ```javascript
+      createActionCableSubscription(channelId) {
+        App.seek = App.cable.subscriptions.create(
+          {
+            // this needs to match chat_channel.rb
+            channel: "ChatChannel",
+            channelId: channelId,
+          },
+          {
+            // received will be invoked when the subscription broadcasts from the backend
+            received: data => {
+              switch (data.type) {
+                case 'message':
+                  this.setState({
+                    messages: this.state.messages.concat(data)
+                  });
+                  break;
+              }
+            },
+            // performs the speak method in the backend while passing in some data
+            speak: function (data) {
+              return this.perform("speak", data)
+            },
+          }
+        );
+      }
+    ```
+
+    ```javascript
+      class ChatRoom extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            messages: [],
+            channelId: this.props.match.params.channelId,
+          }
+
+          this.props.fetchChannelMessages()
+            .then(
+              () => this.setState({
+                messages: filterChannelMessages(this.props.messages, this.props.match.params.channelId) 
+              })
+            );
+
+          this.bottom = React.createRef();
+          this.formatTimestamp = this.formatTimestamp.bind(this);
+          this.createActionCableSubscription = this.createActionCableSubscription.bind(this);
+        }
+    ```
 
 ## Technologies
 - Backend
