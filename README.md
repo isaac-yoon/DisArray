@@ -83,12 +83,10 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
       createActionCableSubscription(channelId) {
         App.seek = App.cable.subscriptions.create(
           {
-            // this needs to match chat_channel.rb
             channel: "ChatChannel",
             channelId: channelId,
           },
           {
-            // received will be invoked when the subscription broadcasts from the backend
             received: data => {
               switch (data.type) {
                 case 'message':
@@ -98,7 +96,6 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
                   break;
               }
             },
-            // performs the speak method in the backend while passing in some data
             speak: function (data) {
               return this.perform("speak", data)
             },
