@@ -13,8 +13,7 @@ import Main from './main/main_app';
 const App = () => (
   <div>
     <Modal />
-    <ProtectedRoute path="/channels/@me/:serverId" component = { DropdownModal } />
-    {/* made DropdownModal only accessible when on a server page */}
+    <DropdownModal />
     
     <Switch>
       <AuthRoute exact path="/" component= {Splash} />

@@ -2,7 +2,6 @@ import React from 'react';
 
 class EditServerModal extends React.Component {
   constructor(props) {
-    debugger
     super(props);
 
     this.state = {
@@ -22,7 +21,7 @@ class EditServerModal extends React.Component {
     return (
       <div>
         <div>Invite Code</div>
-        <div>{this.props.inviteCode}</div>
+        <div>{this.props.servers ? this.props.servers[this.state.serverId].inviteCode : null }</div>
       </div>
     )
   }

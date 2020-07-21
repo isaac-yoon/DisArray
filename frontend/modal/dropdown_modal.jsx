@@ -8,16 +8,21 @@ import EditServerModalContainer from '../components/server/edit_server_modal';
 
 import { withRouter } from 'react-router-dom';
 
-function dropdownModal({ modal, closeModal }) {
+function dropdownModal({ modal, closeModal, openModal, servers }) {
   if (!modal) {
     return null;
   }
 
   let component;
-
+  
   switch (modal) {
     case 'edit-server':
-      component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}><ProtectedRoute path="/channels/@me/:serverId" component={EditServerModalContainer} /></div>;
+      component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}><ProtectedRoute path="/channels/@me/:serverId" component = { EditServerModalContainer } servers = {servers} /></div>;
+      // note: using ProtectedRoute here to have the serverId as a wildcard for the component
+      // how to pass in servers as a prop to EditServerModalContainer?
+      
+      // component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}> < EditServerModalContainer servers = {servers} /></div>;
+      // if done this way, how to get :serverId as a wildcard?
       break;
     default:
       return null;
@@ -25,14 +30,15 @@ function dropdownModal({ modal, closeModal }) {
 
   return (
     <div className="dropdown-modal-background" onClick={closeModal}>
-      {component}
+      { component }
     </div>
   );
 }
 
 const mapStateToProps = state => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    servers: state.entities.servers,
   };
 };
 
