@@ -6,9 +6,7 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
   return {
     errors: state.errors,
-    // servers: state.entities.servers,
-    // possibly need to thread it from dropdown_modal.jsx?
-    // why can't you just grab state from here?
+    servers: state.entities.servers,
   }
 };
 

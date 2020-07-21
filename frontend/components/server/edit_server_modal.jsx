@@ -7,6 +7,7 @@ class EditServerModal extends React.Component {
     this.state = {
       serverId: this.props.match.params.serverId,
     }
+    debugger
   }
 
   componentDidUpdate(prevProps) {

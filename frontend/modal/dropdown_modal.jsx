@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-import EditServerModalContainer from '../components/server/edit_server_modal';
+import EditServerModalContainer from '../components/server/edit_server_modal_container';
 
 import { withRouter } from 'react-router-dom';
 
@@ -17,12 +17,8 @@ function dropdownModal({ modal, closeModal, openModal, servers }) {
   
   switch (modal) {
     case 'edit-server':
-      component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}><ProtectedRoute path="/channels/@me/:serverId" component = { EditServerModalContainer } servers = {servers} /></div>;
-      // note: using ProtectedRoute here to have the serverId as a wildcard for the component
-      // how to pass in servers as a prop to EditServerModalContainer?
-      
-      // component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}> < EditServerModalContainer servers = {servers} /></div>;
-      // if done this way, how to get :serverId as a wildcard?
+      component = <div className="modal-child-edit-server-modal" onClick={e => e.stopPropagation()}><ProtectedRoute path="/channels/@me/:serverId" component = { EditServerModalContainer } /></div>;  
+      // if you wanted to thread props in using Routes, use props = {props}
       break;
     default:
       return null;
