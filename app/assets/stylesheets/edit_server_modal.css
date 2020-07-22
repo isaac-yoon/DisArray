@@ -6,7 +6,7 @@
   color: white;
   border-radius: 5px;
   width: 235px;
-  height: 150px;
+  height: 158px;
   animation-duration: 0.2s;
   animation-name: slideInFromTop;
 }
@@ -28,5 +28,9 @@
 }
 
 .edit-server-option {
+  padding: 10px;
+}
 
+.edit-server-option:hover {
+  cursor: pointer;
 }
