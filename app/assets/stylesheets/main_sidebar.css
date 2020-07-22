@@ -119,15 +119,12 @@
   bottom: 0;
 }
 
-/* how do I do this effect with flexbox? */
-
 .side-bar-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-width: 300px;
+  min-width: 250px;
   border-top: 1px groove black;
-  /* align-content: flex-end; */
 }
 
 .side-bar-bottom button {

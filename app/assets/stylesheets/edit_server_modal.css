@@ -2,9 +2,31 @@
   position: absolute;
   top: 55px;
   left: 85px;
-  /* transform: translate(-50%, -50%); */
-  background-color: white;
+  background-color: #18191C;
+  color: white;
   border-radius: 5px;
-  width: 285px;
-  height: 200px;
+  width: 235px;
+  height: 150px;
+  animation-duration: 0.2s;
+  animation-name: slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+  from {
+    top: 25px;
+  }
+
+  to {
+    top: 55px;
+  }
+}
+
+.edit-server-modal {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+}
+
+.edit-server-option {
+
 }

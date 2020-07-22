@@ -7,7 +7,6 @@ class EditServerModal extends React.Component {
     this.state = {
       serverId: this.props.match.params.serverId,
     }
-    debugger
   }
 
   componentDidUpdate(prevProps) {
@@ -19,10 +18,13 @@ class EditServerModal extends React.Component {
   }
 
   render() {
+    const { openModal } = this.props;
     return (
-      <div>
-        <div>Invite Code</div>
-        <div>{this.props.servers ? this.props.servers[this.state.serverId].inviteCode : null }</div>
+      <div className="edit-server-modal">
+        <div className="edit-server-option" onClick={() => openModal()}>Invite Friends</div>
+        {/* <div>{this.props.servers ? this.props.servers[this.state.serverId].inviteCode : null }</div> */}
+        <div className="edit-server-option">Edit Server</div>
+        <div className="edit-server-option">Delete Server</div>
       </div>
     )
   }
