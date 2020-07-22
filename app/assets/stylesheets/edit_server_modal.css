@@ -24,6 +24,7 @@
 .edit-server-modal {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 7px;
 }
 
