@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from '../modal/modal';
+import DropdownModal from '../modal/dropdown_modal';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Switch, Redirect, Route } from 'react-router-dom';
@@ -12,6 +13,7 @@ import Main from './main/main_app';
 const App = () => (
   <div>
     <Modal />
+    <DropdownModal />
     
     <Switch>
       <AuthRoute exact path="/" component= {Splash} />

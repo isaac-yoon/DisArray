@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Route, HashRouter, Redirect } from 'react-router-dom';
 
 const mapStateToProps = state => {
-  return { loggedIn: Boolean(state.session.id) };
+  return { loggedIn: Boolean(state.session.id) , servers: state.entities.servers };
 };
 
 

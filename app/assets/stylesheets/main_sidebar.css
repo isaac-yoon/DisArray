@@ -3,6 +3,9 @@
 }
 
 .side-bar-server-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 15px;
   border-bottom: 1px groove black;
 }
@@ -116,15 +119,12 @@
   bottom: 0;
 }
 
-/* how do I do this effect with flexbox? */
-
 .side-bar-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-width: 300px;
+  min-width: 250px;
   border-top: 1px groove black;
-  /* align-content: flex-end; */
 }
 
 .side-bar-bottom button {
@@ -138,4 +138,10 @@
 #main-top-home {
   padding: 15px;
   border-bottom: 1px groove black;
+}
+
+#server-name-dropdown {
+  margin-top: -5px;
+  font-size: 24px;
+  cursor: pointer;
 }
