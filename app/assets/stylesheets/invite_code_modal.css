@@ -1,4 +1,14 @@
 .modal-child-invite-code-modal {
+  position: absolute;
+  top: 55px;
+  left: 85px;
   background-color: white;
+  border-radius: 5px;
+  width: 235px;
+  height: 134px;
 }
 
+/* possible future additions
+make invite code a standard modal
+rather than a dropdown modal
+ */
