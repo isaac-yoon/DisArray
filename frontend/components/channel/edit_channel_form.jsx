@@ -28,7 +28,6 @@ class EditChannelForm extends React.Component {
         });
         this.props.closeModal();
       })
-    // .then(() => this.props.history.push('/channels/@me'));
   }
 
   render() {
@@ -49,11 +48,15 @@ class EditChannelForm extends React.Component {
               type="text"
               value={this.state.name}
               onChange={this.handleInput('name')}
-              placeholder="Choose a name"
+              placeholder="Choose a new name"
               className="edit-channel-input"
             >
             </input>
             <br />
+
+            <button onClick ={() => this.props.closeModal()}>
+              BACK
+            </button>
 
             <button
               className="edit-channel-button"
