@@ -41,31 +41,29 @@ class EditChannelForm extends React.Component {
           )
         })}
 
-        <form onSubmit={this.handleSubmit}>
-          <label className="edit-channel-label">
-            <br />
-            <input
-              type="text"
-              value={this.state.name}
-              onChange={this.handleInput('name')}
-              placeholder="Choose a new name"
-              className="edit-channel-input"
-            >
-            </input>
-            <br />
+        <div className="edit-channel-form-top-container">
+          <div>EDIT TEXT CHANNEL</div>
+        </div>
 
-            <button onClick ={() => this.props.closeModal()}>
-              BACK
-            </button>
+        <div id="edit-channel-name-input-container">
+          <input
+            type="text"
+            value={this.state.name}
+            onChange={this.handleInput('name')}
+            placeholder="Choose a new name"
+            className="edit-channel-input"
+          ></input>
+        </div>
 
-            <button
-              className="edit-channel-button"
-            >
-              Edit Channel
-            </button>
+        <div className="edit-channel-buttons">
+          <button className="edit-channel-button" onClick ={() => this.props.closeModal()}>
+            Cancel
+          </button>
 
-          </label>
-        </form>
+          <button className="edit-channel-button" id = "edit-channel-button" onClick={this.handleSubmit}>
+            Edit Channel
+          </button>
+        </div>
       </div>
     );
   }
