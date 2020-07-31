@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const WelcomeNavBar = ({ currentUser, logout, openModal }) => {
+const WelcomeNavBar = ({ openModal }) => {
   return (
     <div
       className = "welcome-nav-bar-login-signup-links"
@@ -11,11 +11,6 @@ const WelcomeNavBar = ({ currentUser, logout, openModal }) => {
           id="welcome-login-button"
           onClick={() => openModal('login')}
         >LOGIN</button>
-
-        <button
-          id="welcome-demo-button"
-          onClick={() => openModal('demo-login')}
-        >TRY DEMO</button>
 
         <button
           id="welcome-signup-button"
