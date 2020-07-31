@@ -1,26 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const WelcomeNavBar = ({ currentUser, logout, openModal }) => {
+const WelcomeNavBar = () => {
+
+  // reminder: there are still login, demo, and signup modals in the file tree
+  // they were removed and changed to link to the login/signup pages instead for a cleaner user experience
+  
   return (
     <div
       className = "welcome-nav-bar-login-signup-links"
     >
       <nav className="login-signup">
-        <button
-          id="welcome-login-button"
-          onClick={() => openModal('login')}
-        >LOGIN</button>
+        <Link to="login">
+          <button
+            id="welcome-login-button"
+          >LOGIN</button>
+        </Link>
 
-        <button
-          id="welcome-demo-button"
-          onClick={() => openModal('demo-login')}
-        >TRY DEMO</button>
-
-        <button
-          id="welcome-signup-button"
-          onClick={() => openModal('signup')}
-        >SIGNUP</button>
+        <Link to="register">
+          <button
+            id="welcome-signup-button"
+          >SIGNUP</button>  
+        </Link>
       </nav>
     </div>
   )
