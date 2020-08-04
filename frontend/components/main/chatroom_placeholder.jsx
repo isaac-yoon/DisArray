@@ -7,7 +7,7 @@ const ChatRoomPlaceHolder = () => {
         CHAT ROOMS APPEAR HERE
       </div>
       <div>
-        Click on one of the channels to the left or make a new channel with the plus sign on your left
+        Click on one of the channels to the left or make a new channel
       </div>
     </div>
   )
