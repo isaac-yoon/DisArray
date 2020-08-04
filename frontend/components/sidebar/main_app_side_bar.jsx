@@ -5,6 +5,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import TopContainer from './top_server_name_container';
 import TopHomePage from './top_home_page';
 import BottomName from './bottom_name_container';
+import ChannelIndexPlaceHolder from './channel_index_placeholder';
 
 const SideBar = () => {
   return (
@@ -20,6 +21,7 @@ const SideBar = () => {
       <div className="main-app-side-bar-content">
         <Switch>
           <ProtectedRoute path= "/channels/@me/:server_id/" component = {ChannelIndexContainer} />
+          <ProtectedRoute path= "/channels/@me" component = {ChannelIndexPlaceHolder} />
         </Switch>
       </div>
 
