@@ -6,9 +6,9 @@ DisArray is a chat messaging app based closely on Discord. DisArray allows users
 ## Features
 * Secure authentication for user login and signup
 * Servers: creation and deletion
-* Channels: creation and deletion within servers, and editing (make sure to click on the channel first!)
+* Channels: creation, deletion, and editing within servers, inviting other users using an invite code
 * Supports users uploading images for their servers using Amazon Web Services
-* Chatting: universal chat message room for users that updates in real time using Action Cable
+* Chatting: chat rooms that broadcasts to all members part of a channel that updates in real time using Action Cable
 
 ## Implementation
   * Conditional Rendering of Components <br/>
