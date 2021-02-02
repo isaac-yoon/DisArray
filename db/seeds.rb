@@ -8,7 +8,7 @@
 
 
 User.destroy_all
-Users = User.create([
+User.create([
   { username: 'Isaac', email: 'isaac@isaac.isaac', password: '123456' },
   { username: 'DemoLogin', email: 'demouser@demo.disarray', password: '123456' },
   { username: 'Captain America', email: 'firstavenger@avengers.io', password: '123456' },
@@ -18,13 +18,13 @@ Users = User.create([
 ])
 
 Server.destroy_all
-Servers = Server.create([
+Server.create([
   { name: 'Avengers', owner_id: User.all[3].id, invite_code: 'ISA662' },
   { name: 'Stark Industries', owner_id: User.all[3].id, invite_code: 'PUBLIC22' },
 ])
 
 ServerMembership.destroy_all
-ServerMembership = ServerMembership.create([
+ServerMembership.create([
   # avengers server
   { member_id: User.all[0].id, server_id: Server.first.id },
   { member_id: User.all[1].id, server_id: Server.first.id },
@@ -40,7 +40,7 @@ ServerMembership = ServerMembership.create([
 ])
 
 ChannelMessage.destroy_all
-ChannelMessage = ChannelMessage.create([
+ChannelMessage.create([
   # Stark Industries General Channel Messages
   { author_id: User.all[3].id, body: 'The truth is...I am Iron Man.', channel_id: Channel.second.id, created_at: Time.zone.parse('2011-02-03 15:30:45')},
   { author_id: User.all[1].id, body: 'What?!', channel_id: Channel.second.id, created_at: Time.zone.parse('2011-02-03 15:30:48')},
@@ -55,5 +55,4 @@ ChannelMessage = ChannelMessage.create([
 
   # Direct Messages
   # { author_id: captain_america.id, body: "Tony, I'm glad you're back at the compound. I don't like the idea of you rattling around a mansion by yourself. We all need family. The Avengers are yours, maybe more so than mine. I've been on my own since I was 18. I never really fit in anywhere, even in the army. My faith's in people, I guess. Individuals. And I'm happy to say that, for the most part, they haven't let me down. Which is why I can't let them down either. Locks can be replaced, but maybe they shouldn't. I know I hurt you, Tony. I guess I thought by not telling you about your parents I was sparing you, but I can see now that I was really sparing myself, and I'm sorry. Hopefully one day you can understand. I wish we agreed on the Accords, I really do.I know you're doing what you believe in, and that's all any of us can do. That's all any of us should do. So, no matter what. I promise you, if you need us, if you need me, I'll be there.", channel_id: Channel.first.id, created_at: Time.zone.parse('2012-05-04 09:30:36')},
-
 ])
