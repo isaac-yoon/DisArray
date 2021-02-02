@@ -3,7 +3,7 @@ class Server < ApplicationRecord
 
   has_one_attached :photo
 
-  belongs_to :owner,
+  belongs_to :owner, optional: true
     foreign_key: :owner_id,
     class_name: 'User'
   
