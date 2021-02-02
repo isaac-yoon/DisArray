@@ -8,7 +8,7 @@
 
 
 User.destroy_all
-User.create([
+User.create!([
   { username: 'Isaac', email: 'isaac@isaac.isaac', password: '123456' },
   { username: 'DemoLogin', email: 'demouser@demo.disarray', password: '123456' },
   { username: 'Captain America', email: 'firstavenger@avengers.io', password: '123456' },
@@ -18,13 +18,15 @@ User.create([
 ])
 
 Server.destroy_all
-Server.create([
+Server.create!([
   { name: 'Avengers', owner_id: User.all[3].id, invite_code: 'ISA662' },
   { name: 'Stark Industries', owner_id: User.all[3].id, invite_code: 'PUBLIC22' },
 ])
 
+# channels are created manually, check servers controller folder
+
 ServerMembership.destroy_all
-ServerMembership.create([
+ServerMembership.create!([
   # avengers server
   { member_id: User.all[0].id, server_id: Server.first.id },
   { member_id: User.all[1].id, server_id: Server.first.id },
@@ -40,7 +42,7 @@ ServerMembership.create([
 ])
 
 ChannelMessage.destroy_all
-ChannelMessage.create([
+ChannelMessage.create!([
   # Stark Industries General Channel Messages
   { author_id: User.all[3].id, body: 'The truth is...I am Iron Man.', channel_id: Channel.second.id, created_at: Time.zone.parse('2011-02-03 15:30:45')},
   { author_id: User.all[1].id, body: 'What?!', channel_id: Channel.second.id, created_at: Time.zone.parse('2011-02-03 15:30:48')},
