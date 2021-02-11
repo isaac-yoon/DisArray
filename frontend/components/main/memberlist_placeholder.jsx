@@ -2,7 +2,7 @@ import React from 'react';
 
 const MemberListPlaceHolder = () => {
   return (
-    <div id="member-list">
+    <div className="strong-headers" id="member-list">
       MEMBERS APPEAR HERE
     </div>
   )
