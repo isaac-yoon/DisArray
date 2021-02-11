@@ -4,6 +4,9 @@ import {Link} from 'react-router-dom';
 const SplashFooter = () => {
   return (
     <div className="splash-footer">
+      <div>
+      </div>
+      
       <div className="splash-footer-welcome-messages">
         <h2 id="splash-footer-message-1">Ready to try DisArray? It's free!</h2>
         <br/>
