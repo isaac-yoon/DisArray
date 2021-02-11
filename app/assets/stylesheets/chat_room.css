@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.strong-headers {
+  margin: 1em;
+}
+
 .chatroom-container input {
   color: black;
   overflow: scroll;

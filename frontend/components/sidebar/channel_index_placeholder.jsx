@@ -4,7 +4,7 @@ const ChannelIndexPlaceHolder = () => {
   return (
     <div className="channel-index-placeholder-top-level">
       <div>
-        <strong>
+        <strong className="strong-headers">
           CHANNELS APPEAR HERE
         </strong>
         

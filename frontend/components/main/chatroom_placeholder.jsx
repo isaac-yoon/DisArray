@@ -3,7 +3,7 @@ import React from 'react';
 const ChatRoomPlaceHolder = () => {
   return(
     <div className="chatroom-container">
-      <strong>
+      <strong className="strong-headers">
         CHAT ROOMS APPEAR HERE
       </strong>
       <div>
