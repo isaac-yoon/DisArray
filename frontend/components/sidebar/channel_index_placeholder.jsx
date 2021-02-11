@@ -4,9 +4,9 @@ const ChannelIndexPlaceHolder = () => {
   return (
     <div className="channel-index-placeholder-top-level">
       <div>
-        <div>
+        <strong>
           CHANNELS APPEAR HERE
-        </div>
+        </strong>
         
         <div>
           Click on one of the servers to the left -or- make a new server by clicking on the plus sign to the left

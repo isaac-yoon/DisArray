@@ -3,9 +3,9 @@ import React from 'react';
 const ChatRoomPlaceHolder = () => {
   return(
     <div className="chatroom-container">
-      <div>
+      <strong>
         CHAT ROOMS APPEAR HERE
-      </div>
+      </strong>
       <div>
         Click on one of the channels to the left or make a new channel
       </div>
