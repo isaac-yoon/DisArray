@@ -56,8 +56,6 @@ class LoginForm extends React.Component {
     }
 
     typeEmail();
-    // thanks TJ for the base code! 
-    // integrating this into my code proved a bit challenging because modal forms were used but was successful!
   }
 
   handleSubmit(e) {
