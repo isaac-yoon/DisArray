@@ -48,6 +48,8 @@ ChannelMessage.create!([
   { author_id: User.all[1].id, body: 'What?!', channel_id: Channel.second.id, created_at: Time.zone.parse('2011-02-03 15:30:48')},
   { author_id: User.all[0].id, body: 'Yep. Almost all the reporters went crazy.', channel_id: Channel.second.id, created_at: Time.zone.parse('2011-02-03 15:30:49')},
   { author_id: User.all[3].id, body: "It's not about me. It's not about you. It's not even about us. It's about legacy. It's about what we choose to leave behind.", channel_id: Channel.second.id, created_at: Time.zone.parse('2014-01-02 18:30:45')},
+  { author_id: User.all[0].id, body: 'Check out my GitHub here: https://github.com/isaac-yoon', channel_id: Channel.second.id, created_at: Time.zone.parse('2021-02-03 14:33:44')},
+  { author_id: User.all[0].id, body: 'And this is my LinkedIn! https://www.linkedin.com/in/lucidlaughter', channel_id: Channel.second.id, created_at: Time.zone.parse('2021-02-03 14:33:45')},
 
   # Avengers General Channel Messages
   { author_id: User.all[3].id, body: "We're the avengers. We can bust arms dealers all the livelong day, but that up there, that's...the end game. How were you guys planning on beating them?", channel_id: Channel.first.id, created_at: Time.zone.parse('2012-05-04 09:30:33')},
