@@ -1,6 +1,6 @@
 # DisArray
 
-[Link to DisArray](http://disarray.herokuapp.com/#/) </br>
+[Link to LIVE-SITE](http://disarray.herokuapp.com/#/) </br>
 DisArray is a chat messaging app based on Discord. DisArray allows users to create servers, channels within servers, and chat with friends. I designed DisArray using Ruby on Rails and React/Redux. 
 
 ## Features
