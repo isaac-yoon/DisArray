@@ -144,5 +144,6 @@ DisArray is a chat messaging app based on Discord. DisArray allows users to crea
   * jQuery
   * Webpack
 
-## Future Additions
+## Potential Future Additions
   - [ ] Add direct messaging capabilities between users
+  - [ ] Improve scalability by employing a smarter method of rendering chat messages (union between frontend and backend)
