@@ -77,7 +77,7 @@ DisArray is a chat messaging app based on Discord. DisArray allows users to crea
       Even more subcomponents that will render conditionally based on the URL.
 
   * Chatting <br/>
-    DisArray utilizes Action Cable, a technology that integrates Websockets into the Rails. However, it proved to be challenge to integrate Action Cable into the redux cycle. Based on the current set up of my app, sending a message through Action Cable will create messages on the Rails backend. However, it will utilize the local state of the chatroom to populate the room with chat messages. Upon the component mounting, it will fetch all the channel messages and update the channel messages slice of state. Using the redux cycle, the app will filter through all of the channel messages inside of the global state based on the server id and channel id, rendering the appropriate messages. This method will be not as efficient for larger, enterprise level projects, as filtering through the entire log of messages in order to display the appropriate channel messages will be a bottleneck on the frontend side. For the purposes of this hobby project, however, this method is adequate.
+    DisArray utilizes Action Cable, a technology that integrates Websockets into the Rails. However, it proved to be challenge to integrate Action Cable into the redux cycle. Based on the current set up of my app, sending a message through Action Cable will create messages on the Rails backend. However, it will utilize the local state of the chatroom to populate the room with chat messages. Upon the component mounting, it will fetch all the channel messages and update the channel messages slice of state. Using the redux cycle, the app will filter through all of the channel messages inside of the global state based on the server id and channel id, rendering the appropriate messages. This method will be not as efficient for larger projects, as filtering through the global state of messages will be a bottleneck. For the purposes of this hobby project, however, this method is adequate.
 
     ```javascript
       createActionCableSubscription(channelId) {
@@ -146,4 +146,4 @@ DisArray is a chat messaging app based on Discord. DisArray allows users to crea
 
 ## Potential Future Additions
   - [ ] Add direct messaging capabilities between users
-  - [ ] Improve scalability by employing a smarter method of rendering chat messages (union between frontend and backend)
+  - [ ] Improve scalability by employing a smarter method of rendering chat messages (union between frontend and backend). Maybe utilize a different data structure (?)
