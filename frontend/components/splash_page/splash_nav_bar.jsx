@@ -12,8 +12,8 @@ const SplashNavBar = ({ currentUser, logout, openModal }) => {
           >LOGIN</button>
         </Link> */}
         <div>
-          <a class="icon brands alt fa-linkedin-in" href="https://www.linkedin.com/in/lucidlaughter" target="_blank"></a>
-          <a class="icon brands alt fa-github" href="https://www.github.com/isaac-yoon/DisArray" target="_blank"></a>
+          <i class="fa-brands alt fa-linkedin-in" href="https://www.linkedin.com/in/lucidlaughter" target="_blank"></i>
+          <i class="fa-brands alt fa-github" href="https://www.github.com/isaac-yoon/DisArray" target="_blank"></i>
         </div>
       </div>
 
