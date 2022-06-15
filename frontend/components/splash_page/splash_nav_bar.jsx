@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 const SplashNavBar = ({ currentUser, logout, openModal }) => {
   return (
     <div className = "main-nav-bar">
       <div className = "main-nav-bar-login-button-container">
-        <FontAwesomeIcon icon="fa-brands fa-github" href="https://www.github.com/isaac-yoon"
-        />
-        <FontAwesomeIcon icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/lucidlaughter" />
+        <Link to={{pathname: "https://github.com/isaac-yoon"}}>
+          <FaGithub></FaGithub>
+        </Link>
+        <Link to={{pathname: "https://linkedin.com/in/lucidlaughter"}}>
+          <FaLinkedinIn></FaLinkedinIn>
+        </Link>
       </div>
 
     </div>
