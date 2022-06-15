@@ -15,12 +15,14 @@ const SplashNavBar = ({ currentUser, logout, openModal }) => {
           <img 
             alt="GitHub"
             src={window.github}
-            class="fa-brands"
+            // class="fa-brands"
+            style="width:2em; height:3em"
           />
           <img 
             alt="GitHub"
             src={window.linkedin}
-            class="fa-brands"
+            style="width:2em; height:3em"
+            // class="fa-brands"
           />
         </div>
       </div>
