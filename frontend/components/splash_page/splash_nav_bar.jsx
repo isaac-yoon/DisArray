@@ -5,12 +5,9 @@ const SplashNavBar = ({ currentUser, logout, openModal }) => {
   return (
     <div className = "main-nav-bar">
       <div className = "main-nav-bar-login-button-container">
-        <Link to="/login" id="main-nav-bar-login-link">
-          <button 
-            className = "button" 
-            id="main-nav-bar-login-button"
-          >LOGIN</button>
-        </Link>
+        <FontAwesomeIcon icon="fa-brands fa-github" href="https://www.github.com/isaac-yoon"
+        />
+        <FontAwesomeIcon icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/lucidlaughter" />
       </div>
 
     </div>
