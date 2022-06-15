@@ -90,14 +90,3 @@
   font-weight: 500;
   margin-top: 4px;
 }
-
-.splash-footer-signup-link {
-  margin-right: 10px;
-  border-radius: 25px;
-  padding: 10px;
-  border: 1px groove white;
-}
-
-#warning {
-  color: red;
-}
