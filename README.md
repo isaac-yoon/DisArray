@@ -2,6 +2,8 @@
 
 [Link to LIVE-SITE](http://disarray.herokuapp.com/#/) </br>
 * <strong>Heroku no longer offers support for hobby websites. So the site will be down for the indefinite future.</strong></br>
+
+</br>
 DisArray is a chat messaging app based on Discord. DisArray allows users to create servers, channels within servers, and chat with friends. I designed DisArray using Ruby on Rails and React/Redux. 
 
 ## Features
