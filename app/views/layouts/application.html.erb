@@ -5,8 +5,35 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta property="og:title" content="DisArray" />
+    <meta property="og:description" content="A chat messaging app inspired by Discord" />
+    <%# <meta property="og:image" content="" /> %>
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript"> 
+      window.desktop = "<%= image_url("splash/desktop.svg") %>"
+      window.android = "<%= image_url("splash/android.svg") %>"
+      window.gamecontroller = "<%= image_url("splash/gamecontroller.svg") %>"
+      window.headphones = "<%= image_url("splash/headphones.svg") %>"
+      window.iphone = "<%= image_url("splash/iphone.svg") %>"
+      window.laptop = "<%= image_url("splash/laptop.svg") %>"
+      window.smallbox = "<%= image_url("splash/smallbox.svg") %>"
+      window.discordicon = "<%= image_url("mainnavbaricon.png") %>"
+      window.bomb = "<%= image_url("splash/bomb.svg") %>"
+      window.coin = "<%= image_url("splash/coin.svg") %>"
+      window.potion = "<%= image_url("splash/potion.svg") %>"
+      window.gamepack = "<%= image_url("splash/gamepack.svg") %>"
+      window.disc = "<%= image_url("splash/disc.svg") %>"
+      window.xicon = "<%= image_url("splash/x.svg") %>"
+      window.triangle = "<%= image_url("splash/triangle.svg") %>"
+      window.square = "<%= image_url("splash/square.svg") %>"
+      window.circle = "<%= image_url("splash/circle.svg") %>"
+      window.circlefill = "<%= image_url("splash/circlefill.svg") %>"
+      window.joinServerIcon = "<%= image_url("main/join-server-icon.svg") %>"
+      window.createServerIcon = "<%= image_url("main/create-server-icon.svg") %>"
+    </script>
   </head>
 
   <body>

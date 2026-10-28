@@ -1,0 +1,147 @@
+#channel-index-header {
+  color: #8e9297;
+}
+
+.side-bar-server-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px groove black;
+}
+
+.main-app-side-bar-name-container {
+  font-size: 16px;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 600;
+  /* border-bottom: 0.3px groove black; */
+  /* -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; */
+}
+
+.main-app-nav-bar {
+  display: flex;
+  flex-direction: column;
+  min-width: 75px;
+  max-width: 75px;
+  align-items: center;
+  height: 100%;
+  color: white;
+  overflow-x: visible;
+  overflow-y: scroll;
+}
+
+
+
+.guild-separator {
+  height: 2px;
+  width: 32px;
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 1px;
+  background-color: gray;
+  display: block;
+}
+
+.main-app-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #36393f;
+  margin-top: 10px;
+}
+
+.main-app-icon-container:hover {
+  border-radius: 10px;
+  background-color: #7289DA;
+}
+
+.server-index-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-add-server {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+#main-logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+/* Channel Index */
+
+#channel-index-header-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px groove black;
+}
+
+.add-channel-button-svg:hover {
+  cursor: pointer;
+}
+
+.channel-index-item {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+#channel-index-edit-button:hover {
+  cursor: pointer;
+}
+
+.main-app-side-bar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-app-side-bar-bottom {
+  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+
+.side-bar-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 250px;
+  border-top: 1px groove black;
+}
+
+.side-bar-bottom button {
+  padding: 10px;
+}
+
+.side-bar-bottom div {
+  padding: 10px;
+}
+
+#main-top-home {
+  padding: 15px;
+  border-bottom: 1px groove black;
+}
+
+#server-name-dropdown {
+  margin-top: -5px;
+  font-size: 24px;
+  cursor: pointer;
+}

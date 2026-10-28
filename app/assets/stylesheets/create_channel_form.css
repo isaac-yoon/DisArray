@@ -1,0 +1,84 @@
+.modal-child-create-channel-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #36393F;
+  border-radius: 5px;
+  max-height: 660px;
+  min-height: 200px;
+  width: 440px;
+}
+
+.create-channel-form-top-container {
+  padding: 16px;
+}
+
+#create-channel-form-top-container-header {
+  color: white;
+  font-weight: 700;
+}
+
+#create-channel-form-secondary-message {
+  color: gray;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.create-channel-form {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  height: 250px;
+}
+
+#text-channel-name {
+  color: #8E9297;
+}
+
+.create-channel-input {
+  height: auto;
+  width: auto;
+  border: 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px inset black;
+  background-color: #292B2F;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.create-channel-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2F3136;
+  align-items: center;
+  height: 60px;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.create-channel-buttons button {
+  border-radius: 5px;
+  width: 150px;
+  padding: 0px;
+}
+
+.create-channel-button {
+  width: 100px;
+  color: white;
+  height: 38px;
+  min-width: 96px;
+  border: none;
+}
+
+#create-channel-button {
+  background-color: #677BC4;
+}
+
+#channel-name-input-container {
+  width: 440px;
+  height: auto;
+  padding: 16px;
+}

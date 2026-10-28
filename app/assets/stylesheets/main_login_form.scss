@@ -1,0 +1,71 @@
+.main-login-form-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: image-url('loginpage/loginbackgroundimage.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+
+#main-login-form {
+  position: absolute;
+  top: 5%;
+  background-color: #36393f;
+  height: 550px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+
+#main-login-form-welcome-message-1 {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 50px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-style: helvetica;
+}
+
+#main-login-form-welcome-message-2 {
+  color: #b9bbbe;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: helvetica;
+}
+
+#main-login-form-input {
+  padding: 10px;
+  height: 40px;
+  font-size: 16px;
+  width: 300px;
+}
+
+#main-login-form-button {
+  width: 300px;
+}
+
+#main-login-form-demo-button {
+  width: 300px;
+}
+
+.main-login-form-register {
+  display: flex;
+}
+
+#register-message {
+  color: #B9BBBE;
+}
+
+#register-button {
+  color: #7289DA;
+  text-decoration: none;
+}
+
+#register-button:hover {
+  color: red;
+  text-decoration: underline;
+}

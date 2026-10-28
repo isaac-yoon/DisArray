@@ -1,0 +1,73 @@
+.modal-child-edit-channel-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #36393f;
+  border-radius: 5px;
+  max-height: 660px;
+  min-height: 200px;
+  width: 440px;
+}
+
+.edit-channel-form-top-container {
+  padding: 16px;
+  color: white;
+  height: auto;
+  font-weight: 700;
+}
+
+.edit-channel-form {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  height: 250px;
+}
+
+.edit-channel-input {
+  height: auto;
+  width: auto;
+  border: 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px inset black;
+  background-color: #292B2F;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.edit-channel-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2F3136;
+  height: 70px;
+  align-items: center;
+  height: 60px;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.edit-channel-buttons button {
+  border-radius: 5px;
+  width: 150px;
+  padding: 0px;
+}
+
+.edit-channel-button {
+  width: 100px;
+  color: white;
+  height: 38px;
+  min-width: 96px;
+  border: none;
+}
+
+#edit-channel-button {
+  background-color: #677BC4;
+}
+
+#edit-channel-name-input-container {
+  width: 440px;
+  height: auto;
+  padding: 16px;
+}

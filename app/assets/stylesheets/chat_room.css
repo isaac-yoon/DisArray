@@ -1,0 +1,67 @@
+.chatroom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+
+.strong-headers {
+  margin: 1em;
+}
+
+.chatroom-container input {
+  color: black;
+  overflow: scroll;
+}
+
+#channel-message-form-textinput {
+  border-radius: 10px;
+  width: 100%;
+  background-color: #27272B;
+  margin-bottom: 10px;
+  padding: 14px 14px 14px 20px;
+  height: 16px;
+  cursor: text;
+  color: white;
+}
+
+#channel-message-form-submit-button {
+  display: none;
+}
+
+.message-list {
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+
+#message-list-items {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15px 10px 15px;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.message-username-timestamp-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#message-form-container {
+  width: 97%;
+}
+
+#message-timestamp {
+  color: gray;
+}
+
+#message-username {
+  font-weight: 700;
+}

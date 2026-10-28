@@ -1,0 +1,95 @@
+.main-app-nav-bar button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 1px;
+  background-color: #36393f;
+}
+
+.main-app-nav-bar button:hover {
+  border-radius: 10px;
+}
+
+.main-app-nav-bar-discordicon {
+  max-width: none;
+  width: 65px;
+  height: 65px;
+}
+
+.server-index-item {
+  display: flex;
+  background-color: #36393f;
+  color: white;
+  margin: 1px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: background-color 0.2s;
+  /* overflow: scroll; */
+}
+
+.server-index-item:hover {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #7289DA;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 11;
+  transform: translate(50px, 0px);
+  /* top: -5px;
+  left: 105%; */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  /* display: inline-block; */
+}
+
+#plus-sign {
+  color: #43B581;
+}
+
+#discordicon-container {
+  color: #43B581;
+  -webkit-transition: background-color 0.2s;
+}
+
+#main-add-server:hover #plus-sign {
+  color: white;
+}
+
+#main-add-server:hover {
+  background-color: #43B581;
+}
+
+#main-add-server {
+  -webkit-transition: background-color 0.2s;
+}
+
+#user-logout-button-image {
+  width: 25px;
+  height: 25px;
+  fill: rgb(129, 131, 138);
+}

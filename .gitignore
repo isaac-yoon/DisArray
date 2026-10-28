@@ -31,6 +31,7 @@
 node_modules/
 bundle.js
 bundle.js.map
+# you could also write bundle.js* to include both bundle.js and bundle.js.map
 .byebug_history
 .DS_Store
 npm-debug.log
